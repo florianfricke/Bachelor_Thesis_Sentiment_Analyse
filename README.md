@@ -10,5 +10,16 @@ Der Pfad muss in jeder Datei angepasst werden, damit mit Python mit den eigenen 
 <br>
 `python - m textblob.download_corpora`
 
+## Daten
 Die Word-Embeddings können unter folgendem Link heruntergeladen werden:
 https://www.spinningbytes.com/resources/wordembeddings/
+
+Die folgenden Daten befinden sich im Repository und stammen von folgenden Quellen:
+GermanPolarityClues - A Lexical Resource for German Sentiment Analysis
+http://www.ulliwaltinger.de/sentiment/
+
+One Million Posts Corpus
+https://ofai.github.io/million-post-corpus/
+
+SB-10k: German Sentiment Corpus
+https://www.spinningbytes.com/resources/germansentiment/
