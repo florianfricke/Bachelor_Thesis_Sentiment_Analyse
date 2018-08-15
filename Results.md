@@ -1,3 +1,5 @@
+Bitte im RAW Modus anschauen!
+
 ## emphrasis and stopwords
 ### Lexicon-Method
 confusion matrix:
