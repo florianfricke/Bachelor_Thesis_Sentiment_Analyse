@@ -6,7 +6,7 @@ Der Pfad muss in jeder Datei angepasst werden, damit mit Python mit den eigenen 
 `sys.path.insert(0, "C:/Users/Flo/Projekte/Bachelor_Thesis_Sentiment_Analyse")`
 
 ## Voraussetzungen
-`pip install -r /Bachelor_Thesis_Sentiment_Analyse/requirements.txt`
+`pip install -r requirements.txt`
 <br>
 `python - m textblob.download_corpora`
 
