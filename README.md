@@ -15,11 +15,11 @@ Die Word-Embeddings können unter folgendem Link heruntergeladen werden:
 https://www.spinningbytes.com/resources/wordembeddings/
 
 Die folgenden Daten befinden sich im Repository und stammen von folgenden Quellen:
-GermanPolarityClues - A Lexical Resource for German Sentiment Analysis
+GermanPolarityClues - A Lexical Resource for German Sentiment Analysis <br>
 http://www.ulliwaltinger.de/sentiment/
 
-One Million Posts Corpus
+One Million Posts Corpus <br>
 https://ofai.github.io/million-post-corpus/
 
-SB-10k: German Sentiment Corpus
+SB-10k: German Sentiment Corpus <br>
 https://www.spinningbytes.com/resources/germansentiment/
