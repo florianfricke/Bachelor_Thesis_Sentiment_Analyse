@@ -1,0 +1,287 @@
+affirm  Alles klar.
+affirm  Bereit.
+affirm  Dann erzähl mal.
+affirm  Gerne.
+affirm  Gerne. Ja.
+affirm  Ja.
+affirm  Ja.
+affirm  Ja.
+affirm  Ja.
+affirm  Ja.
+affirm  Ja.
+affirm  Ja.
+affirm  Ja.
+affirm  Ja.
+affirm  Ja.
+affirm  Ja.
+affirm  Ja.
+affirm  Ja.
+affirm  Ja.
+affirm  Ja.
+affirm Ja.
+affirm	Ja.
+affirm  Ja bitte.
+affirm  Ja bitte.
+affirm  Ja, erzähl mal was.
+affirm	Ja gerne.
+affirm  Ja ja doch.
+affirm  Ja ja, hab ich.
+affirm	Ja klar.
+affirm  Na gut.
+affirm	Na klar.
+affirm  Natürlich.
+affirm  Noch mehr.
+affirm  Okay.
+affirm  Okay.
+affirm  Okay, dann kommen wir mal wieder.
+affirm  Sehr gern.
+answer  Der erste Computer auf der Welt war Z1.
+answer  Der erste Computer auf der Welt war Z1.
+answer  Dient zum Rechnen, Schreiben?
+answer  Eine Schreibmaschine ist eine Maschine mit der man schreiben kann.
+ask Ähm was sind das für Geräte?
+ask Darf ich die mal anfassen?
+ask Echt. Wie viel wiegst denn du?
+ask Erklär mir mal bitte die Sortiermaschine
+ask Erklär mir mal bitte die Sortiermaschine.
+ask Frag mal, warum der Bildschirm rund ist.
+ask Führst du uns bitte zum Analogrechner?
+ask Funktioniert der mit Farbe oder Schwarz-Weiß?
+ask Ist der aus?
+ask Kann man da schon krasse Spiele drauf spielen?
+ask Kannst du auch fahren oder laufen?
+ask Kannst du die Geräte anzeigen?
+ask Kannst du etwas mehr darüber sagen?
+ask Kannst du mir etwas bieten?
+ask Kannst du uns bitte einen ganz ganz großen Computer zeigen?
+ask Kannst du uns das auch erklären?
+ask Kannst du uns den ältesten Computer der Welt zeigen?
+ask Kannst du uns mal zum Analogrechner führen?
+ask Keine Ahnung, was kann ich dich denn noch fragen?
+ask Macht der das selber?
+ask Mmh tja. Und was kann man damit sonst noch so machen?
+ask Na was denn dann?
+ask Ok. Was kannst du uns noch mehr über Rechner sagen?
+ask Tesaro, zeigst du mir jetzt den ältesten Computer der Welt?
+ask Tesaro zeigst du uns mal bitte den ältesten Computer den es hier gibt?
+ask Tesaro zeigst du uns mal bitte eine Schreibmaschine?
+ask Und wie alt bist du?
+ask Und wozu hat man dann so ein Riesending gebaut?
+ask Was?
+ask Was das alles kann?
+ask Was gibt es denn zum Anschauen?
+ask Was gibts denn?
+ask Was hat man denn damit gemacht? Das wär jetzt mal interessant.
+ask Was hatten wir da am Anfang?
+ask Was hatten wir noch nicht?
+ask Was ist das?
+ask Was kannst du mir denn sonst noch so erzählen?
+ask Was konnte denn das Ding alles?
+ask Was konnte man darauf zocken?
+ask Was weißt du alles?
+ask	Weiß ich nicht so richtig. Was kannst du mir empfehlen?
+ask Welche Programmiersprache war das?
+ask Wer hat sich das denn alles ausgedacht?
+ask Wie alt bist du?
+ask Wie funktioniert diese Maschine?
+ask Wie heißt das Ding?
+ask Wie lange dauert denn das Programmieren damit?
+ask Wie viel Speicher hat er denn gehabt?
+ask Wurden sehr viele davon produziert?
+feedback.ack    Aber ich.
+feedback.ack    Aha.
+feedback.ack    Aha.
+feedback.ack    Aha.
+feedback.ack    Aha.
+feedback.ack    Das stimmt.
+feedback.ack    Folge mir.
+feedback.ack    Jetzt gehts weiter.
+feedback.ack    Jo.
+feedback.ack    Weiß ich nicht.
+feedback.ack    Weißt du Bescheid.
+feedback.ack    Wir sind angekommen.
+feedback.bad    Das ist aber ein bisschen spärlich.
+feedback.bad    Das ist aber schade.
+feedback.bad    Das ist aber unhöflich. Ich hätte dich sogar eingeladen.
+feedback.bad    Das ist schade. Ich dachte wir gehen jetzt ein Bier zusammen trinken.
+feedback.bad    Das könnte ich mir eigentlich auch da vorne angucken.
+feedback.bad    Das müsstest du aber eigentlich wissen. Das weiß ich.
+feedback.bad    Der braucht aber lange um anzukommen.
+feedback.bad    Der ignoriert uns einfach.
+feedback.bad    Jetzt auch noch angepisst sein. Na toll.
+feedback.bad    Och nö. Irgendwie. Nö gerade nicht.
+feedback.bad    Oh schade.
+feedback.bad    Schade.
+feedback.bad    Schon dabei. Jetzt drängel doch nicht so.
+feedback.bad    Wir wollen was anders sehen.
+feedback.good   Der ist doch nicht gruselig.
+feedback.good   Du auch. Danke.
+feedback.good	Ganz gut.
+feedback.good   Gut.
+feedback.good   Gut reicht jetzt.
+feedback.good   Ich finde den übelst witzig.
+feedback.good   Ich hab dich lieb Tesaro.
+feedback.good   Ist ja mal cool.
+feedback.good   Ja das ist sie.
+feedback.good   Na dann mal weiter.
+feedback.good	Ok. Ich bin fertig.
+feedback.good   Sehr interessant.
+garbage 1623.
+garbage Achso.
+garbage Arschloch.
+garbage Das stinkt hast du geforzt?
+garbage Der hat gar keine Haare.
+garbage Der lenkt um.
+garbage Ein Totenkopf.
+garbage Emilio.
+garbage Er kann laufen.
+garbage Fährt der jetzt da raus?
+garbage Geh mal weg, damit er vorbei kann.
+garbage Glaub ich nicht. Ich glaub der fährt so vorwärts.
+garbage Hä, wo will er denn hin?
+garbage Mama kommst du mit?
+garbage Mist.
+garbage Mmh.
+garbage Na dann.
+garbage Oh Mist schon wieder.
+garbage Oh was.
+garbage Sieht aus wie ein Staubsauger.
+garbage Uh.
+garbage Wieso hinterher? Der fährt doch rückwärts.
+garbage Witzig das Ding.
+gargabe Oh aus dem Weg.
+goodbye Bis zum nächsten Mal. Tschau.
+goodbye Tschüss.
+goodbye Tschüss Tesaro.
+greet   Hallo.
+greet   Hallo.
+greet   Hallo lieber Roboter.
+greet   Hallo Tesaro.
+greet   Hallo Tesaro, hörst du mich?
+greeting	Hallo.
+help    Hier sind wir.
+negate  Das reicht.
+negate  Nein.
+negate	Nein.
+negate  Nein, danke.
+negate  Nein hat er nicht.
+negate	Nein, ich habe keine Fragen.
+negate	Nein. Ich habe keine Fragen.
+negate  Nö.
+negate  Nö.
+negate  Nö.
+negate  Nö.
+request Analogrechner.
+request Analogrechner.
+request Dann nehmen wir mal den Monitor.
+request Dann vielleicht etwas über Analogrechner.
+request Den Heimcomputer.
+request Den riesigen Monitor wuerde ich gerne mal sehen.
+request Die goldene Maschine.
+request Ein digitales System für technische Zeichnungen.
+request Ein digitales System für technische Zeichnungen.
+request Erklärst du uns mal was?
+request Erzähl mal was.
+request Hab ich doch gesagt. Das Cafe.
+request	Ich will mehr darüber wissen.
+request Irgendwas erzählen.
+request Ja doch, erzähl mal.
+request Ja erzähl mal.
+request Ja erzähl mal noch ein bisschen.
+request  Ja erzähl mal noch ein bisschen mehr.
+request Jetzt will ich aber auch einen riesigen Monitor sehen.
+request Kühlschränke.
+request Mechanische Rechenmaschinen.
+request Monitor.
+request Na dann zum Analogrechner.
+request Na immer mehr.
+request Na was.
+request Na was anderes.
+request Och öh das Cafe.
+request Och, weißt du noch irgendwas darüber?
+request Rechenmaschine.
+request Sag mal hallo.
+request Schreibmaschinen.
+request Wir gehen zu diesem Riesenmonitor.
+request Zeig mal wo die steht.
+smalltalk.ask   Alter hab ich Recht?
+smalltalk.ask   Anstrengend heh?
+smalltalk.ask   Bin ich böse?
+smalltalk.ask   Bin ich böse?
+smalltalk.ask   Bin ich böse?
+smalltalk.ask   Bin ich böse?
+smalltalk.ask   Bin ich ein Einbrecher?
+smalltalk.ask   Bin ich ein Einbrecher?
+smalltalk.ask   Bin ich ein Einbrecher?
+smalltalk.ask   Bin ich lieb?
+smalltalk.ask   Bin ich lieb?
+smalltalk.ask   Bist du krank?
+smalltalk.ask   Bist du reich?
+smalltalk.ask   Dann sag es mir mal bitte.
+smalltalk.ask   Darf ich jetzt auch mal?
+smalltalk.ask   Folgst du mir bitte Tesaro?
+smalltalk.ask   Gehen wir noch zusammen einen trinken?
+smalltalk.ask   Geht es dir gut?
+smalltalk.ask   Hab ich Recht?
+smalltalk.ask   Hast du Arme?
+smalltalk.ask   Hast du dir gemerkt was das hier ist?
+smalltalk.ask   Hast du dir gemerkt was das hier ist?
+smalltalk.ask   Hast du dir gemerkt was das ist?
+smalltalk.ask   Hast du eine Freundin?
+smalltalk.ask   Ist das ein Hund?
+smalltalk.ask   Kann der auch Lieder singen?
+smalltalk.ask   Kannst du bitte Qartett spielen?
+smalltalk.ask   Kannst du dich noch erinnern was das hier ist?
+smalltalk.ask   Kannst du eigentlich auch tanzen?
+smalltalk.ask   Kannst du ein Lied singen?
+smalltalk.ask   Kannst du hüpfen?
+smalltalk.ask   Kannst du meine Hand sehen?
+smalltalk.ask   Kannst du mir bitte Eis holen?
+smalltalk.ask   Kannst du mir was zu essen geben?
+smalltalk.ask   Kannst du Qartett spielen?
+smalltalk.ask   Magst du Emilio?
+smalltalk.ask   Putzt du dir alleine die Zähne?
+smalltalk.ask   Roboter darf ich schonmal vorgehen?
+smalltalk.ask   Sag mal so so sing mal ein Lied oder so.
+smalltalk.ask   Seh ich behindert aus?
+smalltalk.ask   Seh ich cool aus?
+smalltalk.ask   Sieht der alles Schwarz-Weiß?
+smalltalk.ask   Sieht der auch farbig?
+smalltalk.ask   Tanz ich grade?
+smalltalk.ask   Und selbst?
+smalltalk.ask   Und wie gehts dir so?
+smalltalk.ask   Wann sind wir da?
+smalltalk.ask   Was ist das? Sag es mir mal.
+smalltalk.ask   Was ist ein plus eins?
+smalltalk.ask   Was ist ein plus eins?
+smalltalk.ask   Weißt du was das ist?
+smalltalk.ask   Weißt du wie ich heiße?
+smalltalk.ask   Weißt du wo die Toilette ist?
+smalltalk.ask   Wie wird das Wetter morgen?
+smalltalk.ask   Willst du Eis?
+smalltalk.ask   Wohnst du schon lange hier?
+smalltalk.state	Cool. Ich freue mich dich kennenzulernen.
+smalltalk.state Dafür kann er nichts.
+smalltalk.state Da ist Wochenende. Da können wir morgen nochmal vorbeikommen.
+smalltalk.state Das ist doch schön.
+smalltalk.state Das ist ein Schlüsselanhänger.
+smalltalk.state Der kann laufen.
+smalltalk.state Der kann nicht laufen.
+smalltalk.state Du musst in die Kamera reingucken.
+smalltalk.state Ich dachte immer Roboter sind schneller.
+smalltalk.state Ist der lustig.
+smalltalk.state Ja ganz gut.
+smalltalk.state Ja na sicher hat der grade gesagt.
+smalltalk.state Jetzt ist er bestimmt sauer.
+smalltalk.state Lass ihn mal fragen.
+smalltalk.state Mmh das ist aber ungünstig.
+smalltalk.state Mmh komisch.
+smalltalk.state Na gut ist ja auch ein Roboter.
+smalltalk.state Na ich weiß nicht. Ich hab noch nie einen funktionierenden Roboter gesehen, der rumfährt, vor allem keinen der sich mit mir unterhält.
+smalltalk.state Nochmal Glück gehabt.
+smalltalk.state Oh oh, der ist aber langsam.
+smalltalk.state Sowas hab ich noch nie gesehen.
+smalltalk.state Weil er keine Arme hat.
+smalltalk.state Wie heißt er? Tesaro? Ist ja witzig.
+smalltalk.state Wir sollen hinterher gehen.
+smalltalk.state Wir sollen hinterherlaufen.

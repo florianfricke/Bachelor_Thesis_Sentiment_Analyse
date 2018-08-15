@@ -1,0 +1,225 @@
+__label__respondunsure anstrengend heh
+__label__respondunsure darf ich jetzt auch mal
+__label__respondunsure hast du dir gemerkt was das hier ist
+__label__respondunsure hast du eine frau
+__label__respondunsure hast du geheiratet
+__label__respondunsure kann man da schon krasse spiele drauf spielen
+__label__respondunsure putzt du dir alleine die zähne
+__label__respondunsure und selbst
+__label__respondunsure bist du menschlich
+__label__respondunsure wie menschlich bist du
+__label__respondunsure kennst du hal
+__label__respondunsure kennst du hell
+__label__respondunsure magst du cortana
+__label__respondunsure kennst du siri
+__label__respondunsure was denkst du über siri
+__label__triviaage bist du alt
+__label__triviaage wie alt bist du tesaro
+__label__triviaage kannst du mir sagen wie alt du bist
+__label__triviaage wann hat man dich gebaut tesaro
+__label__triviaage tesaro wann wurdest du gebaut
+__label__triviaage roboter wann hat man dich gebaut
+__label__triviaage wann hat man dich gebaut
+__label__triviaage wann hat mich dich gebaut
+__label__triviaage wann wurdest du erbaut
+__label__triviaage wie alt bist du
+__label__triviaage und dein alter tesaro
+__label__triviaage dein alter roboter
+__label__yes alles klar
+__label__yes alles klar tesaro
+__label__yes auf jeden fall
+__label__yes gern roboter
+__label__yes gerne
+__label__yes ja ja doch
+__label__yes ja ja hab ich
+__label__yes ja klar
+__label__yes johr
+__label__yes natürlich
+__label__yes noch mehr
+__label__yes okay dann kommen wir mal wieder
+__label__yes sehr gern roboter
+__label__yes na klar roboter
+__label__yes okay roboter
+__label__triviahowareyou geht es dir gut
+__label__triviahowareyou bist du gern hier im museum
+__label__triviahowareyou fühlst du dich schlecht
+__label__triviahowareyou hast du gute laune
+__label__triviahowareyou wie ist deine laune heute
+__label__exhibit_analog führst du uns bitte zum analogrechner
+__label__exhibit_analog kannst du mir etwas über den analogrechner erzählen
+__label__exhibit_analog kannst du uns mal zum analogrechner führen
+__label__exhibit_analog erläutere bitte den analogrechner
+__label__exhibit_analog zeige mir den analogrechner
+__label__triviaaboutme bist du ein roboter
+__label__triviaaboutme bist du echt ein roboter
+__label__triviaaboutme bist du ein echter roboter
+__label__triviaaboutme was bist du
+__label__triviaaboutme nenne mir deinen namen
+__label__triviaaboutme den namen bitte
+__label__triviaaboutme sagst du mir wie du heist roboter
+__label__triviaaboutme woher kommst du
+__label__triviaaboutme kannst du mir sagen wie du heißt
+__label__triviaaboutme hey roboter wie heißt du
+__label__triviaaboutme hey roboter wie ist dein name
+__label__triviaaboutme was ist deine aufgabe
+__label__exhibit_mechanicalcomputer die goldene maschine
+__label__exhibit_mechanicalcomputer ich würde gern die rechenmaschine sehen
+__label__exhibit_mechanicalcomputer führe mich bitte zu der rechenmaschiene
+__label__exhibit_mechanicalcomputer ich möchte mehr über die rechenmaschiene wissen
+__label__exhibit_mechanicalcomputer erläutere bitte die rechenmaschiene
+__label__exhibit_mechanicalcomputer zeige mir die rechenmaschiene
+__label__exhibit_mechanicalcomputer kannst du mir etwas über die mechanische rechenmaschiene erzählen
+__label__exhibit_mechanicalcomputer ich möchte mehr über die mechanische rechenmaschiene wissen
+__label__exhibit_mechanicalcomputer zeige mir die mechanische rechenmaschiene
+__label__exhibit_cad den riesigen monitor wuerde ich gerne mal sehen
+__label__exhibit_cad ich möchte mehr über das system für technische zeichnungen erfahren
+__label__exhibit_cad kannst du uns mal zum system für technische zeichnungen führen
+__label__exhibit_cad das system für technische zeichnungen bitte
+__label__exhibit_cad erläutere bitte das system für technische zeichnungen
+__label__exhibit_cad zeige mir das system für technische zeichnungen
+__label__exhibit_cad kannst du mir etwas über das system zum zeichnen erzählen
+__label__exhibit_cad ich möchte mehr über das system zum zeichnen wissen
+__label__exhibit_cad zeige mir das system zum zeichnen
+__label__trivialanguages kannst du mir sagen wie viele sprachen du sprichst
+__label__trivialanguages sprichst du mehere sprachen
+__label__trivialanguages sprichst du mehere sprachen
+__label__trivialanguages wie viele sprachen sprichst du noch
+__label__trivialanguages kannst du noch mehr sprachen ausser deutsch
+__label__trivialanguages was sprichst du ausser deutsch
+__label__trivialanguages was für sprachen sprichst du so
+__label__requestweather wird heute schönes wetter
+__label__requestweather wird es später regnen
+__label__requestweather soll es später regnen
+__label__requestweather wie wird das wetter
+__label__requestweather kann heute es regnen
+__label__requestweather wird heute es regnen
+__label__requestweather soll es heute regnen
+__label__triviaaboutmyparents kannst du mir etwas über deine entwickler erzälen
+__label__triviaaboutmyparents wer hat dich erschaffen
+__label__triviaaboutmyparents wer hat dich gebaut
+__label__triviaaboutmyparents wer ist dein erbauer
+__label__triviaaboutmyparents wer ist deine mutter
+__label__triviaaboutmyparents von wem wurdest du geschaffen
+__label__triviaaboutmyparents von wem wurdest du erbaut
+__label__triviaaboutmyparents hast du dich gebaut
+__label__triviaaboutmyparents woher kommst du
+__label__exhibits_help ich hätte gerne eine führung
+__label__exhibits_help kannst du mir bitte eine führung geben
+__label__exhibits_help erzähl mal was
+__label__exhibits_help hilfe
+__label__exhibits_help ich brauche hilfe
+__label__exhibits_help keine ahnung was kann ich dich denn noch fragen
+__label__exhibits_help was kannst du mir denn sonst noch so erzählen
+__label__exhibits_help wie kannst du mir helfen
+__label__triviaspeed du bist aber langsam
+__label__triviaspeed du bist aber nicht schnell
+__label__triviaspeed du bist mir zu lahm
+__label__triviaspeed kannst du schneller fahren
+__label__triviaspeed oh oh der ist aber langsam
+__label__triviaspeed wie schnell kannst du fahren
+__label__triviaspeed wie schnell kannst du laufen
+__label__triviaspeed mach bitte schneller
+__label__triviaspeed kannst du auch mal schneller fahren
+__label__triviaspeed fahr schneller du lahmer roboter
+__label__triviaspeed schnell ist der roboter aber echt nicht
+__label__respondcantdothis kannst du bitte qartett spielen
+__label__respondcantdothis kannst du eigentlich auch tanzen
+__label__respondcantdothis kannst du mir bitte eis holen
+__label__respondcantdothis kannst du qartett spielen
+__label__respondcantdothis spring aus dem fenster
+__label__respondcantdothis tesaro zeigst du uns mal bitte eine schreibmaschine
+__label__respondcantdothis was ist eins plus eins
+__label__exhibit_ddrcomputer mich interessiert der heimcomputer
+__label__exhibit_ddrcomputer der ddr heimcomputer
+__label__exhibit_ddrcomputer kannst du uns mal zum heimcomputer führen
+__label__exhibit_ddrcomputer zeige mir bitte den heimcomputer
+__label__exhibit_ddrcomputer der ddr computer bitte
+__label__exhibit_ddrcomputer zeige mir den ddr computer
+__label__requesttime weißt du wie spät es ist
+__label__requesttime wie spät haben wir es
+__label__requesttime wie spät ist es
+__label__requesttime weißt du wie viel uhr wir haben
+__label__requesttime wie spät haben wir es gerade
+__label__requesttime kann ich dich nach der uhrzeit fragen
+__label__requesttime weißt du die uhrzeit
+__label__triviaweight wieviel wiegst du eigentlich
+__label__triviaweight wie schwer bist du
+__label__triviaweight wie viel wiegen sie
+__label__triviaweight der ist bestimmt schwer
+__label__triviaweight wie schwer wird der wohl sein
+__label__triviaweight sag mir dein gewicht
+__label__triviaweight nenne mir dein gewicht
+__label__greet guten tag lieber roboter
+__label__greet hallo du da
+__label__greet hallo du roboter
+__label__greet hallo lieber roboter
+__label__greet hey
+__label__greet hey robo
+__label__greet hi
+__label__greet na du sag mal hallo
+__label__greet kannst mich begrüßen
+__label__greet sei gegrüßt tesaro
+__label__greet hallo tesaro
+__label__greet huhu roboter
+__label__greet huhu du da
+__label__greet huhu sag mal hallo
+__label__goodbye schönen abend noch
+__label__goodbye auf wiederschauen tesaro
+__label__goodbye bis demnächst
+__label__goodbye bis denn
+__label__goodbye bis bald roboter
+__label__goodbye bis dann roboter
+__label__goodbye bis denn roboter
+__label__goodbye bis bald tesaro
+__label__goodbye bis nachher tesaro
+__label__goodbye bis später tesaro
+__label__goodbye bye roboter
+__label__goodbye mach es gut
+__label__goodbye man sieht sich
+__label__goodbye pass gut auf dich auf
+__label__goodbye tschüs tesaro
+__label__goodbye tschüss
+__label__goodbye wir sehen uns das nächste mal
+__label__triviajoke erzähle einen witz roboter
+__label__triviajoke erzähle mir bitte einen witz
+__label__triviajoke kennst du viele witze
+__label__triviajoke kanst du scherze machen
+__label__triviajoke erzähle mir etwas lustiges
+__label__triviajoke kannst du witzig sein
+__label__triviajoke kannst du späße machen
+__label__triviajoke verstehst du spaß
+__label__triviajoke das ist nicht lustig hier
+__label__triviajoke sei bitte witzig
+__label__triviajoke kannst du witze erzählen roboter
+__label__requestcloseingtime ist das museum noch lange offen
+__label__requestcloseingtime ist das museum heute noch lange offen
+__label__requestcloseingtime wann macht das museum zu
+__label__requestcloseingtime was hast du feierabend
+__label__requestcloseingtime was hast du heute feierabend
+__label__requestcloseingtime wie lang habt ihr heute offen
+__label__requestcloseingtime weißt du wann das museum schließt
+__label__requestcloseingtime kannst du mir sagen wann das museum heute geschlossen wird
+__label__requestcloseingtime wie lang ist noch offen
+__label__respondyes bist du besser als mama
+__label__respondyes bist du gesprächig
+__label__respondyes gehen wir noch zusammen einen trinken
+__label__respondyes hörst du mich
+__label__respondyes kannst du mich verstehen
+__label__respondyes siehst du mich
+__label__respondyes roboter darf ich schonmal vorgehen
+__label__respondyes verstehst du mich
+__label__respondyes wohnst du hier
+__label__respondyes bist du witzig
+__label__respondyes bist du ein komiker
+__label__respondyes bist du ein komisch
+__label__respondyes wohnst du hier im museum
+__label__no auf keinen fall
+__label__no nein danke
+__label__no nö
+__label__no nein nicht wirklich tesaro
+__label__no nicht wirklich tesaro
+__label__no never tesaro
+__label__no auf keinen fall roboter
+__label__no nein auf keinen fall roboter
+__label__no nein nicht wirklich roboter
+__label__no nö roboter
