@@ -11,9 +11,14 @@ Der Pfad muss noch in jeder Datei angepasst werden, damit Python mit den erstell
 <br>
 `python - m textblob.download_corpora`
 
+## Evaluierung
+folgt..
+Durch Ausführung des Konsolenbefehls ´tensorboard --logdir logs´ im Projektordner können verschiedene Metriken während und nach dem Training evaluiert werden.
+
 ## Daten
 Die Word-Embeddings können unter folgendem Link heruntergeladen werden:
 https://www.spinningbytes.com/resources/wordembeddings/
+Embeddings in ´datastories_semeval2017_task4/embeddings´ kopieren und den Namen in folgendes Format bringen {}.{}d z.B. embedtweets.de.200d
 
 Die folgenden Daten befinden sich un- und vorverarbeitet im Repository und stammen von folgenden Quellen:
 GermanPolarityClues - A Lexical Resource for German Sentiment Analysis <br>
