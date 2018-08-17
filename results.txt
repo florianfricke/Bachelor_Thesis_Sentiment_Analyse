@@ -1,3 +1,5 @@
+Bitte im RAW Modus anschauen!
+
 ## emphrasis and stopwords
 ### Lexicon-Method
 confusion matrix:
@@ -45,6 +47,7 @@ classification report:
    positive       0.57      0.59      0.58       501
 
 avg / total       0.65      0.64      0.64      3161
+<<<<<<< HEAD:results.txt
 
 ### Artificial Neural Network
 5 Epochs, Batchsize = 10
@@ -64,3 +67,5 @@ classification report:
           2       0.55      0.66      0.60       250
 
 avg / total       0.66      0.62      0.63      1581
+=======
+>>>>>>> 32a07b192130ef28dd675f64d11f5981edcedc7b:Results.md
