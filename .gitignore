@@ -1,6 +1,6 @@
 **/*/__pycache__
-**/*/.vscode
-**/*/.ipynb_checkpoints
+**/.vscode
+**/.ipynb_checkpoints
 /datastories_semeval2017_task4/embeddings/embedtweets.de.52d
 /datastories_semeval2017_task4/embeddings/embedtweets.de.52d.pickle
 /datastories_semeval2017_task4/embeddings/embedtweets.de.200d
