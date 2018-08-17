@@ -8,3 +8,4 @@ Keras==2.1.6
 keras_utilities==0.5.0
 frozendict==1.2
 textblob-de==0.4.2
+ftfy==4.4.3
