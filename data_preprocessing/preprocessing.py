@@ -1,3 +1,7 @@
+"""
+Created by Florian Fricke.
+"""
+
 import sys
 sys.path.insert(
     0, "C:/Users/Flo/Projekte/Bachelor_Thesis_Sentiment_Analyse")
@@ -26,24 +30,23 @@ class Preprocessing:
             "data/labeled_sentiment_data/pickle_files/y_data.pickle", "wb"))
 
         self.text_processor = TextPreProcessor(
-            # terms that will be normalize
-
+            # terms that will be normalize e.g. test@gmx.de to <email>
             normalize=['url', 'email', 'percent', 'money', 'phone', 'user',
                     'time', 'url', 'date', 'number'],
 
-            # terms that will be annotated
+            # terms that will be annotated e.g. <hashtag>#test</hashtag>
             annotate={"hashtag", "allcaps", "elongated", "repeated",
                     'emphasis', 'censored'},
             fix_html=True,  # fix HTML tokens
 
             # corpus from which the word statistics are going to be used
-            # for word segmentation
+            # for word segmentation e.g. pythonappsource to python app source
             segmenter="twitter",
 
             unpack_hashtags=True,  # perform word segmentation on hashtags
-
-            # select a tokenizer. You can use SocialTokenizer, or pass your own
-            # the tokenizer, should take as input a string and return a list of tokens
+            unpack_contractions=False,  #e.g can't to can not
+            # select a tokenizer. You can use SocialTokenizer, or pass your own if not text tokenized on whitespace
+            # the tokenizer, should take as input a string and return a list of tokens 
             tokenizer=SocialTokenizer(lowercase=True).tokenize,
 
             # list of dictionaries, for replacing tokens extracted from the text,

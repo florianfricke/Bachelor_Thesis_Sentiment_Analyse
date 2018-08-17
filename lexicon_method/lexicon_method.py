@@ -1,3 +1,7 @@
+"""
+Created by Florian Fricke.
+"""
+
 import sys
 sys.path.insert(0, "C:/Users/Flo/Projekte/Bachelor_Thesis_Sentiment_Analyse")
 
@@ -57,7 +61,7 @@ class LexiconMethod:
                 prediction.append("negative")
         return prediction
     
-    def performance_analysis(self, X_test, y_test, verbose=True, classification_report=True, confusion_matrix=True):
+    def performance_analysis(self, X_test, y_test, verbose=True, confusion_matrix=True, classification_report=True):
         y_pred = self.predict(X_test)
         metric_list = list()
 
@@ -92,7 +96,8 @@ if __name__ == '__main__':
 
     X_test = transform_data(X_test)
 
-    metric_list = model.performance_analysis(X_test, y_test, True, True, True)
+    metric_list = model.performance_analysis(
+        X_test, y_test, verbose=True, confusion_matrix=True, classification_report=True)
 
     text = ['Ich liebe euch', 'Ich hasse euch']
     result = model.predict(text)

@@ -1,3 +1,7 @@
+"""
+Created by Florian Fricke.
+"""
+
 import sys
 sys.path.insert(
     0, "C:/Users/Flo/Projekte/Bachelor_Thesis_Sentiment_Analyse")
@@ -30,7 +34,7 @@ class MultinomialNaiveBayes:
         model.fit(self.X_train, self.y_train)
         return model        
 
-    def performance_analysis(self, model, verbose=True, accuracy=True, classification_report=True, confusion_matrix=True):
+    def performance_analysis(self, model, verbose=True, accuracy=True, confusion_matrix=True, classification_report=True):
         y_pred = model.predict(self.X_test)
         metric_list = list()
         if(accuracy):
@@ -75,5 +79,5 @@ if __name__ == '__main__':
         X_train, X_test, y_train, y_test, max_features=5000, min_df=2)
     mnb_model.encoding_textdata()
     model = mnb_model.fit_model()
-    metric_list = mnb_model.performance_analysis(model, True, True, True, True)
+    metric_list = mnb_model.performance_analysis(model, verbose=True, accuracy=True, confusion_matrix=True, classification_report=True)
     print(mnb_model.predict(model, ["Ich liebe euch", "Ich hasse euch"]))
