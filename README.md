@@ -17,7 +17,7 @@ Durch Ausführung des Konsolenbefehls `tensorboard --logdir logs` im Projektordn
 
 ## Daten
 Die Word-Embeddings können unter folgendem Link heruntergeladen werden:
-https://www.spinningbytes.com/resources/wordembeddings/
+https://www.spinningbytes.com/resources/wordembeddings/ <br>
 Embeddings in `datastories_semeval2017_task4/embeddings` kopieren und den Namen in folgendes Format bringen `{}.{}d` z.B. `embedtweets.de.200d`
 
 Die folgenden Daten befinden sich un- und vorverarbeitet im Repository und stammen von folgenden Quellen:
