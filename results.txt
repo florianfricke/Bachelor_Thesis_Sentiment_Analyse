@@ -45,3 +45,22 @@ classification report:
    positive       0.57      0.59      0.58       501
 
 avg / total       0.65      0.64      0.64      3161
+
+### Artificial Neural Network
+5 Epochs, Batchsize = 10
+Model with min Validation-Loss
+attention = none
+max_length = 50 
+
+confusion matrix:
+[[241  99  62]
+ [278 578  73]
+ [ 28  56 166]]
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.44      0.60      0.51       402
+          1       0.79      0.62      0.70       929
+          2       0.55      0.66      0.60       250
+
+avg / total       0.66      0.62      0.63      1581
