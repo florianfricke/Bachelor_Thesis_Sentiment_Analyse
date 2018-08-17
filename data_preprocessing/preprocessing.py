@@ -92,10 +92,11 @@ class Preprocessing:
         return X_clean
 
 if __name__ == '__main__':
+    path = "data/labeled_sentiment_data/pickle_files/"
     data = Preprocessing()
     clean_data = data.emphrasis_preprocessing()
     pickle.dump(clean_data, open(
-        "data/labeled_sentiment_data/pickle_files/X_clean_data_emphrasis.pickle", "wb"))
+        path + "X_clean_data_emphrasis.pickle", "wb"))
     clean_data = data.remove_stopwords(clean_data)
     pickle.dump(clean_data, open(
-        "data/labeled_sentiment_data/pickle_files/X_clean_data_stopwords.pickle", "wb"))
+        path + "X_clean_data_stopwords.pickle", "wb"))
