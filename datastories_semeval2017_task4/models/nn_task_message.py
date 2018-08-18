@@ -41,13 +41,13 @@ PREPROCESS_TYP = "stopwords"
 # if True save model checkpoints, as well as the corresponding word indices
 # set PERSIST = True, in order to be able to use the trained model later
 PERSIST = True
-results_path = "results_artificial_neural_network/"
+RESULT_PATH = "results_artificial_neural_network/"
 
 MODEL_FILE_NUMBER = len(
-    glob.glob(os.path.join(results_path, "model_history*.pickle"))) + 1
+    glob.glob(os.path.join(RESULT_PATH, "model_history*.pickle"))) + 1
 
 def best_model(): return "{}model_{}_{}.hdf5".format(
-    results_path, PREPROCESS_TYP, MODEL_FILE_NUMBER)
+    RESULT_PATH, PREPROCESS_TYP, MODEL_FILE_NUMBER)
 
 def best_model_word_indices(): return "{}model_word_indices_{}.{}.pickle".format(DATAFOLDER, WV_CORPUS, WV_DIM)
 
@@ -122,7 +122,7 @@ if not FINAL:
 
 metrics_callback = MetricsCallback(datasets=_datasets, metrics=metrics)
 plotting = PlottingCallback(grid_ranges=(0.5, 0.75), height=5,
-                            benchmarks={"SE17": 0.681}, preprocess_typ=PREPROCESS_TYP)
+                            benchmarks={"SE17": 0.681}, preprocess_typ=PREPROCESS_TYP, results_path=RESULT_PATH)
 tensorboard = TensorBoard(log_dir='./logs')
 
 _callbacks = []
@@ -155,7 +155,8 @@ history = nn_model.fit(training[0], training[1],
                        epochs=epochs, batch_size=batch_size,  
                        class_weight=class_weights, callbacks=_callbacks)
 
-pickle.dump(history.history, open("{}model_history_{}_{}.pickle".format(results_path, PREPROCESS_TYP, MODEL_FILE_NUMBER), "wb"))
+pickle.dump(history.history, open("{}model_history_{}_{}.pickle".format(
+    RESULT_PATH, PREPROCESS_TYP, MODEL_FILE_NUMBER), "wb"))
 
 ############################################################################
 # Evaluation
