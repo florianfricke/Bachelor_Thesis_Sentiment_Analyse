@@ -33,4 +33,4 @@ def performance_analysis(testing, model, file_name="", file_information="", verb
             if(verbose):
                 print("\nclassification report:", file=f)
                 print(classification_report, file=f)
-        return metric_list
+    return metric_list
