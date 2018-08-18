@@ -122,7 +122,7 @@ if not FINAL:
 
 metrics_callback = MetricsCallback(datasets=_datasets, metrics=metrics)
 plotting = PlottingCallback(grid_ranges=(0.5, 0.75), height=5,
-                            benchmarks={"SE17": 0.681}, preprocess_typ=PREPROCESS_TYP, results_path=RESULT_PATH)
+                            benchmarks={"SE17": 0.681}, plot_name="{}model_{}_{}".format(RESULT_PATH, PREPROCESS_TYP, MODEL_FILE_NUMBER))
 tensorboard = TensorBoard(log_dir='./logs')
 
 _callbacks = []
