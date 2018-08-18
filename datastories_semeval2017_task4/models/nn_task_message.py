@@ -1,5 +1,6 @@
 import pickle
 import numpy
+import glob
 import os
 from keras.callbacks import ModelCheckpoint
 from keras.layers import LSTM
@@ -40,13 +41,15 @@ PREPROCESS_TYP = "stopwords"
 # if True save model checkpoints, as well as the corresponding word indices
 # set PERSIST = True, in order to be able to use the trained model later
 PERSIST = True
-MODEL_FILE_NAME = 1
 results_path = "results_artificial_neural_network/"
-def best_model(): return results_path + "model_{}{}.hdf5".format(
-    PREPROCESS_TYP, MODEL_FILE_NAME)
 
-def best_model_word_indices(): return DATAFOLDER + \
-    "model_word_indices_"+ str(WV_CORPUS) +"."+ str(WV_DIM) +".pickle"
+MODEL_FILE_NUMBER = len(
+    glob.glob(os.path.join(results_path, "model_history*.pickle"))) + 1
+
+def best_model(): return "{}model_{}_{}.hdf5".format(
+    results_path, PREPROCESS_TYP, MODEL_FILE_NUMBER)
+
+def best_model_word_indices(): return "{}model_word_indices_{}.{}.pickle".format(DATAFOLDER, WV_CORPUS, WV_DIM)
 
 ############################################################################
 # LOAD DATA
@@ -65,24 +68,21 @@ if FINAL:
     training, testing = loader.load_final() #Processing Data
 else:
     training, validation, testing = loader.load_train_val_test()
-    pickle.dump(validation, open(
-        DATAFOLDER + "validation_data_nn_" + PREPROCESS_TYP + ".pickle", "wb"))
+    pickle.dump(validation, open("{}validation_data_nn_{}.pickle".format(DATAFOLDER, PREPROCESS_TYP), "wb"))
     # training[0], training[1] = text, sentiment
 
-pickle.dump(training, open(
-    DATAFOLDER + "training_data_nn_" + PREPROCESS_TYP + ".pickle", "wb"))
-pickle.dump(testing, open(
-    DATAFOLDER + "testing_data_nn_" + PREPROCESS_TYP + ".pickle", "wb"))
+pickle.dump(training, open("{}training_data_nn_{}.pickle".format(DATAFOLDER, PREPROCESS_TYP), "wb"))
+pickle.dump(testing, open("{}testing_data_nn_{}.pickle".format(DATAFOLDER, PREPROCESS_TYP), "wb"))
 
 ############################################################################
 # NN MODEL
 ############################################################################
 print("Building NN Model...")
-attention_model = None
+attention_model = "simple" # simple, None
 nn_model = build_attention_RNN(embeddings, classes=3, max_length=max_length,    #classes = pos., neg, neutral
                                unit=LSTM, layers=2, cells=150,
                                bidirectional=True,
-                               attention=attention_model,  # simple
+                               attention=attention_model,  
                                noise=0.3,
                                final_layer=False,
                                dropout_final=0.5,
@@ -90,7 +90,7 @@ nn_model = build_attention_RNN(embeddings, classes=3, max_length=max_length,    
                                dropout_words=0.3,
                                dropout_rnn=0.3,
                                dropout_rnn_U=0.3,
-                               clipnorm=1, lr=0.001, loss_l2=0.0001,)   # gradient clipping and learning rate                           
+                               clipnorm=1, lr=0.001, loss_l2=0.0001)   # gradient clipping and learning rate                           
 print(nn_model.summary())
 
 ############################################################################
@@ -121,18 +121,18 @@ if not FINAL:
     _datasets["3-test"] = testing
 
 metrics_callback = MetricsCallback(datasets=_datasets, metrics=metrics)
-# plotting = PlottingCallback(grid_ranges=(0.5, 0.75), height=5,
-                            # benchmarks={"SE17": 0.681})
+plotting = PlottingCallback(grid_ranges=(0.5, 0.75), height=5,
+                            benchmarks={"SE17": 0.681}, preprocess_typ=PREPROCESS_TYP)
 tensorboard = TensorBoard(log_dir='./logs')
 
 _callbacks = []
 _callbacks.append(metrics_callback)
 _callbacks.append(tensorboard)
-# _callbacks.append(plotting)
+_callbacks.append(plotting)
 
 if PERSIST:
-    monitor = "val_loss" # 'val.macro_recall' mode="max"
-    mode = "min"
+    monitor = "val_loss" # 'val.macro_recall' 
+    mode = "min" # mode="max"
     checkpointer = ModelCheckpoint(filepath=best_model(),
                                    monitor=monitor, mode=mode,  
                                    verbose=1, save_best_only=True)
@@ -148,22 +148,23 @@ print("Class weights:",
 
 # 50-50
 epochs = 1
-batch_size = 50
+batch_size = 20
 
 history = nn_model.fit(training[0], training[1],
                        validation_data=validation if not FINAL else testing,
                        epochs=epochs, batch_size=batch_size,  
                        class_weight=class_weights, callbacks=_callbacks)
 
-pickle.dump(history.history, open(results_path + "model_history_" + PREPROCESS_TYP + str(MODEL_FILE_NAME) + ".pickle", "wb"))
+pickle.dump(history.history, open("{}model_history_{}_{}.pickle".format(results_path, PREPROCESS_TYP, MODEL_FILE_NUMBER), "wb"))
 
 ############################################################################
 # Evaluation
 ############################################################################
-file_name = PREPROCESS_TYP + str(MODEL_FILE_NAME)
+file_name = "{}_{}".format(PREPROCESS_TYP, MODEL_FILE_NUMBER)
 file_information = "epochs = " + str(epochs) + "\nbatch_size = " + str(batch_size) + \
     "\nmax textlength = " + str(max_length) + "\npreprocess-typ = " + \
     PREPROCESS_TYP + "\nattention model = " + \
-    str(attention_model) + "\nbest model with " + mode + " " + monitor + "\n"
+    str(attention_model) + "\nbest model with " + mode + " " + monitor
+file_information = file_information + "\ndropout_attention = 0" 
 performance_analysis(testing, nn_model, file_name=file_name, file_information=file_information, verbose=True, accuracy=True,
                      confusion_matrix=True, classification_report=True)

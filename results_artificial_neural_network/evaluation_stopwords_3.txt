@@ -1,0 +1,25 @@
+epochs = 20
+batch_size = 20
+max textlength = 50
+preprocess-typ = stopwords
+attention model = simple
+best model with min val_loss
+dropout_attention = 0
+
+model accuracy (loss value, accuracy):
+[0.7359051947952598, 0.6438962683731962]
+
+confusion matrix:
+[[265  80  57]
+ [264 578  87]
+ [ 34  41 175]]
+
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.47      0.66      0.55       402
+          1       0.83      0.62      0.71       929
+          2       0.55      0.70      0.62       250
+
+avg / total       0.69      0.64      0.65      1581
+
