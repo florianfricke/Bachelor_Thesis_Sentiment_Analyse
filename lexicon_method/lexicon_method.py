@@ -61,44 +61,24 @@ class LexiconMethod:
                 prediction.append("negative")
         return prediction
     
-    def performance_analysis(self, X_test, y_test, verbose=True, confusion_matrix=True, classification_report=True):
+    def performance_analysis(self, X_test, y_test, file_name="", verbose=True, confusion_matrix=True, classification_report=True):
         y_pred = self.predict(X_test)
         metric_list = list()
 
-        if(confusion_matrix):
-            confusion_matrix = metrics.confusion_matrix(y_test, y_pred, labels=[
-                "positive", "neutral", "negative"])
-            metric_list.append(confusion_matrix)
-            if(verbose):
-                print("confusion matrix:")
-                print(confusion_matrix)
-        
-        if(classification_report):
-            classification_report = metrics.classification_report(y_test, y_pred)
-            metric_list.append(classification_report)
-            if(verbose):
-                print("classification report:")
-                print(classification_report)
+        with open('results/evaluation_{}.txt'.format(file_name), 'w') as f:
+            if(confusion_matrix):
+                confusion_matrix = metrics.confusion_matrix(y_test, y_pred, labels=[
+                    "positive", "neutral", "negative"])
+                metric_list.append(confusion_matrix)
+                if(verbose):
+                    print("confusion matrix:", file=f)
+                    print(confusion_matrix, file=f)
+            
+            if(classification_report):
+                classification_report = metrics.classification_report(y_test, y_pred)
+                metric_list.append(classification_report)
+                if(verbose):
+                    print("classification report:", file=f)
+                    print(classification_report, file=f)
         return metric_list
 
-if __name__ == '__main__':
-    sentiment_files = get_filenames_from_directory(
-        'data/sentiment_lexicons/')
-    model = LexiconMethod(sentiment_files)
-
-    path = "data/labeled_sentiment_data/pickle_files/"
-    preprocess_typ = "stopwords"
-    X_test = pickle.load(open(
-        path + "X_test_" + preprocess_typ + ".pickle", "rb"))
-
-    y_test = pickle.load(open(
-        path + "y_test_" + preprocess_typ + ".pickle", "rb"))
-
-    X_test = transform_data(X_test)
-
-    metric_list = model.performance_analysis(
-        X_test, y_test, verbose=True, confusion_matrix=True, classification_report=True)
-
-    text = ['Ich liebe euch', 'Ich hasse euch']
-    result = model.predict(text)
-    print(result)

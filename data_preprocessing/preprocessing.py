@@ -12,6 +12,7 @@ from ekphrasis.dicts.emoticons import emoticons
 from tqdm import tqdm
 from nltk.corpus import stopwords
 from data.data_loader import DataLoader
+from utilities.utilities import save_data
 import pickle
 
 class Preprocessing:
@@ -91,12 +92,6 @@ class Preprocessing:
             X_clean.append(self.text_processor.pre_process_doc(row))
         return X_clean
 
-if __name__ == '__main__':
-    path = "data/labeled_sentiment_data/pickle_files/"
-    data = Preprocessing()
-    clean_data = data.emphrasis_preprocessing()
-    pickle.dump(clean_data, open(
-        path + "X_clean_data_emphrasis.pickle", "wb"))
-    clean_data = data.remove_stopwords(clean_data)
-    pickle.dump(clean_data, open(
-        path + "X_clean_data_stopwords.pickle", "wb"))
+    def save_clean_data(self, clean_data, path, preprocess_typ):
+        save_data(clean_data, path=path,
+                  filename="X_clean_data_{}".format(preprocess_typ))

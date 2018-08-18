@@ -34,50 +34,34 @@ class MultinomialNaiveBayes:
         model.fit(self.X_train, self.y_train)
         return model        
 
-    def performance_analysis(self, model, verbose=True, accuracy=True, confusion_matrix=True, classification_report=True):
+    def performance_analysis(self, model, file_name="", verbose=True, accuracy=True, confusion_matrix=True, classification_report=True):
         y_pred = model.predict(self.X_test)
         metric_list = list()
-        if(accuracy):
-            accuracy = model.score(self.X_test, self.y_test)
-            metric_list.append(accuracy)
-            if(verbose):
-                print("model accuracy: {:.4f}".format(accuracy))
         
-        if(confusion_matrix):
-            confusion_matrix = metrics.confusion_matrix(self.y_test, y_pred, labels=[
-                "positive", "neutral", "negative"])
-            metric_list.append(confusion_matrix)
-            if(verbose):
-                print("confusion matrix:")
-                print(confusion_matrix)
-        
-        if(classification_report):
-            classification_report = metrics.classification_report(self.y_test, y_pred)
-            metric_list.append(classification_report)
-            if(verbose):
-                print("classification report:")
-                print(classification_report)
+        with open('results/evaluation_{}.txt'.format(file_name), 'w') as f:
+            if(accuracy):
+                accuracy = model.score(self.X_test, self.y_test)
+                metric_list.append(accuracy)
+                if(verbose):
+                    print("model accuracy:", file=f)
+                    print(accuracy, file=f)
+            
+            if(confusion_matrix):
+                confusion_matrix = metrics.confusion_matrix(self.y_test, y_pred, labels=[
+                    "positive", "neutral", "negative"])
+                metric_list.append(confusion_matrix)
+                if(verbose):
+                    print("confusion matrix:", file=f)
+                    print(confusion_matrix, file=f)
+            
+            if(classification_report):
+                classification_report = metrics.classification_report(self.y_test, y_pred)
+                metric_list.append(classification_report)
+                if(verbose):
+                    print("classification report:", file=f)
+                    print(classification_report, file=f)
         return metric_list
 
     def predict(self, model, testdata):
         x = self.cv.transform(pd.Series(testdata))
         return model.predict(x)
-
-if __name__ == '__main__':
-    path = "data/labeled_sentiment_data/pickle_files/"
-    preprocess_typ = "stopwords"
-    X_train = pickle.load(open(
-        path + "X_train_"+ preprocess_typ +".pickle", "rb"))
-    X_test = pickle.load(open(
-        path + "X_test_"+ preprocess_typ +".pickle", "rb"))
-    y_train = pickle.load(open(
-        path + "y_train_"+ preprocess_typ +".pickle", "rb"))
-    y_test = pickle.load(open(
-        path + "y_test_"+ preprocess_typ +".pickle", "rb"))
-
-    mnb_model = MultinomialNaiveBayes(
-        X_train, X_test, y_train, y_test, max_features=5000, min_df=2)
-    mnb_model.encoding_textdata()
-    model = mnb_model.fit_model()
-    metric_list = mnb_model.performance_analysis(model, verbose=True, accuracy=True, confusion_matrix=True, classification_report=True)
-    print(mnb_model.predict(model, ["Ich liebe euch", "Ich hasse euch"]))

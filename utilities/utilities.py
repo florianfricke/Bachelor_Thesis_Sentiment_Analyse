@@ -5,6 +5,7 @@ Created by Florian Fricke.
 from os import listdir
 from os.path import isfile, join
 import html
+import pickle
 
 def get_filenames_from_directory(path):
     files = [f for f in listdir(path) if isfile(join(path, f))]
@@ -36,3 +37,7 @@ def transform_data(data):
                 sentence = sentence + word + " "
         transformed_data.append(sentence)
     return transformed_data #return format: ['sentence','sentence']
+
+def save_data(data, path="", filename=""):
+    pickle.dump(data, open("{}{}.pickle".format(path, filename), "wb"))
+    return None
