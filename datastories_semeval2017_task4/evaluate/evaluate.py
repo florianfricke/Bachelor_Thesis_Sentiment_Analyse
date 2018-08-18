@@ -6,7 +6,7 @@ from sklearn import metrics
 
 
 def performance_analysis(testing, model, file_name="", file_information="", verbose=True, accuracy=True, confusion_matrix=True, classification_report=True):
-    with open('results_artificial_neural_network/evaluation_' + file_name + '.txt', 'w') as f:
+    with open('results_artificial_neural_network/evaluation_{}.txt'.format(file_name), 'w') as f:
         print(file_information, file=f)
         y_pred = model.predict(testing[0])
         y_pred = y_pred.argmax(axis=1)
