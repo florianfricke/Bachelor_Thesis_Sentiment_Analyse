@@ -1,0 +1,25 @@
+epochs = 20
+batch_size = 20
+max textlength = 50
+preprocess-typ = emphrasis
+attention model = None
+best model with min val_loss
+
+
+model accuracy (loss value, accuracy):
+[0.78797917954911167, 0.62871600268084671]
+
+confusion matrix:
+[[318  48  36]
+ [338 506  85]
+ [ 39  41 170]]
+
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.46      0.79      0.58       402
+          1       0.85      0.54      0.66       929
+          2       0.58      0.68      0.63       250
+
+avg / total       0.71      0.63      0.64      1581
+
