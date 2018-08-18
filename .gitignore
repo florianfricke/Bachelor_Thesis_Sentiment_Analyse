@@ -5,3 +5,4 @@
 /datastories_semeval2017_task4/embeddings/embedtweets.de.52d.pickle
 /datastories_semeval2017_task4/embeddings/embedtweets.de.200d
 /datastories_semeval2017_task4/embeddings/embedtweets.de.200d.pickle
+**/*.hdf5
