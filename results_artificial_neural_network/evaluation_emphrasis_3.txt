@@ -1,0 +1,26 @@
+epochs = 50
+batch_size = 10
+max textlength = 50
+preprocess-typ = emphrasis
+attention model = None
+best model with max val_acc
+3 LSTM Layer
+LSTM Cells = 64
+
+model accuracy (loss value, accuracy):
+[0.79070589502426281, 0.61100569278812344]
+
+confusion matrix:
+[[324  41  37]
+ [368 470  91]
+ [ 43  35 172]]
+
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.44      0.81      0.57       402
+          1       0.86      0.51      0.64       929
+          2       0.57      0.69      0.63       250
+
+avg / total       0.71      0.61      0.62      1581
+
