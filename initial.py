@@ -24,10 +24,16 @@ preprocess_typ = "emphrasis"
 runprocessing = False
 
 if(runprocessing):
-    data = Preprocessing()
+    datafolders = [["labeled_sentiment_data/sb10k_corpus.tsv", "\t",
+                     1, 4], ["labeled_sentiment_data/million_pos_corpus.tsv", "\t", 0, 1]]
+    data = Preprocessing(datafolders=datafolders, save_data_path=path)
     clean_data = data.emphrasis_preprocessing()
     data.save_clean_data(clean_data, path, preprocess_typ)
     # clean_data = data.remove_stopwords(clean_data)
+
+    split_data = TrainTestSplit(save_data_path=path, preprocess_typ=preprocess_typ)
+    X_train, X_test, y_train, y_test = split_data.split_to_train_test(
+        test_size=0.3)
 
 ############################################################################
 # Load Data
@@ -58,7 +64,7 @@ if(run_lexicon_method):
 ############################################################################
 # textblob-de
 ############################################################################
-run_textblob = False
+run_textblob = True
 
 if(run_textblob):
     results_file_name = "{}_textblob".format(preprocess_typ)
