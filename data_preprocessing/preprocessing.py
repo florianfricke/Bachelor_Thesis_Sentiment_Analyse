@@ -16,19 +16,15 @@ from utilities.utilities import save_data
 import pickle
 
 class Preprocessing:
-    def __init__(self):
-        self.datafolders = [["labeled_sentiment_data/sb10k_corpus.tsv", "\t",
-                            1, 4], ["labeled_sentiment_data/million_pos_corpus.tsv", "\t", 0, 1]]
+    def __init__(self, datafolders, save_data_path):
+        self.datafolders = datafolders
         self.dataset = self.get_data()
         self.X = [d[1] for d in self.dataset]  # text
         self.y = [d[0] for d in self.dataset]  # sentiment
         
-        pickle.dump(self.dataset, open(
-            "data/labeled_sentiment_data/pickle_files/dataset_unprocessed.pickle", "wb"))
-        pickle.dump(self.X, open(
-            "data/labeled_sentiment_data/pickle_files/X_data_unprocessed.pickle", "wb"))
-        pickle.dump(self.y, open(
-            "data/labeled_sentiment_data/pickle_files/y_data.pickle", "wb"))
+        save_data(self.dataset, path=save_data_path, filename="dataset_unprocessed")
+        save_data(self.X, path=save_data_path, filename="X_data_unprocessed")
+        save_data(self.y, path=save_data_path, filename="y_data")
 
         self.text_processor = TextPreProcessor(
             # terms that will be normalize e.g. test@gmx.de to <email>
