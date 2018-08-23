@@ -29,19 +29,15 @@ class Preprocessing:
         self.text_processor = TextPreProcessor(
             # terms that will be normalize e.g. test@gmx.de to <email>
             normalize=['url', 'email', 'percent', 'money', 'phone', 'user',
-                    'time', 'url', 'date', 'number'],
+                    'time', 'date', 'number'],
 
             # terms that will be annotated e.g. <hashtag>#test</hashtag>
             annotate={"hashtag", "allcaps", "elongated", "repeated",
-                    'emphasis', 'censored'},
+                    'emphasis'},
             fix_html=True,  # fix HTML tokens
 
-            # corpus from which the word statistics are going to be used
-            # for word segmentation e.g. pythonappsource to python app source
-            segmenter="twitter",
-
             unpack_hashtags=True,  # perform word segmentation on hashtags
-            unpack_contractions=False,  #e.g can't to can not
+
             # select a tokenizer. You can use SocialTokenizer, or pass your own if not text tokenized on whitespace
             # the tokenizer, should take as input a string and return a list of tokens 
             tokenizer=SocialTokenizer(lowercase=True).tokenize,
