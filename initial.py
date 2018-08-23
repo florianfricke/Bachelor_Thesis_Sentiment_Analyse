@@ -46,7 +46,7 @@ y_test = pickle.load(open("{}y_test_{}.pickle".format(path, preprocess_typ), "rb
 ############################################################################
 # Lexicon Method
 ############################################################################
-run_lexicon_method = True
+run_lexicon_method = False
 
 if(run_lexicon_method):
     results_file_name = "{}_lexiconmethod".format(preprocess_typ)
@@ -56,7 +56,7 @@ if(run_lexicon_method):
         'data/sentiment_lexicons/')
     lexicon_model = LexiconMethod(sentiment_files)
     lexicon_metric_list = lexicon_model.performance_analysis(
-        transform_data(X_test), y_test, file_name=results_file_name, verbose=True, confusion_matrix=True, classification_report=True)
+        transform_data(X_test), y_test, file_name=results_file_name, verbose=True, confusion_matrix=True, classification_report=True, save_pred=True)
     text = ['Ich liebe euch', 'Ich hasse euch']
     result = lexicon_model.predict(text)
     print(result)
@@ -64,7 +64,7 @@ if(run_lexicon_method):
 ############################################################################
 # textblob-de
 ############################################################################
-run_textblob = True
+run_textblob = False
 
 if(run_textblob):
     results_file_name = "{}_textblob".format(preprocess_typ)
@@ -72,7 +72,7 @@ if(run_textblob):
     print("run textblob-de")
     textblob_model = TextBlobSentimentAnalysis()
     metric_list = textblob_model.performance_analysis(
-        transform_data(X_test), y_test, file_name=results_file_name, verbose=True, confusion_matrix=True, classification_report=True)
+        transform_data(X_test), y_test, file_name=results_file_name, verbose=True, confusion_matrix=True, classification_report=True, save_pred=True)
     text = ['Ich liebe euch', 'Ich hasse euch']
     result = textblob_model.predict(text)
     print(result)
@@ -91,5 +91,5 @@ if(run_mnb):
     mnb_model.encoding_textdata()
     model = mnb_model.fit_model()
     metric_list = mnb_model.performance_analysis(
-        model, file_name=results_file_name, verbose=True, accuracy=True, confusion_matrix=True, classification_report=True)
+        model, file_name=results_file_name, verbose=True, accuracy=True, confusion_matrix=True, classification_report=True, save_pred=True)
     print(mnb_model.predict(model, ["Ich liebe euch", "Ich hasse euch"]))

@@ -26,11 +26,11 @@ class TextBlobSentimentAnalysis:
                 prediction.append("negative")
         return prediction
 
-    def performance_analysis(self, X_test, y_test, file_name="", verbose=True, confusion_matrix=True, classification_report=True):
+    def performance_analysis(self, X_test, y_test, file_name="", verbose=True, confusion_matrix=True, classification_report=True, save_pred=True):
         y_pred = self.predict(X_test)
         metric_list = list()
 
-        with open('results/evaluation_{}.txt'.format(file_name), 'w') as f:
+        with open('results/evaluation_{}.txt'.format(file_name), 'w', encoding="utf-8") as f:
             if(confusion_matrix):
                 confusion_matrix = metrics.confusion_matrix(y_test, y_pred, labels=[
                     "positive", "neutral", "negative"])
@@ -46,4 +46,10 @@ class TextBlobSentimentAnalysis:
                 if(verbose):
                     print("classification report:", file=f)
                     print(classification_report, file=f)
+        
+        if(save_pred):
+            with open('results/evaluation_{}_predictions.txt'.format(file_name), 'w', encoding="utf-8") as f:
+                for i in range(len(y_pred)):
+                    print("{}\t{}".format(
+                        y_pred[i], X_test[i]), file=f)
         return metric_list

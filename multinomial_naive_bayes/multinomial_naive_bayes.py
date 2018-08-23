@@ -35,11 +35,11 @@ class MultinomialNaiveBayes:
         model.fit(self.X_train, self.y_train)
         return model        
 
-    def performance_analysis(self, model, file_name="", verbose=True, accuracy=True, confusion_matrix=True, classification_report=True):
+    def performance_analysis(self, model, X_test=[], file_name="", verbose=True, accuracy=True, confusion_matrix=True, classification_report=True, save_pred=True):
         y_pred = model.predict(self.X_test)
         metric_list = list()
         
-        with open('results/evaluation_{}.txt'.format(file_name), 'w') as f:
+        with open('results/evaluation_{}.txt'.format(file_name), 'w', encoding="utf-8") as f:
             if(accuracy):
                 accuracy = model.score(self.X_test, self.y_test)
                 metric_list.append(accuracy)
@@ -61,6 +61,13 @@ class MultinomialNaiveBayes:
                 if(verbose):
                     print("classification report:", file=f)
                     print(classification_report, file=f)
+        
+        if(save_pred):
+            with open('results/evaluation_{}_predictions.txt'.format(file_name), 'w', encoding="utf-8") as f:
+                for i in range(len(y_pred)):
+                    print("{}\t{}".format(
+                        y_pred[i], X_test[i]), file=f)
+        
         return metric_list
 
     def predict(self, model, testdata):
