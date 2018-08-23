@@ -1,0 +1,13 @@
+confusion matrix:
+[[ 50 150   1]
+ [ 96 510   5]
+ [ 16  74  36]]
+classification report:
+             precision    recall  f1-score   support
+
+   negative       0.86      0.29      0.43       126
+    neutral       0.68      0.83      0.75       611
+   positive       0.28      0.25      0.26       201
+
+avg / total       0.59      0.61      0.58       975
+
