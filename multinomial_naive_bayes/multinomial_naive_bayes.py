@@ -26,7 +26,8 @@ class MultinomialNaiveBayes:
         self.X_train = self.cv.fit_transform(
             pd.Series(transform_data(self.X_train)))
         self.X_test = self.cv.transform(pd.Series(transform_data(self.X_test)))
-        # print("Dimension X_train Bag of Words: {}".format(self.X_train.shape))
+        print("Dimension X_train Bag of Words: {}".format(self.X_train.shape))
+        print("Dimension X_test Bag of Words: {}".format(self.X_test.shape))
         return None
 
     def fit_model(self):
