@@ -29,8 +29,11 @@ https://github.com/cbaziotis/ekphrasis
 ## Sentiment Analyse mit Künstlichem Neuronalem Netz
 Die Implementierung von Data Stories Semeval 2017 Sentiment Analysis mit Twitterdaten und Neuronalen Netzen befindet sich im Verzeichnis `datastories_semeval2017_task4`. <br>
 Diese Implementierungsvariante wurde auf deutsche Textdaten von mir angepasst.<br>
+`datastories_semeval2017_task4/models/nn_task_message.py` startet das Training des Neuronalen Netzes<br>
 https://github.com/cbaziotis/datastories-semeval2017-task4
 
+## weitere Sentiment Analyse Methoden
+`initial.py` startet das Training und Evaluieren der Wörterbuch basierten Sentiment Analyse, Python Bibliothek textblob-de, Multinomial Naive Bayes Klassifikator
+
 ## Evaluierung
-folgt..<br>
 Durch Ausführung des Konsolenbefehls `tensorboard --logdir logs` im Projektordner können verschiedene Metriken während und nach dem Training evaluiert werden.
