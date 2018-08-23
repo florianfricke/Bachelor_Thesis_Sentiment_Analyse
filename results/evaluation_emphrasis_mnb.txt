@@ -1,3 +1,6 @@
+max_features=5000
+min_df=2
+
 model accuracy:
 0.634925656438
 confusion matrix:
