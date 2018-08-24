@@ -415,33 +415,33 @@ positive	auf wiedersehen roboter
 positive	ich gehe jetzt
 positive	bye
 positive	bis dann tesaro
-psotive	sei mal lustig
-psotive	kennst du witziges
-psotive	kennst du lustige späße
-psotive	scherzt du manchmal
-psotive	erzähle einen witz
+positive	sei mal lustig
+positive	kennst du witziges
+positive	kennst du lustige späße
+positive	scherzt du manchmal
+positive	erzähle einen witz
 neutral	kannst du komisch sein
-psotive	kannst du was lustiges machen
-psotive	erzähle mir bitte etwas lustiges
-psotive	kannst du mir einen witz erzählen roboter
-psotive	sag was lustiges
-psotive	mache etwas lustiges
-psotive	erzähle einen witz tesaro
-psotive	sag was lustiges roboter
-psotive	kennst du witze
-psotive	verstehst du spass
-psotive	sei mal bitte witzig
-psotive	kannst du was lustiges erzählen
-psotive	roboter kannst du witze erzählen
-psotive	kannst du witze erzählen
-psotive	kannst du was lustiges sagen
-psotive	witz
-psotive	kannst du mir einen witz erzählen
-psotive	erzähle mir bitte einen witz roboter
-psotive	kennst du lustige witze
-psotive	kannst du bitte einen witz erzählen
-psotive	erzähle mir bitte einen witz tesaro
-psotive	sag doch mal was lustiges
+positive	kannst du was lustiges machen
+positive	erzähle mir bitte etwas lustiges
+positive	kannst du mir einen witz erzählen roboter
+positive	sag was lustiges
+positive	mache etwas lustiges
+positive	erzähle einen witz tesaro
+positive	sag was lustiges roboter
+positive	kennst du witze
+positive	verstehst du spass
+positive	sei mal bitte witzig
+positive	kannst du was lustiges erzählen
+positive	roboter kannst du witze erzählen
+positive	kannst du witze erzählen
+positive	kannst du was lustiges sagen
+positive	witz
+positive	kannst du mir einen witz erzählen
+positive	erzähle mir bitte einen witz roboter
+positive	kennst du lustige witze
+positive	kannst du bitte einen witz erzählen
+positive	erzähle mir bitte einen witz tesaro
+positive	sag doch mal was lustiges
 neutral	wann wird das museum schließen
 neutral	wie lang ist das museum noch offen
 neutral	wann machst du feierabend
@@ -622,13 +622,13 @@ negative	Arschloch.
 negative	Das stinkt hast du geforzt?
 negative	Der hat gar keine Haare.
 neutral	Der lenkt um.
-negtive	Ein Totenkopf.
+negative	Ein Totenkopf.
 neutral	Emilio.
 positive	Er kann laufen.
 positive	Fährt der jetzt da raus?
 negative	Geh mal weg, damit er vorbei kann.
 neutral	Glaub ich nicht. Ich glaub der fährt so vorwärts.
-neagtive	Hä, wo will er denn hin?
+negative	Hä, wo will er denn hin?
 neutral	Mama kommst du mit?
 negative	Mist.
 negative	Mmh.
@@ -718,7 +718,7 @@ neutral	Putzt du dir alleine die Zähne?
 neutral	Roboter darf ich schonmal vorgehen?
 neutral	Sag mal so so sing mal ein Lied oder so.
 neutral	Seh ich behindert aus?
-postive	Seh ich cool aus?
+positive	Seh ich cool aus?
 neutral	Sieht der alles Schwarz-Weiß?
 neutral	Sieht der auch farbig?
 neutral	Tanz ich grade?
@@ -743,8 +743,8 @@ negative	Der kann nicht laufen.
 neutral	Du musst in die Kamera reingucken.
 negative	Ich dachte immer Roboter sind schneller.
 positive	Ist der lustig.
-postive	Ja ganz gut.
-postive	Ja na sicher hat der grade gesagt.
+positive	Ja ganz gut.
+positive	Ja na sicher hat der grade gesagt.
 negative	Jetzt ist er bestimmt sauer.
 neutral	Lass ihn mal fragen.
 negative	Mmh das ist aber ungünstig.
@@ -881,12 +881,12 @@ neutral	kannst du qartett spielen
 negative	spring aus dem fenster
 neutral	tesaro zeigst du uns mal bitte eine schreibmaschine
 neutral	was ist eins plus eins
-netral	mich interessiert der heimcomputer
-netral	der ddr heimcomputer
-netral	kannst du uns mal zum heimcomputer führen
-netral	zeige mir bitte den heimcomputer
-netral	der ddr computer bitte
-netral	zeige mir den ddr computer
+neutral	mich interessiert der heimcomputer
+neutral	der ddr heimcomputer
+neutral	kannst du uns mal zum heimcomputer führen
+neutral	zeige mir bitte den heimcomputer
+neutral	der ddr computer bitte
+neutral	zeige mir den ddr computer
 neutral	weißt du wie spät es ist
 neutral	wie spät haben wir es
 neutral	wie spät ist es
