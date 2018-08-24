@@ -9,6 +9,7 @@ sys.path.insert(
 from utilities.utilities import get_filenames_from_directory
 from utilities.utilities import transform_data
 from data_preprocessing.preprocessing_corpus import PreprocessingCorpus
+from data_preprocessing.preprocessing_text import PreprocessingText
 from data_preprocessing.train_test_split import TrainTestSplit
 from lexicon_method.lexicon_method import LexiconMethod
 from lexicon_method.textblob_de import TextBlobSentimentAnalysis
@@ -29,7 +30,7 @@ run_mnb = True
 if(runprocessing):
     datafolders = [["labeled_sentiment_data/htw_data/join_data_clean.tsv", "\t", 0, 1]]
     data = PreprocessingCorpus(
-        datafolders=datafolders, save_data_path=path, corpus_name="htw")
+        datafolders=datafolders, save_data_path=path, corpus_name="htw_")
     clean_data = data.ekphrasis_preprocessing()
     if(preprocess_typ == "stopwords"):
         clean_data = data.remove_stopwords(clean_data)
@@ -58,10 +59,6 @@ if(run_lexicon_method):
     lexicon_metric_list = lexicon_model.performance_analysis(
         transform_data(X_test), y_test, file_name=results_file_name, verbose=True, confusion_matrix=True, classification_report=True, save_pred=True)
 
-    text = ['Ich liebe euch', 'Ich hasse euch']
-    result = lexicon_model.predict(text)
-    print(result)
-
 ############################################################################
 # textblob-de
 ############################################################################
@@ -73,9 +70,6 @@ if(run_textblob):
     textblob_model = TextBlobSentimentAnalysis()
     metric_list = textblob_model.performance_analysis(
         transform_data(X_test), y_test, file_name=results_file_name, verbose=True, confusion_matrix=True, classification_report=True, save_pred=True)
-    text = ['Ich liebe euch', 'Ich hasse euch']
-    result = textblob_model.predict(text)
-    print(result)
 
 ############################################################################
 # Multinomial Naive Bayes
@@ -91,4 +85,4 @@ if(run_mnb):
     model = mnb_model.fit_model()
     metric_list = mnb_model.performance_analysis(
         model, file_name=results_file_name, X_test=transform_data(X_test), verbose=True, accuracy=True, confusion_matrix=True, classification_report=True, save_pred=True)
-    print(mnb_model.predict(model, ["Ich liebe euch", "Ich hasse euch"]))
+
