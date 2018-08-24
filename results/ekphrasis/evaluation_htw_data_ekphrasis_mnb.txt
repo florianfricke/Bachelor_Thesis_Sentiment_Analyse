@@ -1,0 +1,15 @@
+model accuracy:
+0.5651282051282052
+confusion matrix:
+[[ 55 143  32]
+ [105 476  36]
+ [ 21  87  20]]
+classification report:
+             precision    recall  f1-score   support
+
+   negative       0.23      0.16      0.19       128
+    neutral       0.67      0.77      0.72       617
+   positive       0.30      0.24      0.27       230
+
+avg / total       0.53      0.57      0.54       975
+
