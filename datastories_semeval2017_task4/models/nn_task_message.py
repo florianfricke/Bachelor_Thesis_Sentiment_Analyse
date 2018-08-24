@@ -41,13 +41,13 @@ PREPROCESS_TYP = "ekphrasis"
 # if True save model checkpoints, as well as the corresponding word indices
 # set PERSIST = True, in order to be able to use the trained model later
 PERSIST = True
-RESULT_PATH = "results_artificial_neural_network/"
+RESULT_PATH = "results_artificial_neural_network/{}/".format(PREPROCESS_TYP)
 
 MODEL_FILE_NUMBER = len(
     glob.glob(os.path.join(RESULT_PATH, "model_history_{}*.pickle".format(PREPROCESS_TYP)))) + 1
 
-def best_model(): return "{}{}/model_{}_{}.hdf5".format(
-    RESULT_PATH, PREPROCESS_TYP, PREPROCESS_TYP, MODEL_FILE_NUMBER)
+def best_model(): return "{}model_{}_{}.hdf5".format(
+    RESULT_PATH, PREPROCESS_TYP, MODEL_FILE_NUMBER)
 
 def best_model_word_indices(): return "{}model_word_indices_{}.{}.pickle".format(DATAFOLDER, WV_CORPUS, WV_DIM)
 
@@ -155,8 +155,8 @@ history = nn_model.fit(training[0], training[1],
                        epochs=epochs, batch_size=batch_size,  
                        class_weight=class_weights, callbacks=_callbacks)
 
-pickle.dump(history.history, open("{}{}/model_history_{}_{}.pickle".format(
-    RESULT_PATH, PREPROCESS_TYP, PREPROCESS_TYP, MODEL_FILE_NUMBER), "wb"))
+pickle.dump(history.history, open("{}model_history_{}_{}.pickle".format(
+    RESULT_PATH, PREPROCESS_TYP, MODEL_FILE_NUMBER), "wb"))
 
 ############################################################################
 # Evaluation
