@@ -14,10 +14,6 @@ class DataLoader:
         self._dirname = os.path.dirname(__file__)
 
     def get_data(self, filename, seperator="\t", sentiment_column_number=0, text_column_number=1):
-        """
-        Reads the text file and returns a dictionary in the form:
-        tweet_id = (sentiment, text)
-        """
         data = list()
 
         for line_id, line in enumerate(
