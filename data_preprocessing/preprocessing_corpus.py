@@ -23,10 +23,10 @@ class PreprocessingCorpus:
         self.y = [d[0] for d in self.dataset]  # sentiment
         self.corpus_name = kwargs.get('corpus_name', "")
     
-        save_data(self.dataset, path=save_data_path, filename="{}_dataset_unprocessed".format(self.corpus_name))
+        save_data(self.dataset, path=save_data_path, filename="{}dataset_unprocessed".format(self.corpus_name))
         save_data(self.X, path=save_data_path,
-                  filename="{}_X_data_unprocessed".format(self.corpus_name))
-        save_data(self.y, path=save_data_path, filename="{}_y_data".format(self.corpus_name))
+                  filename="{}X_data_unprocessed".format(self.corpus_name))
+        save_data(self.y, path=save_data_path, filename="{}y_data".format(self.corpus_name))
 
         self.text_processor = TextPreProcessor(
             # terms that will be normalize e.g. test@gmx.de to <email>
@@ -88,5 +88,5 @@ class PreprocessingCorpus:
 
     def save_clean_data(self, clean_data, path, preprocess_typ):
         save_data(clean_data, path=path,
-                  filename="{}_X_clean_data_{}".format(self.corpus_name, preprocess_typ))
+                  filename="{}X_clean_data_{}".format(self.corpus_name, preprocess_typ))
                   
