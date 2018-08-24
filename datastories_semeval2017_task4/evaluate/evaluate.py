@@ -2,10 +2,16 @@
 Created by Florian Fricke.
 """
 
+import sys
+sys.path.insert(
+    0, "C:/Users/Flo/Projekte/Bachelor_Thesis_Sentiment_Analyse")
+
 from sklearn import metrics
+from keras.models import load_model
+import pickle
+import os
 
-
-def performance_analysis(testing, model, file_name="", file_information="", verbose=True, accuracy=True, confusion_matrix=True, classification_report=True):
+def performance_analysis(testing, model, file_name="", file_information="", verbose=True, accuracy=True, confusion_matrix=True, classification_report=True, **kwargs):
     with open('results_artificial_neural_network/evaluation_{}.txt'.format(file_name), 'w') as f:
         print(file_information, file=f)
         y_pred = model.predict(testing[0])
@@ -33,4 +39,64 @@ def performance_analysis(testing, model, file_name="", file_information="", verb
             if(verbose):
                 print("\nclassification report:", file=f)
                 print(classification_report, file=f)
+
+        if(kwargs.get('save_pred', False) and kwargs.get('X_test_unprocessed', False)):
+            with open('results_artificial_neural_network/predictions/evaluation_{}_predictions.txt'.format(file_name), 'w', encoding="utf-8") as f:
+                for i in range(len(y_pred)):
+                    print("{}\t{}".format(
+                        y_pred[i], X_test_unprocessed[i]), file=f)
     return metric_list
+
+############################################################################
+# Evaluate Data
+############################################################################
+pickle_path = "data/labeled_sentiment_data/pickle_files/"
+preprocess_typ = "stopwords"
+model_file_number = 1
+file_information = ""
+file_name = "{}_{}".format(preprocess_typ, model_file_number)
+
+nn_model = load_model(
+    'results_artificial_neural_network/model_{}.hdf5'.format(file_name))
+
+#___________________Evaluate sb10k + One Million Posts Korpus___________________
+if(False):
+    X_test_unprocessed = pickle.load(
+        open("{}X_data_unprocessed.pickle".format(pickle_path), "rb"))
+    testing_data = pickle.load(
+        open("{}testing_data_nn_{}.pickle".format(pickle_path, preprocess_typ), "rb"))
+
+    performance_analysis(testing_data, nn_model, file_name=file_name, file_information=file_information, verbose=False, accuracy=False,
+                     confusion_matrix=False, classification_report=False, save_pred=True, X_test_unprocessed=X_test_unprocessed)
+
+#_______________________________Evaluate HTW Data_______________________________
+if(True):
+    X_test_unprocessed = pickle.load(
+        open("{}htw_data_X_test_unprocessed.pickle".format(pickle_path), "rb"))
+
+    if os.path.exists("{}htw_data_testing_nn_{}.pickle".format(pickle_path, preprocess_typ)):
+        testing_data = pickle.load(
+            open("{}htw_data_testing_nn_{}.pickle".format(pickle_path, preprocess_typ), "rb"))
+        print("Load Data")
+    else:
+        X_test = pickle.load(
+            open("{}htw_data_X_train_clean_{}.pickle".format(pickle_path, preprocess_typ), "rb"))
+        y_test = pickle.load(
+            open("{}htw_data_y_test.pickle".format(pickle_path), "rb"))
+
+        sys.path.insert(
+            0, "C:/Users/Flo/Projekte/Bachelor_Thesis_Sentiment_Analyse/datastories_semeval2017_task4")
+        from utilities.data_loader import Task4Loader
+        from utilities.data_loader import get_embeddings
+        
+        embeddings, word_indices = get_embeddings(
+            corpus="embedtweets.de", dim=200)
+        loader = Task4Loader(word_indices, text_lengths=50, loading_data=False,
+                            datafolder=pickle_path, preprocess_typ=preprocess_typ)
+        testing_data=loader.decode_data_to_embeddings(X_test, y_test)  # decode data to word vectors
+
+        pickle.dump(testing_data, open("{}htw_data_testing_nn_{}.pickle".format(
+            pickle_path, preprocess_typ), "wb"))
+
+    performance_analysis(testing_data, nn_model, file_name=file_name, file_information=file_information, verbose=True, accuracy=True,
+                        confusion_matrix=True, classification_report=True, save_pred=True, X_test_unprocessed=X_test_unprocessed)

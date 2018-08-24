@@ -22,9 +22,9 @@ class Preprocessing:
         self.X = [d[1] for d in self.dataset]  # text
         self.y = [d[0] for d in self.dataset]  # sentiment
         
-        save_data(self.dataset, path=save_data_path, filename="dataset_unprocessed")
-        save_data(self.X, path=save_data_path, filename="X_data_unprocessed")
-        save_data(self.y, path=save_data_path, filename="y_data")
+        save_data(self.dataset, path=save_data_path, filename="htw_dataset_unprocessed")
+        save_data(self.X, path=save_data_path, filename="htw_data_X_test_unprocessed")
+        save_data(self.y, path=save_data_path, filename="htw_data_y_test")
 
         self.text_processor = TextPreProcessor(
             # terms that will be normalize e.g. test@gmx.de to <email>
@@ -78,7 +78,7 @@ class Preprocessing:
     #             data_clean.append(d)
     #     return data_clean
 
-    def emphrasis_preprocessing(self):
+    def ekphrasis_preprocessing(self):
         X_clean = []
         for row in tqdm(self.X):
             X_clean.append(self.text_processor.pre_process_doc(row))
@@ -86,4 +86,4 @@ class Preprocessing:
 
     def save_clean_data(self, clean_data, path, preprocess_typ):
         save_data(clean_data, path=path,
-                  filename="X_clean_data_{}".format(preprocess_typ))
+                  filename="htw_data_X_train_clean_{}".format(preprocess_typ))

@@ -39,7 +39,7 @@ class MultinomialNaiveBayes:
         y_pred = model.predict(self.X_test)
         metric_list = list()
         
-        with open('results/evaluation_{}.txt'.format(file_name), 'w', encoding="utf-8") as f:
+        with open('results/{}.txt'.format(file_name), 'w', encoding="utf-8") as f:
             if(accuracy):
                 accuracy = model.score(self.X_test, self.y_test)
                 metric_list.append(accuracy)
@@ -63,7 +63,7 @@ class MultinomialNaiveBayes:
                     print(classification_report, file=f)
         
         if(save_pred):
-            with open('results/evaluation_{}_predictions.txt'.format(file_name), 'w', encoding="utf-8") as f:
+            with open('results/predictions/{}_predictions.txt'.format(file_name), 'w', encoding="utf-8") as f:
                 for i in range(len(y_pred)):
                     print("{}\t{}".format(
                         y_pred[i], X_test[i]), file=f)

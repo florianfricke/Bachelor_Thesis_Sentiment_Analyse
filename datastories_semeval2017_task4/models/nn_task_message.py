@@ -33,7 +33,7 @@ FINAL = False
 
 max_length = 50     # max tweet length
 DATAFOLDER = "C:/Users/Flo/Projekte/Bachelor_Thesis_Sentiment_Analyse/data/labeled_sentiment_data/pickle_files/"
-PREPROCESS_TYP = "stopwords"
+PREPROCESS_TYP = "ekphrasis"
 
 ############################################################################
 # PERSISTENCE
@@ -44,7 +44,7 @@ PERSIST = True
 RESULT_PATH = "results_artificial_neural_network/"
 
 MODEL_FILE_NUMBER = len(
-    glob.glob(os.path.join(RESULT_PATH, "model_history*.pickle"))) + 1
+    glob.glob(os.path.join(RESULT_PATH, "model_history_{}*.pickle".format(PREPROCESS_TYP)))) + 1
 
 def best_model(): return "{}model_{}_{}.hdf5".format(
     RESULT_PATH, PREPROCESS_TYP, MODEL_FILE_NUMBER)
@@ -60,7 +60,7 @@ if PERSIST:
     if not os.path.exists(best_model_word_indices()):
         pickle.dump(word_indices, open(best_model_word_indices(), 'wb'))
 
-loader = Task4Loader(word_indices, text_lengths=max_length,
+loader = Task4Loader(word_indices, text_lengths=max_length, loading_data=True,
                      datafolder=DATAFOLDER, preprocess_typ=PREPROCESS_TYP)
 
 if FINAL:
@@ -86,7 +86,7 @@ nn_model = build_attention_RNN(embeddings, classes=3, max_length=max_length,    
                                noise=0.3,
                                final_layer=False,
                                dropout_final=0.5,
-                               dropout_attention=0, #0.5
+                               dropout_attention=0.5, #0.5
                                dropout_words=0.3,
                                dropout_rnn=0.3,
                                dropout_rnn_U=0.3,
@@ -122,7 +122,7 @@ if not FINAL:
 
 metrics_callback = MetricsCallback(datasets=_datasets, metrics=metrics)
 plotting = PlottingCallback(grid_ranges=(0.5, 0.75), height=5,
-                            benchmarks={"SE17": 0.681}, plot_name="{}model_{}_{}".format(RESULT_PATH, PREPROCESS_TYP, MODEL_FILE_NUMBER))
+                            benchmarks={"SE17": 0.681}, plot_name="model_{}_{}".format(PREPROCESS_TYP, MODEL_FILE_NUMBER))
 tensorboard = TensorBoard(log_dir='./logs')
 
 _callbacks = []
@@ -147,8 +147,8 @@ print("Class weights:",
       {cat_to_class_mapping[c]: w for c, w in class_weights.items()})
 
 # 50-50
-epochs = 1
-batch_size = 20
+epochs = 50
+batch_size = 10
 
 history = nn_model.fit(training[0], training[1],
                        validation_data=validation if not FINAL else testing,
@@ -166,6 +166,6 @@ file_information = "epochs = " + str(epochs) + "\nbatch_size = " + str(batch_siz
     "\nmax textlength = " + str(max_length) + "\npreprocess-typ = " + \
     PREPROCESS_TYP + "\nattention model = " + \
     str(attention_model) + "\nbest model with " + mode + " " + monitor
-file_information = file_information + "\ndropout_attention = 0" 
+file_information = file_information + "\ndropout_attention = 0.5\n3 LSTM Layer"
 performance_analysis(testing, nn_model, file_name=file_name, file_information=file_information, verbose=True, accuracy=True,
                      confusion_matrix=True, classification_report=True)

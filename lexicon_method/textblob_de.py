@@ -30,7 +30,7 @@ class TextBlobSentimentAnalysis:
         y_pred = self.predict(X_test)
         metric_list = list()
 
-        with open('results/evaluation_{}.txt'.format(file_name), 'w', encoding="utf-8") as f:
+        with open('results/{}.txt'.format(file_name), 'w', encoding="utf-8") as f:
             if(confusion_matrix):
                 confusion_matrix = metrics.confusion_matrix(y_test, y_pred, labels=[
                     "positive", "neutral", "negative"])
@@ -48,7 +48,7 @@ class TextBlobSentimentAnalysis:
                     print(classification_report, file=f)
         
         if(save_pred):
-            with open('results/evaluation_{}_predictions.txt'.format(file_name), 'w', encoding="utf-8") as f:
+            with open('results/predictions/{}_predictions.txt'.format(file_name), 'w', encoding="utf-8") as f:
                 for i in range(len(y_pred)):
                     print("{}\t{}".format(
                         y_pred[i], X_test[i]), file=f)

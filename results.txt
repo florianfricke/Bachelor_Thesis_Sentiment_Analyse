@@ -1,6 +1,6 @@
 Bitte im RAW Modus anschauen!
 
-## emphrasis and stopwords
+## ekphrasis and stopwords
 ### Lexicon-Method
 confusion matrix:
 [[271 182  48]

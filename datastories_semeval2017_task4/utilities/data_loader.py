@@ -57,8 +57,7 @@ def prepare_text_only_dataset(X, pipeline):
     return X
 
 class Task4Loader:
-    def __init__(self, word_indices, text_lengths, datafolder="data/labeled_sentiment_data/pickle_files/", preprocess_typ="ekphrasis", silver=False,
-                 **kwargs):
+    def __init__(self, word_indices, text_lengths, loading_data=True, datafolder="data/labeled_sentiment_data/pickle_files/", preprocess_typ="ekphrasis", **kwargs):
         self.word_indices = word_indices
         self.y_one_hot = kwargs.get("y_one_hot", True)
 
@@ -67,20 +66,20 @@ class Task4Loader:
                                         max_lengths=text_lengths,
                                         add_tokens=(True),
                                         unk_policy="random"))])
-        
-        print("Loading data...")
-        self.X_train = pickle.load(open(
-            datafolder + "X_train_" + preprocess_typ + ".pickle", "rb"))
-        self.X_test = pickle.load(open(
-            datafolder + "X_test_" + preprocess_typ + ".pickle", "rb"))
-        self.y_train = pickle.load(open(
-            datafolder + "y_train_" + preprocess_typ + ".pickle", "rb"))
-        self.y_test = pickle.load(open(
-            datafolder + "y_test_" + preprocess_typ + ".pickle", "rb"))
+        if(loading_data):
+            print("Loading data...")
+            self.X_train = pickle.load(open(
+                datafolder + "X_train_" + preprocess_typ + ".pickle", "rb"))
+            self.X_test = pickle.load(open(
+                datafolder + "X_test_" + preprocess_typ + ".pickle", "rb"))
+            self.y_train = pickle.load(open(
+                datafolder + "y_train_" + preprocess_typ + ".pickle", "rb"))
+            self.y_test = pickle.load(open(
+                datafolder + "y_test_" + preprocess_typ + ".pickle", "rb"))
 
-        print("-------------------\ntraining set stats\n-------------------")
-        print_dataset_statistics(self.y_train)
-        print("-------------------")
+            print("-------------------\ntraining set stats\n-------------------")
+            print_dataset_statistics(self.y_train)
+            print("-------------------")
 
     def load_train_val_test(self):
         X_val, X_test, y_val, y_test = train_test_split(self.X_test, self.y_test,
@@ -106,3 +105,8 @@ class Task4Loader:
         testing = prepare_dataset(self.X_test, self.y_test, self.pipeline,
                                   self.y_one_hot)
         return training, testing
+    
+    def decode_data_to_embeddings(self, X_data, y_data):
+        embedding_data = prepare_dataset(X_data, y_data, self.pipeline,
+                                    self.y_one_hot)
+        return embedding_data

@@ -1,7 +1,7 @@
 epochs = 50
 batch_size = 10
 max textlength = 50
-preprocess-typ = emphrasis
+preprocess-typ = ekphrasis
 attention model = None
 best model with max val_acc
 3 LSTM Layer

@@ -16,18 +16,18 @@ from multinomial_naive_bayes.multinomial_naive_bayes import MultinomialNaiveBaye
 import pickle
 
 path = "data/labeled_sentiment_data/pickle_files/"
-preprocess_typ = "emphrasis"
+preprocess_typ = "stopwords"
 
 ############################################################################
 # Preprocess Data
 ############################################################################
-runprocessing = False
+runprocessing = True
 
 if(runprocessing):
     datafolders = [["labeled_sentiment_data/htw_data/join_data_clean.tsv", "\t", 0, 1]]
     data = Preprocessing(datafolders=datafolders, save_data_path=path)
-    clean_data = data.emphrasis_preprocessing()
-    # clean_data = data.remove_stopwords(clean_data)
+    clean_data = data.ekphrasis_preprocessing()
+    clean_data = data.remove_stopwords(clean_data)
     data.save_clean_data(clean_data, path, preprocess_typ)
 
 ############################################################################
@@ -43,10 +43,10 @@ y_test = pickle.load(
 ############################################################################
 # Lexicon Method
 ############################################################################
-run_lexicon_method = False
+run_lexicon_method = True
 
 if(run_lexicon_method):
-    results_file_name = "htw_data_{}_lexiconmethod".format(preprocess_typ)
+    results_file_name = "{}/evaluation_htw_data_{}_lexiconmethod".format(preprocess_typ, preprocess_typ)
 
     print("run lexicon-method")
     sentiment_files = get_filenames_from_directory(
@@ -62,10 +62,11 @@ if(run_lexicon_method):
 ############################################################################
 # textblob-de
 ############################################################################
-run_textblob = False
+run_textblob = True
 
 if(run_textblob):
-    results_file_name = "htw_data_{}_textblob".format(preprocess_typ)
+    results_file_name = "{}/evaluation_htw_data_{}_textblob".format(
+        preprocess_typ, preprocess_typ)
 
     print("run textblob-de")
     textblob_model = TextBlobSentimentAnalysis()
@@ -81,7 +82,7 @@ if(run_textblob):
 run_mnb = True
 
 if(run_mnb):
-    results_file_name = "htw_data_{}_mnb".format(preprocess_typ)
+    results_file_name = "{}/evaluation_htw_data_{}_mnb".format(preprocess_typ, preprocess_typ)
 
     print("run multinomial naive bayes")
     mnb_model = MultinomialNaiveBayes(

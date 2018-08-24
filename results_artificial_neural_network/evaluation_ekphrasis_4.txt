@@ -1,7 +1,7 @@
 epochs = 20
 batch_size = 20
 max textlength = 50
-preprocess-typ = emphrasis
+preprocess-typ = ekphrasis
 attention model = simple
 best model with min val_loss
 dropout_attention = 0
