@@ -46,8 +46,8 @@ RESULT_PATH = "results_artificial_neural_network/"
 MODEL_FILE_NUMBER = len(
     glob.glob(os.path.join(RESULT_PATH, "model_history_{}*.pickle".format(PREPROCESS_TYP)))) + 1
 
-def best_model(): return "{}model_{}_{}.hdf5".format(
-    RESULT_PATH, PREPROCESS_TYP, MODEL_FILE_NUMBER)
+def best_model(): return "{}{}/model_{}_{}.hdf5".format(
+    RESULT_PATH, PREPROCESS_TYP, PREPROCESS_TYP, MODEL_FILE_NUMBER)
 
 def best_model_word_indices(): return "{}model_word_indices_{}.{}.pickle".format(DATAFOLDER, WV_CORPUS, WV_DIM)
 
@@ -155,13 +155,13 @@ history = nn_model.fit(training[0], training[1],
                        epochs=epochs, batch_size=batch_size,  
                        class_weight=class_weights, callbacks=_callbacks)
 
-pickle.dump(history.history, open("{}model_history_{}_{}.pickle".format(
-    RESULT_PATH, PREPROCESS_TYP, MODEL_FILE_NUMBER), "wb"))
+pickle.dump(history.history, open("{}{}/model_history_{}_{}.pickle".format(
+    RESULT_PATH, PREPROCESS_TYP, PREPROCESS_TYP, MODEL_FILE_NUMBER), "wb"))
 
 ############################################################################
 # Evaluation
 ############################################################################
-file_name = "{}_{}".format(PREPROCESS_TYP, MODEL_FILE_NUMBER)
+file_name = "{}/evaluation_{}_{}".format(PREPROCESS_TYP, PREPROCESS_TYP, MODEL_FILE_NUMBER)
 file_information = "epochs = " + str(epochs) + "\nbatch_size = " + str(batch_size) + \
     "\nmax textlength = " + str(max_length) + "\npreprocess-typ = " + \
     PREPROCESS_TYP + "\nattention model = " + \

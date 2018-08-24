@@ -12,7 +12,7 @@ import pickle
 import os
 
 def performance_analysis(testing, model, file_name="", file_information="", verbose=True, accuracy=True, confusion_matrix=True, classification_report=True, **kwargs):
-    with open('results_artificial_neural_network/evaluation_{}.txt'.format(file_name), 'w') as f:
+    with open('results_artificial_neural_network/{}.txt'.format(file_name), 'w') as f:
         print(file_information, file=f)
         y_pred = model.predict(testing[0])
         y_pred = y_pred.argmax(axis=1)
@@ -41,7 +41,7 @@ def performance_analysis(testing, model, file_name="", file_information="", verb
                 print(classification_report, file=f)
 
         if(kwargs.get('save_pred', False) and kwargs.get('X_test_unprocessed', False)):
-            with open('results_artificial_neural_network/predictions/evaluation_{}_predictions.txt'.format(file_name), 'w', encoding="utf-8") as f:
+            with open('results_artificial_neural_network/predictions/{}_predictions.txt'.format(file_name), 'w', encoding="utf-8") as f:
                 for i in range(len(y_pred)):
                     print("{}\t{}".format(
                         y_pred[i], X_test_unprocessed[i]), file=f)
