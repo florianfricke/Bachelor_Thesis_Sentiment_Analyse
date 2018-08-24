@@ -1,0 +1,975 @@
+negative	bist du ein mann
+negative	bin ich böse
+neutral	bist du verheiratet
+neutral	kennst du cortana
+negative	hast du dir gemerkt was hier ist
+neutral	tanz ich grade
+neutral	alter hab ich recht
+neutral	kennst du kommander data
+negative	hast du dir gemerkt was das ist
+neutral	kennst du data
+neutral	bist du männlich
+negative	hab ich recht
+neutral	magst du mich
+neutral	bist du eine ki
+positive	magst du emilimo
+negative	was denkst du über
+neutral	bist du eine künstliche intelligenz
+negative	was weißt du alles
+neutral	bist du weiblich
+neutral	ist der aus
+positive	wie schmecken bunte wäscheklammern
+neutral	darf ich dich mal anfassen
+negative	seh ich behindert aus
+neutral	kennst du den terminator
+neutral	hast du ein bewusstsein
+neutral	bin ich ein einbrecher
+neutral	was denkst du über cortana
+negative	bist du ein mensch
+neutral	bist du eine frau
+neutral	hast du eine freundin
+positive	bin ich lieb
+neutral	magst du siri
+neutral	bist du intelligent
+neutral	ist das ein hund
+neutral	wie alt bist du denn
+negative	kannst du mir dein alter sagen
+neutral	roboter wie ist dein alter
+neutral	wie viele jahre bist du alt
+neutral	bist du älter als ich
+negative	wohnst du schon lange hier
+neutral	wann wurdest du erschafffen
+negative	wann wurdest du gebaut
+neutral	wie ist dein alter
+neutral	tesaro wie alt bist du
+neutral	tesaro wann hat man dich gebaut
+neutral	alter
+neutral	roboter wie alt bist du
+neutral	roboter wann wurdest du gebaut
+negative	wie lange wohst du schon hier
+neutral	wann baute man dich
+neutral	dein alter tesaro
+neutral	wann baute man dich tesaro
+neutral	darf ich dein alter erfahren
+neutral	tesaro wie ist dein alter
+neutral	und dein alter roboter
+neutral	wann hat man dich erschaffen
+neutral	dein alter
+negative	wie lange gibt es dich schon
+neutral	wann hat man dich erbaut
+neutral	und wie alt bist du
+neutral	wie alt bist du roboter
+positive	gern tesaro
+neutral	erzähle mir mehr
+neutral	sehr gern
+negative	ja erzähl mal
+negative	ja ja tesaro
+neutral	nu klar roboter
+negative	dann erzähl mal
+negative	okay
+negative	ja erzähl mal noch ein bisschen
+negative	na klar
+positive	na gut
+negative	ja erzähl mal was
+negative	ja doch erzähl mal
+negative	ja
+negative	na immer mehr
+neutral	gern
+neutral	ok roboter
+negative	gerne ja
+neutral	ja gerne
+neutral	erzähle noch mehr
+neutral	ja roboter
+neutral	ich will mehr darüber wissen
+negative	ja bitte
+neutral	dann erzähl mal roboter
+neutral	auf jeden fall tesaro
+negative	nu klar
+negative	ok
+negative	ja erzähl mal noch ein bisschen mehr
+neutral	natürlich roboter
+neutral	alles klar roboter
+negative	jo
+negative	hast du schlechte laune
+positive	wie gehts dir
+negative	geht es dir schlecht
+positive	wie ist deine laune
+positive	hast du gute laune
+neutral	wie geht es dir
+negative	fühlst du dich gut
+positive	wie gehts dir heute
+negative	wie fühlst du dich
+negative	bist du gut drauf
+neutral	fühlst du dich hier im museum wohl
+neutral	mich interessiert der analogrechner
+positive	führe mich bitte zu dem analogrechner
+neutral	kannst du uns mal zum analogrechner führen
+neutral	analogrechner
+positive	zeige mir bitte dem analogrechner
+neutral	dann vielleicht etwas über analogrechner
+neutral	analogrechner bitte
+neutral	ich möchte mehr über den analogrechnererfahren
+positive	na dann zum analogrechner
+neutral	führe mich zu dem analogrechner
+neutral	der analogrechner
+neutral	ich möchte mehr über den analogrechner wissen
+neutral	weisst du wie du heißt
+neutral	wie ist dein name
+neutral	wer bist du roboter
+neutral	was machst du hier im museum
+negative	kannst du mir deinen namen sagen
+neutral	wie heißt du
+neutral	wer bist du
+neutral	wer sind sie
+neutral	wie heißen sie
+negative	bitte nenne mir deinen namen
+neutral	sag mir wie du heist
+negative	sagst du mir bitte deinen namen
+neutral	hey roboter kannst du mir deinen namen sagen
+negative	kannst du mir sagen wie man dich nennt
+negative	kannst du deinen namen sagen
+neutral	kennst du deinen namen
+negative	weisst du wer du bist
+neutral	wie heißt du roboter
+neutral	kannst du mir sagen wie du heißt
+negative	wie nennt man dich
+neutral	sag mir deinen namen
+neutral	roboter sag mir wie du heißt
+negative	können sie mir ihren namen sagen
+neutral	roboter wer bist du
+neutral	bist du ein echter roboter
+negative	wie nennen sie dich
+neutral	ich möchte mehr über die rechenmaschiene erfahren
+neutral	mechanische rechenmaschinen
+neutral	die mechanische rechenmaschiene
+neutral	kannst du mir die rechenmaschine zeigen
+neutral	ich möchte mehr über die mechanische rechenmaschiene erfahren
+neutral	die rechenmaschiene
+neutral	die mechanische rechenmaschiene bitte
+neutral	erläutere bitte die mechanische rechenmaschiene
+neutral	führe mich bitte zu der mechanischen rechenmaschiene
+neutral	rechenmaschiene bitte
+negative	kannst du mir etwas über die rechenmaschiene erzählen
+neutral	rechenmaschine
+neutral	zeige mir bitte die mechanische rechenmaschiene
+neutral	kannst du uns mal zur rechenmaschiene führen
+neutral	die rechenmaschiene bitte
+neutral	führe mich zu der rechenmaschiene
+positive	zeige mir bitte die rechenmaschiene
+neutral	mich interessiert die rechenmaschiene
+neutral	mich interessiert die mechanische rechenmaschiene
+neutral	kannst du uns mal zum der mechanischen rechenmaschiene führen
+neutral	führe mich zu der mechanischen rechenmaschiene
+neutral	ein digitales system für technische zeichnungen
+neutral	führe mich zu dem system für technische zeichnungen
+neutral	wir gehen zu diesem riesenmonitor
+neutral	zeige mir bitte das system zum zeichnen
+neutral	monitor
+neutral	jetzt will ich aber auch einen riesigen monitor sehen
+neutral	das system für technische zeichnungen
+neutral	kannst du uns bitte einen ganz ganz großen computer zeigen
+neutral	zeige mir bitte das system für technische zeichnungen
+neutral	ich möchte mehr über das system für technische zeichnungen wissen
+neutral	mich interessiert das system zum zeichnen
+neutral	kannst du uns mal zum das system zum zeichnen führen
+neutral	erläutere bitte das system zum zeichnen
+neutral	führe mich bitte zu dem system für technische zeichnungen
+neutral	ich möchte mehr über das system zum zeichnen erfahren
+neutral	das system zum zeichnen bitte
+neutral	mich interessiert das system für technische zeichnungen
+neutral	führe mich zu dem system zum zeichnen
+neutral	führe mich bitte zu dem system zum zeichnen
+neutral	dann nehmen wir mal den monitor
+neutral	das system zum zeichnen
+neutral	kannst du mir etwas über das system für technische zeichnungen erzählen
+neutral	sprichst du sprachen ausser deutsch
+neutral	ich kann drei sprachen und du
+neutral	sprichst du weitere sprachen
+neutral	kannst du andere sprachen ausser deutsch
+neutral	wie viele sprachen kannst du noch
+neutral	ich kann englisch sprechen und du
+negative	sprichst du fanzösisch
+neutral	sprichst du spanisch
+neutral	kannst du weitere sprachen ausser deutsch
+neutral	sprichst du noch eine sprache
+neutral	sprichst du viele sprachen
+neutral	sprichst du englisch
+neutral	sprichst du eine andere sprache
+neutral	ich kann viele sprachen und du
+neutral	wie viele sprachen kannst du
+neutral	welche sprachen sprichst du
+neutral	ich kann 3 sprachen und du
+neutral	sprichst du andere sprachen
+negative	wird es dann regnen
+negative	weißt du wie das wetter morgen wird
+neutral	wie ist das wetter
+positive	wird morgen schönes wetter
+negative	wird es regnen
+negative	kann es später regnen
+positive	wie wird das wetter morgen
+negative	weißt du wie das wetter wird
+negative	wird es dann noch regnen
+negative	kannst du mir sagen wie das wetter wird
+positive	wird diese woche schönes wetter
+negative	regnet es
+negative	wird es heute noch regnen
+neutral	wird es heute noch regen geben
+neutral	weisst du etwas über das wetter
+negative	kannst du mir etwas über das wetter sagen
+neutral	wer hat dich entwickelt
+neutral	hast du dich entwickelt
+neutral	kannst du mir etwas über deine erbauer erzälen
+neutral	wer sind deine entwickler
+neutral	wer hat dich zusammengebaut
+neutral	kommst du aus dresden
+neutral	kommst du aus der region
+neutral	wer ist dein vater
+negative	von wem wurdest du gebaut
+neutral	wer sind deine eltern
+neutral	kommst du von hier
+neutral	wer hat dich gemacht
+neutral	und wer hat dich entwickelt
+neutral	und wer hat dich gebaut
+neutral	und wer hat dich erschaffen
+neutral	von wem wurdest du entwickelt
+neutral	wo kommst du her
+neutral	wer hat dich geschaffen
+negative	von wem wurdest du erbaut
+negative	von wem wurdest du gemacht
+neutral	kannst du mich durch die ausstellung führen
+neutral	keine ahnung was kann ich dich denn fragen
+neutral	ok was kannst du uns noch mehr über rechner sagen
+neutral	was kann ich dich denn noch fragen
+neutral	was kannst du
+neutral	kannst du mir etwas bieten
+neutral	was kannst du noch
+negative	was kannst du mir sagen
+neutral	kannst du die geräte anzeigen
+neutral	was kannst du alles
+neutral	was kann ich dich fragen
+negative	was kannst du für mich tun
+neutral	was kannst du alles machen
+neutral	wie kannst du mir bitte helfen
+neutral	was gibts denn
+neutral	was kannst du machen
+neutral	was gibt es denn zum anschauen
+negative	was kannst du tun
+neutral	was kannst du mir zeigen
+neutral	kannst du mir eine führung geben
+negative	der kann laufen
+neutral	fahr bitte schneller
+negative	warum fährst du so langsam
+neutral	du bist lahm
+negative	du bist viel zu langsam
+negative	der roboter ist aber echt lahm
+neutral	lauf bitte schneller
+neutral	der roboter ist aber lahm
+neutral	du bist aber nicht besonders schnell
+neutral	schnell ist der roboter aber nicht
+negative	kannst du auch fahren oder laufen
+neutral	der ist aber nicht schnell
+neutral	kannst du bitte schneller fahren
+neutral	man ist der roboer lahm
+neutral	wann sind wir da
+neutral	kannst du jetzt mal bitte schneller fahren
+neutral	mach schneller
+neutral	warum bist du so lahm
+neutral	fahr schneller du langsamer roboter
+negative	du bist echt langsam
+neutral	wie schnell kannst du rennen
+neutral	warum bist du nicht schneller
+negative	warum bist du so langsam
+negative	der kann nicht laufen
+neutral	alter ist der lahm
+neutral	tesaro zeigst du mir jetzt den ältesten computer der welt
+neutral	was ist drei mal neun
+neutral	was ist ein plus eins
+neutral	tesaro zeigst du uns mal bitte den ältesten computer den es hier gibt
+negative	was ist das sag es mir mal
+negative	kannst du schreien
+neutral	kannst du uns den ältesten computer der welt zeigen
+neutral	kannst du dich noch erinnern was das hier ist
+neutral	kannst du meine hand sehen
+negative	kann der auch lieder singen
+negative	kannst du hüpfen
+neutral	sing doch mal was
+negative	kannst du ein lied singen
+negative	sag mal so so sing mal ein lied oder so
+neutral	kannst du mir was zu essen geben
+neutral	ich möchte mehr über den heimcomputer wissen
+neutral	der ddr computer
+neutral	der heimcomputer
+neutral	zeige mir bitte das gerät aus der ddr
+neutral	zeige mir den heimcomputer
+neutral	den heimcomputer
+neutral	ich möchte mehr über den heimcomputer erfahren
+neutral	ich würde gern den ddr computer sehen
+neutral	der heimcomputer bitte
+neutral	führe mich bitte zu dem heimcomputer
+neutral	den ddr computer bitte
+neutral	kannst du mir etwas über den heimcomputer erzählen
+neutral	erläutere bitte den heimcomputer
+neutral	führe mich zu dem heimcomputer
+negative	sagst du mir wie spät es ist
+negative	sagst du mir bitte die uhrzeit
+neutral	wie viel uhr haben wir es
+negative	kannst du mir die uhrzeit sagen
+negative	kannst du mir die uhrzeit nennen
+negative	sagst du mir bitte wie spät es ist
+negative	sag mir wie spät es ist
+negative	kannst du mir die zeit sagen
+negative	kannst du mir die zeit nennen
+negative	wie spät haben wir gerade
+neutral	wie viel uhr ist es
+negative	kannst du mir sagen wie spät es ist
+negative	sag mir doch bitte wie spät es ist
+neutral	kann ich dich nach der zeit fragen
+neutral	weißt du wieviel uhr es ist
+neutral	was sagt die uhr
+neutral	kannst du mir dein
+neutral	sagst du mir dein gewicht
+negative	wie viel wiegst du so
+neutral	der roboter ist bestimmt schwer
+negative	was wiegst du
+neutral	verräst du mir dein gewicht
+negative	bist du schwer
+negative	bist du schwerer als ein mensch
+negative	was wiegst du so
+negative	kannst du mir sagen wieviel du wiegst
+negative	wie schwer kann der schon sein
+negative	wie viel wiegst du
+negative	du bist bestimmt schwer
+negative	was wiegst du eigentlich
+negative	echt wie viel wiegst denn du
+neutral	wie schwer ist so ein roboter
+negative	wiegst du viel
+negative	bist du sehr schwer
+negative	huhu
+neutral	na du roboter
+positive	sei gegrüßt roboter
+neutral	servus
+neutral	hallo
+positive	moin moin
+neutral	sag mal hallo
+neutral	na du roboter sag mal hallo
+neutral	hey roboter kannst du hallo sagen
+neutral	hi roboter
+positive	hi tesaro
+neutral	kannst du hallo sagen
+positive	guten tag roboter
+neutral	hallo roboter
+neutral	hallo tesaro
+positive	servus tesaro
+positive	guten tag
+neutral	hallo tesaro hörst du mich
+neutral	hi hallo
+neutral	hey roboter
+positive	sei gegrüßt
+positive	huhu hallo
+positive	mahlzeit
+positive	huhu tesaro
+neutral	servus roboter
+neutral	moin roboter kannst du hallo sagen
+positive	moin
+neutral	kannst du uns begrüßen
+negative	na du
+positive	grüß gott
+neutral	hi roboter kannst du hallo sagen
+positive	schönes wochenende
+neutral	bis später
+neutral	bis zum nächsten mal
+positive	bis morgen tesaro
+positive	schönen tag noch
+neutral	bis denn tesaro
+positive	tschüs
+positive	bis morgen
+positive	ciao
+neutral	auf wiederschauen roboter
+neutral	wir sehen uns
+positive	schön feierabend
+positive	schönen tag
+positive	auf wiederschauen
+neutral	bis später roboter
+positive	auf wiedersehen anna
+positive	bis die tage tesaro
+positive	tschau
+neutral	bis demnächst roboter
+neutral	bis bald
+neutral	bis demnächst tesaro
+neutral	bis dann
+positive	machs gut
+neutral	bis nachher roboter
+neutral	bis die tage
+positive	tschüss tesaro
+positive	tschüss anna
+neutral	bis morgen roboter
+positive	auf wiedersehen
+positive	bye tesaro
+positive	bis zum nächsten mal tschau
+neutral	bis nachher
+neutral	tschüs roboter
+neutral	bis zum nächsten mal roboter
+positive	ich verabschiede mich jetzt
+neutral	bis die tage roboter
+neutral	auf wiedersehen roboter
+neutral	ich gehe jetzt
+negative	bye
+neutral	bis dann tesaro
+negative	sei mal lustig
+neutral	kennst du witziges
+negative	kennst du lustige späße
+negative	scherzt du manchmal
+negative	erzähle einen witz
+negative	kannst du komisch sein
+neutral	kannst du was lustiges machen
+neutral	erzähle mir bitte etwas lustiges
+negative	kannst du mir einen witz erzählen roboter
+neutral	sag was lustiges
+neutral	mache etwas lustiges
+negative	erzähle einen witz tesaro
+neutral	sag was lustiges roboter
+negative	kennst du witze
+positive	verstehst du spass
+negative	sei mal bitte witzig
+negative	kannst du was lustiges erzählen
+negative	roboter kannst du witze erzählen
+negative	kannst du witze erzählen
+negative	kannst du was lustiges sagen
+negative	witz
+negative	kannst du mir einen witz erzählen
+negative	erzähle mir bitte einen witz roboter
+negative	kennst du lustige witze
+negative	kannst du bitte einen witz erzählen
+negative	erzähle mir bitte einen witz tesaro
+neutral	sag doch mal was lustiges
+neutral	wann wird das museum schließen
+neutral	wie lang ist das museum noch offen
+neutral	wann machst du feierabend
+neutral	wann schliesst das museum so
+neutral	wann wird das museum heute geschlossen
+neutral	wie lang ist das museum heute noch offen
+neutral	wann macht das museum heute zu
+neutral	wie lang hat das museum heute geöffnet
+neutral	wie lang hat das museum geöffnet
+neutral	weißt du wann das museum heute geschlossen wird
+neutral	kannst du mir sagen wann das museum schließt
+neutral	wann wird das museum heute schließen
+neutral	wie lang hat das museum offen
+neutral	wann schliesst das museum heute
+neutral	wann schliesst das museum
+neutral	wie lang hat das museum heute offen
+neutral	wie lang habt ihr offen
+neutral	wann wird das museum geschlossen
+neutral	wann machst du heute feierabend
+neutral	darf ich schon mal vorgehen
+negative	kannnst du sprechen
+negative	kannst du hören was ich sage
+negative	bist du oft hier
+neutral	bist du klüger als google
+neutral	bist du besser als siri
+neutral	bist du gern hier
+neutral	bist du besser als cortana
+negative	kannnst du etwas sagen
+neutral	kannst du hören
+neutral	darf ich dich anfassen
+neutral	bist du besser als ich
+neutral	kannst du mich hören
+positive	freust du dich mich zu sehen
+neutral	sprichst du
+negative	bist du schlau
+negative	hörst du was ich sage
+neutral	kannst du mich sehen
+negative	bist du klüger als siri
+negative	sind deine eltern stolz auf dich
+negative	kannst du sprechen
+positive	bist du ein toller roboter
+negative	sind deine sehr eltern stolz auf dich
+neutral	bist du besser als google
+neutral	bist du klüger als cortana
+negative	bist du gut im witze erzählen
+negative	kannnst du auch sprechen
+positive	nein danke tesaro
+neutral	auf keinen fall tesaro
+neutral	never
+neutral	nein danke roboter
+negative	nö tesaro
+neutral	nicht wirklich roboter
+negative	nein hat er nicht tesaro
+negative	nein hat er nicht
+negative	das reicht
+neutral	nein ich habe keine fragen mehr tesaro
+neutral	nein ich habe keine fragen mehr roboter
+negative	nein nicht wirklich
+negative	nein tesaro
+neutral	never roboter
+neutral	nein ich habe keine fragen
+negative	nicht wirklich
+neutral	nein ich habe keine fragen tesaro
+neutral	das reicht roboter
+negative	nö
+negative	nein auf keinen fall tesaro
+negative	nein
+negative	nein auf keinen fall
+neutral	das reicht tesaro
+neutral	nein roboter
+negative	Alles klar. negative positive
+neutral	Bereit.
+neutral	Dann erzähl mal.
+neutral	Gerne.
+negative	Gerne. Ja.
+negative	Ja.
+negative	Ja bitte.
+negative	Ja, erzähl mal was.
+neutral	Ja gerne.
+negative	Ja ja doch.
+negative	Ja ja, hab ich.
+negative	Ja klar.
+neutral	Na gut.
+negative	Na klar.
+neutral	Natürlich.
+neutral	Noch mehr.
+negative	Okay.
+neutral	Okay, dann kommen wir mal wieder.
+neutral	Sehr gern.
+neutral	Der erste Computer auf der Welt war Z1.
+negative	Dient zum Rechnen, Schreiben?
+neutral	Eine Schreibmaschine ist eine Maschine mit der man schreiben kann.
+neutral	Ähm was sind das für Geräte?
+neutral	Darf ich die mal anfassen?
+negative	Echt. Wie viel wiegst denn du?
+negative	Erklär mir mal bitte die Sortiermaschine.
+neutral	Frag mal, warum der Bildschirm rund ist.
+negative	Führst du uns bitte zum Analogrechner?
+neutral	Funktioniert der mit Farbe oder Schwarz-Weiß?
+neutral	Ist der aus?
+negative	Kann man da schon krasse Spiele drauf spielen?
+negative	Kannst du auch fahren oder laufen?
+neutral	Kannst du die Geräte anzeigen?
+negative	Kannst du etwas mehr darüber sagen?
+neutral	Kannst du mir etwas bieten?
+negative	Kannst du uns bitte einen ganz ganz großen Computer zeigen?
+negative	Kannst du uns das auch erklären?
+negative	Kannst du uns den ältesten Computer der Welt zeigen?
+negative	Kannst du uns mal zum Analogrechner führen?
+negative	Keine Ahnung, was kann ich dich denn noch fragen?
+negative	Macht der das selber?
+neutral	Mmh tja. Und was kann man damit sonst noch so machen?
+neutral	Na was denn dann?
+neutral	Ok. Was kannst du uns noch mehr über Rechner sagen?
+neutral	Tesaro, zeigst du mir jetzt den ältesten Computer der Welt?
+neutral	Tesaro zeigst du uns mal bitte den ältesten Computer den es hier gibt?
+neutral	Tesaro zeigst du uns mal bitte eine Schreibmaschine?
+neutral	Und wie alt bist du?
+negative	Und wozu hat man dann so ein Riesending gebaut?
+neutral	Was?
+neutral	Was das alles kann?
+neutral	Was gibt es denn zum Anschauen?
+neutral	Was gibts denn?
+negative	Was hat man denn damit gemacht? Das wär jetzt mal interessant.
+neutral	Was hatten wir da am Anfang?
+neutral	Was hatten wir noch nicht?
+neutral	Was ist das?
+negative	Was kannst du mir denn sonst noch so erzählen?
+negative	Was konnte denn das Ding alles?
+negative	Was konnte man darauf zocken?
+neutral	Was weißt du alles?
+neutral	Weiß ich nicht so richtig. Was kannst du mir empfehlen?
+neutral	Welche Programmiersprache war das?
+negative	Wer hat sich das denn alles ausgedacht?
+neutral	Wie alt bist du?
+neutral	Wie funktioniert diese Maschine?
+negative	Wie heißt das Ding?
+neutral	Wie lange dauert denn das Programmieren damit?
+neutral	Wie viel Speicher hat er denn gehabt?
+negative	Wurden sehr viele davon produziert?
+neutral	Aber ich.
+negative	Aha.
+negative	Das stimmt.
+neutral	Folge mir.
+neutral	Jetzt gehts weiter.
+negative	Jo.
+negative	Weiß ich nicht.
+neutral	Weißt du Bescheid.
+neutral	Wir sind angekommen.
+negative	Das ist aber ein bisschen spärlich.
+negative	Das ist aber schade.
+negative	Das ist aber unhöflich. Ich hätte dich sogar eingeladen.
+negative	Das ist schade. Ich dachte wir gehen jetzt ein Bier zusammen trinken.
+negative	Das könnte ich mir eigentlich auch da vorne angucken.
+negative	Das müsstest du aber eigentlich wissen. Das weiß ich.
+negative	Der braucht aber lange um anzukommen.
+negative	Der ignoriert uns einfach.
+negative	Jetzt auch noch angepisst sein. Na toll.
+negative	Och nö. Irgendwie. Nö gerade nicht.
+negative	Oh schade.
+negative	Schade.
+neutral	Schon dabei. Jetzt drängel doch nicht so.
+neutral	Wir wollen was anders sehen.
+negative	Der ist doch nicht gruselig.
+positive	Du auch. Danke.
+neutral	Ganz gut.
+neutral	Gut.
+negative	Gut reicht jetzt.
+negative	Ich finde den übelst witzig.
+positive	Ich hab dich lieb Tesaro.
+negative	Ist ja mal cool.
+negative	Ja das ist sie.
+neutral	Na dann mal weiter.
+neutral	Ok. Ich bin fertig.
+neutral	sehr interessant.
+negative	Achso.
+negative	Arschloch.
+negative	Das stinkt hast du geforzt?
+negative	Der hat gar keine Haare.
+negative	Der lenkt um.
+neutral	Ein Totenkopf.
+neutral	Emilio.
+negative	Er kann laufen.
+neutral	Fährt der jetzt da raus?
+negative	Geh mal weg, damit er vorbei kann.
+negative	Glaub ich nicht. Ich glaub der fährt so vorwärts.
+negative	Hä, wo will er denn hin?
+neutral	Mama kommst du mit?
+negative	Mist.
+neutral	Mmh.
+neutral	Na dann.
+negative	Oh Mist schon wieder.
+negative	Oh was.
+neutral	Sieht aus wie ein Staubsauger.
+negative	Uh.
+negative	Wieso hinterher? Der fährt doch rückwärts.
+negative	Witzig das Ding.
+negative	Oh aus dem Weg.
+negative	Bis zum nächsten Mal. Tschau.
+neutral	Tschüss.
+neutral	Tschüss Tesaro.
+neutral	Hallo.
+neutral	Hallo lieber Roboter.
+neutral	Hallo Tesaro.
+neutral	Hallo Tesaro, hörst du mich?
+neutral	Hier sind wir.
+negative	Das reicht.
+negative	Nein.
+negative	Nein, danke.
+negative	Nein hat er nicht.
+neutral	ein, ich habe keine Fragen.
+negative	Nö.
+neutral	Analogrechner.
+neutral	Dann nehmen wir mal den Monitor.
+negative	Dann vielleicht etwas über Analogrechner.
+neutral	Den Heimcomputer.
+neutral	Den riesigen Monitor wuerde ich gerne mal sehen.
+neutral	Die goldene Maschine.
+neutral	Ein digitales System für technische Zeichnungen.
+negative	Erklärst du uns mal was?
+neutral	Erzähl mal was.
+neutral	Hab ich doch gesagt. Das Cafe.
+negative	Ich will mehr darüber wissen.
+negative	Irgendwas erzählen.
+negative	Ja doch, erzähl mal.
+negative	Ja erzähl mal.
+negative	Ja erzähl mal noch ein bisschen.
+negative	Ja erzähl mal noch ein bisschen mehr.
+neutral	Jetzt will ich aber auch einen riesigen Monitor sehen.
+neutral	Kühlschränke.
+neutral	Mechanische Rechenmaschinen.
+neutral	Monitor.
+negative	Na dann zum Analogrechner.
+neutral	Na immer mehr.
+neutral	Na was.
+neutral	Na was anderes.
+negative	Och öh das Cafe.
+negative	Och, weißt du noch irgendwas darüber?
+neutral	Rechenmaschine.
+neutral	Sag mal hallo.
+neutral	Schreibmaschinen.
+neutral	Wir gehen zu diesem Riesenmonitor.
+neutral	Zeig mal wo die steht.
+neutral	Alter hab ich Recht?
+negative	Anstrengend heh?
+negative	Bin ich böse?
+neutral	Bin ich ein Einbrecher?
+positive	Bin ich lieb?
+negative	Bist du krank?
+neutral	Bist du reich?
+negative	Dann sag es mir mal bitte.
+neutral	Darf ich jetzt auch mal?
+neutral	Folgst du mir bitte Tesaro?
+neutral	Gehen wir noch zusammen einen trinken?
+neutral	Geht es dir gut?
+negative	Hab ich Recht?
+negative	Hast du Arme?
+negative	Hast du dir gemerkt was das hier ist?
+negative	Hast du dir gemerkt was das ist?
+neutral	Hast du eine Freundin?
+neutral	Ist das ein Hund?
+neutral	Kann der auch Lieder singen?
+negative	Kannst du bitte Qartett spielen?
+negative	Kannst du dich noch erinnern was das hier ist?
+neutral	Kannst du eigentlich auch tanzen?
+negative	Kannst du ein Lied singen?
+negative	Kannst du hüpfen?
+neutral	Kannst du meine Hand sehen?
+neutral	Kannst du mir bitte Eis holen?
+neutral	Kannst du mir was zu essen geben?
+neutral	Kannst du Qartett spielen?
+neutral	Magst du Emilio?
+negative	Putzt du dir alleine die Zähne?
+negative	Roboter darf ich schonmal vorgehen?
+negative	Sag mal so so sing mal ein Lied oder so.
+negative	Seh ich behindert aus?
+neutral	Seh ich cool aus?
+neutral	Sieht der alles Schwarz-Weiß?
+neutral	Sieht der auch farbig?
+neutral	Tanz ich grade?
+neutral	Und selbst?
+neutral	Und wie gehts dir so?
+neutral	Wann sind wir da?
+neutral	Was ist das? Sag es mir mal.
+neutral	Was ist ein plus eins?
+neutral	Weißt du was das ist?
+neutral	Weißt du wie ich heiße?
+neutral	Weißt du wo die Toilette ist?
+neutral	Wie wird das Wetter morgen?
+neutral	Willst du Eis?
+neutral	Wohnst du schon lange hier?
+positive	Cool. Ich freue mich dich kennenzulernen.
+negative	Dafür kann er nichts.
+neutral	Da ist Wochenende. Da können wir morgen nochmal vorbeikommen.
+positive	Das ist doch schön.
+neutral	Das ist ein Schlüsselanhänger.
+negative	Der kann laufen.
+negative	Der kann nicht laufen.
+neutral	Du musst in die Kamera reingucken.
+neutral	Ich dachte immer Roboter sind schneller.
+negative	Ist der lustig.
+negative	Ja ganz gut.
+negative	Ja na sicher hat der grade gesagt.
+negative	Jetzt ist er bestimmt sauer.
+neutral	Lass ihn mal fragen.
+negative	Mmh das ist aber ungünstig.
+negative	Mmh komisch.
+negative	Na gut ist ja auch ein Roboter.
+negative	Na ich weiß nicht. Ich hab noch nie einen funktionierenden Roboter gesehen, der rumfährt, vor allem keinen der sich mit mir unterhält.
+neutral	Nochmal Glück gehabt.
+negative	Oh oh, der ist aber langsam.
+negative	Sowas hab ich noch nie gesehen.
+negative	Weil er keine Arme hat.
+negative	Wie heißt er? Tesaro? Ist ja witzig.
+negative	Wir sollen hinterher gehen.
+negative	Wir sollen hinterherlaufen.
+negative	anstrengend heh
+negative	darf ich jetzt auch mal
+negative	hast du dir gemerkt was das hier ist
+neutral	hast du eine frau
+neutral	hast du geheiratet
+negative	kann man da schon krasse spiele drauf spielen
+negative	putzt du dir alleine die zähne
+neutral	und selbst
+negative	bist du menschlich
+negative	wie menschlich bist du
+neutral	kennst du hal
+negative	kennst du hell
+neutral	magst du cortana
+neutral	kennst du siri
+negative	was denkst du über siri
+neutral	bist du alt
+neutral	wie alt bist du tesaro
+neutral	kannst du mir sagen wie alt du bist
+neutral	wann hat man dich gebaut tesaro
+neutral	tesaro wann wurdest du gebaut
+neutral	roboter wann hat man dich gebaut
+neutral	wann hat man dich gebaut
+neutral	wann hat mich dich gebaut
+neutral	wann wurdest du erbaut
+neutral	wie alt bist du
+neutral	und dein alter tesaro
+neutral	dein alter roboter
+negative	alles klar
+negative	alles klar tesaro
+neutral	auf jeden fall
+neutral	gern roboter
+neutral	gerne
+negative	ja ja doch
+negative	ja ja hab ich
+negative	ja klar
+positive	johr
+neutral	natürlich
+neutral	noch mehr
+negative	okay dann kommen wir mal wieder
+neutral	sehr gern roboter
+neutral	na klar roboter
+neutral	okay roboter
+negative	geht es dir gut
+neutral	bist du gern hier im museum
+negative	fühlst du dich schlecht
+positive	wie ist deine laune heute
+negative	führst du uns bitte zum analogrechner
+negative	kannst du mir etwas über den analogrechner erzählen
+neutral	erläutere bitte den analogrechner
+positive	zeige mir den analogrechner
+neutral	bist du ein roboter
+negative	bist du echt ein roboter
+neutral	was bist du
+neutral	nenne mir deinen namen
+neutral	den namen bitte
+neutral	sagst du mir wie du heist roboter
+negative	woher kommst du
+neutral	hey roboter wie heißt du
+neutral	hey roboter wie ist dein name
+neutral	was ist deine aufgabe
+neutral	die goldene maschine
+neutral	ich würde gern die rechenmaschine sehen
+positive	führe mich bitte zu der rechenmaschiene
+neutral	ich möchte mehr über die rechenmaschiene wissen
+neutral	erläutere bitte die rechenmaschiene
+positive	zeige mir die rechenmaschiene
+neutral	kannst du mir etwas über die mechanische rechenmaschiene erzählen
+neutral	ich möchte mehr über die mechanische rechenmaschiene wissen
+neutral	zeige mir die mechanische rechenmaschiene
+neutral	den riesigen monitor wuerde ich gerne mal sehen
+neutral	ich möchte mehr über das system für technische zeichnungen erfahren
+neutral	kannst du uns mal zum system für technische zeichnungen führen
+neutral	das system für technische zeichnungen bitte
+neutral	erläutere bitte das system für technische zeichnungen
+neutral	zeige mir das system für technische zeichnungen
+neutral	kannst du mir etwas über das system zum zeichnen erzählen
+neutral	ich möchte mehr über das system zum zeichnen wissen
+neutral	zeige mir das system zum zeichnen
+negative	kannst du mir sagen wie viele sprachen du sprichst
+neutral	sprichst du mehere sprachen
+neutral	wie viele sprachen sprichst du noch
+neutral	kannst du noch mehr sprachen ausser deutsch
+neutral	was sprichst du ausser deutsch
+neutral	was für sprachen sprichst du so
+positive	wird heute schönes wetter
+negative	wird es später regnen
+negative	soll es später regnen
+neutral	wie wird das wetter
+negative	kann heute es regnen
+negative	wird heute es regnen
+negative	soll es heute regnen
+neutral	kannst du mir etwas über deine entwickler erzälen
+neutral	wer hat dich erschaffen
+neutral	wer hat dich gebaut
+neutral	wer ist dein erbauer
+negative	wer ist deine mutter
+negative	von wem wurdest du geschaffen
+neutral	hast du dich gebaut
+neutral	ich hätte gerne eine führung
+neutral	kannst du mir bitte eine führung geben
+negative	erzähl mal was
+neutral	hilfe
+neutral	ich brauche hilfe
+neutral	keine ahnung was kann ich dich denn noch fragen
+negative	was kannst du mir denn sonst noch so erzählen
+neutral	wie kannst du mir helfen
+negative	du bist aber langsam
+neutral	du bist aber nicht schnell
+neutral	du bist mir zu lahm
+neutral	kannst du schneller fahren
+negative	oh oh der ist aber langsam
+neutral	wie schnell kannst du laufen
+neutral	mach bitte schneller
+neutral	kannst du auch mal schneller fahren
+neutral	fahr schneller du lahmer roboter
+negative	schnell ist der roboter aber echt nicht
+neutral	kannst du bitte qartett spielen
+neutral	kannst du eigentlich auch tanzen
+neutral	kannst du mir bitte eis holen
+neutral	kannst du qartett spielen
+neutral	spring aus dem fenster
+neutral	tesaro zeigst du uns mal bitte eine schreibmaschine
+neutral	was ist eins plus eins
+neutral	mich interessiert der heimcomputer
+neutral	der ddr heimcomputer
+neutral	kannst du uns mal zum heimcomputer führen
+neutral	zeige mir bitte den heimcomputer
+neutral	der ddr computer bitte
+neutral	zeige mir den ddr computer
+negative	weißt du wie spät es ist
+negative	wie spät haben wir es
+negative	wie spät ist es
+neutral	weißt du wie viel uhr wir haben
+negative	wie spät haben wir es gerade
+neutral	kann ich dich nach der uhrzeit fragen
+negative	weißt du die uhrzeit
+negative	wieviel wiegst du eigentlich
+negative	wie schwer bist du
+neutral	wie viel wiegen sie
+negative	der ist bestimmt schwer
+negative	wie schwer wird der wohl sein
+neutral	sag mir dein gewicht
+neutral	nenne mir dein gewicht
+positive	guten tag lieber roboter
+neutral	hallo du da
+neutral	hallo du roboter
+neutral	hallo lieber roboter
+positive	hey
+neutral	hey robo
+positive	hi
+neutral	na du sag mal hallo
+neutral	kannst mich begrüßen
+positive	sei gegrüßt tesaro
+neutral	huhu roboter
+negative	huhu du da
+neutral	huhu sag mal hallo
+positive	schönen abend noch
+positive	auf wiederschauen tesaro
+neutral	bis demnächst
+neutral	bis denn
+neutral	bis bald roboter
+neutral	bis dann roboter
+neutral	bis denn roboter
+positive	bis bald tesaro
+positive	bis nachher tesaro
+positive	bis später tesaro
+neutral	bye roboter
+positive	mach es gut
+negative	man sieht sich
+positive	pass gut auf dich auf
+positive	tschüs tesaro
+positive	tschüss
+neutral	wir sehen uns das nächste mal
+neutral	erzähle einen witz roboter
+negative	erzähle mir bitte einen witz
+negative	kennst du viele witze
+negative	kanst du scherze machen
+neutral	erzähle mir etwas lustiges
+negative	kannst du witzig sein
+negative	kannst du späße machen
+positive	verstehst du spaß
+negative	das ist nicht lustig hier
+negative	sei bitte witzig
+negative	kannst du witze erzählen roboter
+neutral	ist das museum noch lange offen
+neutral	ist das museum heute noch lange offen
+neutral	wann macht das museum zu
+positive	was hast du feierabend
+positive	was hast du heute feierabend
+neutral	wie lang habt ihr heute offen
+neutral	weißt du wann das museum schließt
+neutral	kannst du mir sagen wann das museum heute geschlossen wird
+neutral	wie lang ist noch offen
+negative	bist du besser als mama
+negative	bist du gesprächig
+neutral	gehen wir noch zusammen einen trinken
+negative	hörst du mich
+negative	kannst du mich verstehen
+negative	siehst du mich
+neutral	roboter darf ich schonmal vorgehen
+negative	verstehst du mich
+neutral	wohnst du hier
+negative	bist du witzig
+neutral	bist du ein komiker
+negative	bist du ein komisch
+neutral	wohnst du hier im museum
+neutral	auf keinen fall
+positive	nein danke
+negative	nein nicht wirklich tesaro
+negative	nicht wirklich tesaro
+positive	never tesaro
+neutral	auf keinen fall roboter
+neutral	nein auf keinen fall roboter
+neutral	nein nicht wirklich roboter
+neutral	nö roboter
