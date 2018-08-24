@@ -15,16 +15,18 @@ from data.data_loader import DataLoader
 from utilities.utilities import save_data
 import pickle
 
-class Preprocessing:
-    def __init__(self, datafolders, save_data_path):
+class PreprocessingCorpus:
+    def __init__(self, datafolders, save_data_path, **kwargs):
         self.datafolders = datafolders
         self.dataset = self.get_data()
         self.X = [d[1] for d in self.dataset]  # text
         self.y = [d[0] for d in self.dataset]  # sentiment
-        
-        save_data(self.dataset, path=save_data_path, filename="htw_dataset_unprocessed")
-        save_data(self.X, path=save_data_path, filename="htw_data_X_test_unprocessed")
-        save_data(self.y, path=save_data_path, filename="htw_data_y_test")
+        self.corpus_name = kwargs.get('corpus_name', "")
+    
+        save_data(self.dataset, path=save_data_path, filename="{}_dataset_unprocessed".format(self.corpus_name))
+        save_data(self.X, path=save_data_path,
+                  filename="{}_X_data_unprocessed".format(self.corpus_name))
+        save_data(self.y, path=save_data_path, filename="{}_y_data".format(self.corpus_name))
 
         self.text_processor = TextPreProcessor(
             # terms that will be normalize e.g. test@gmx.de to <email>
@@ -86,4 +88,5 @@ class Preprocessing:
 
     def save_clean_data(self, clean_data, path, preprocess_typ):
         save_data(clean_data, path=path,
-                  filename="htw_data_X_train_clean_{}".format(preprocess_typ))
+                  filename="{}_X_clean_data_{}".format(self.corpus_name, preprocess_typ))
+                  

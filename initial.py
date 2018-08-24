@@ -8,7 +8,7 @@ sys.path.insert(
 
 from utilities.utilities import get_filenames_from_directory
 from utilities.utilities import transform_data
-from data_preprocessing.preprocessing import Preprocessing
+from data_preprocessing.preprocessing_corpus import PreprocessingCorpus
 from data_preprocessing.train_test_split import TrainTestSplit
 from lexicon_method.lexicon_method import LexiconMethod
 from lexicon_method.textblob_de import TextBlobSentimentAnalysis
@@ -29,7 +29,7 @@ run_mnb = True
 if(runprocessing):
     datafolders = [["labeled_sentiment_data/sb10k_corpus.tsv", "\t",
                      1, 4], ["labeled_sentiment_data/million_pos_corpus.tsv", "\t", 0, 1]]
-    data = Preprocessing(datafolders=datafolders, save_data_path=path)
+    data = PreprocessingCorpus(datafolders=datafolders, save_data_path=path)
     clean_data = data.ekphrasis_preprocessing()
     if(preprocess_typ == "stopwords"):
         clean_data = data.remove_stopwords(clean_data)

@@ -8,7 +8,7 @@ sys.path.insert(
 
 from utilities.utilities import get_filenames_from_directory
 from utilities.utilities import transform_data
-from data_preprocessing.preprocessing import Preprocessing
+from data_preprocessing.preprocessing_corpus import PreprocessingCorpus
 from data_preprocessing.train_test_split import TrainTestSplit
 from lexicon_method.lexicon_method import LexiconMethod
 from lexicon_method.textblob_de import TextBlobSentimentAnalysis
@@ -28,7 +28,8 @@ run_mnb = True
 ############################################################################
 if(runprocessing):
     datafolders = [["labeled_sentiment_data/htw_data/join_data_clean.tsv", "\t", 0, 1]]
-    data = Preprocessing(datafolders=datafolders, save_data_path=path)
+    data = PreprocessingCorpus(
+        datafolders=datafolders, save_data_path=path, corpus_name="htw")
     clean_data = data.ekphrasis_preprocessing()
     if(preprocess_typ == "stopwords"):
         clean_data = data.remove_stopwords(clean_data)
@@ -40,9 +41,9 @@ if(runprocessing):
 X_train = pickle.load(open("{}X_train_{}.pickle".format(path, preprocess_typ), "rb"))
 y_train = pickle.load(open("{}y_train_{}.pickle".format(path, preprocess_typ), "rb"))
 X_test = pickle.load(
-    open("{}htw_data_X_train_clean_{}.pickle".format(path, preprocess_typ), "rb"))
+    open("{}htw_X_clean_data_{}.pickle".format(path, preprocess_typ), "rb"))
 y_test = pickle.load(
-    open("{}htw_data_y_test.pickle".format(path), "rb"))
+    open("{}htw_y_data.pickle".format(path), "rb"))
 
 ############################################################################
 # Lexicon Method
