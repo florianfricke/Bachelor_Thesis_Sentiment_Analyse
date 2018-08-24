@@ -18,18 +18,22 @@ import pickle
 path = "data/labeled_sentiment_data/pickle_files/"
 preprocess_typ = "ekphrasis"
 
+runprocessing = True
+run_lexicon_method = True
+run_textblob = True
+run_mnb = True
+
 ############################################################################
 # Preprocess Data
 ############################################################################
-runprocessing = False
-
 if(runprocessing):
     datafolders = [["labeled_sentiment_data/sb10k_corpus.tsv", "\t",
                      1, 4], ["labeled_sentiment_data/million_pos_corpus.tsv", "\t", 0, 1]]
     data = Preprocessing(datafolders=datafolders, save_data_path=path)
     clean_data = data.ekphrasis_preprocessing()
+    if(preprocess_typ == "stopwords"):
+        clean_data = data.remove_stopwords(clean_data)
     data.save_clean_data(clean_data, path, preprocess_typ)
-    # clean_data = data.remove_stopwords(clean_data)
 
     split_data = TrainTestSplit(save_data_path=path, preprocess_typ=preprocess_typ)
     X_train, X_test, y_train, y_test = split_data.split_to_train_test(
@@ -46,8 +50,6 @@ y_test = pickle.load(open("{}y_test_{}.pickle".format(path, preprocess_typ), "rb
 ############################################################################
 # Lexicon Method
 ############################################################################
-run_lexicon_method = True
-
 if(run_lexicon_method):
     results_file_name = "{}/evaluation_{}_lexiconmethod".format(
         preprocess_typ, preprocess_typ)
@@ -64,8 +66,6 @@ if(run_lexicon_method):
 ############################################################################
 # textblob-de
 ############################################################################
-run_textblob = True
-
 if(run_textblob):
     results_file_name = "{}/evaluation_{}_textblob".format(
         preprocess_typ, preprocess_typ)
@@ -80,8 +80,6 @@ if(run_textblob):
 ############################################################################
 # Multinomial Naive Bayes
 ############################################################################
-run_mnb = True
-
 if(run_mnb):
     results_file_name = "{}/evaluation_{}_mnb".format(
         preprocess_typ, preprocess_typ)
