@@ -83,11 +83,11 @@ if(False):
     testing_data = pickle.load(
         open("{}testing_data_nn_{}.pickle".format(pickle_path, preprocess_typ), "rb"))
 
-    performance_analysis(testing_data, nn_model, file_name=file_name, file_information=file_information, verbose=False, accuracy=False,
-                     confusion_matrix=False, classification_report=False, save_pred=True, X_test_unprocessed=X_test_unprocessed)
+    performance_analysis(testing_data, nn_model, file_name=file_name, file_information=file_information, verbose=True, accuracy=True,
+                     confusion_matrix=True, classification_report=True, save_pred=True, X_test_unprocessed=X_test_unprocessed)
 
 #_______________________________Evaluate HTW Data_______________________________
-if(True):
+if(False):
     file_name = "{}/evaluation_htw_data_{}_{}".format(preprocess_typ,
                                              preprocess_typ, model_file_number)
     X_test_unprocessed = pickle.load(
