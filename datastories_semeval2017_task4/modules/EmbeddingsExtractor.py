@@ -57,7 +57,7 @@ class EmbeddingsExtractor(BaseEstimator, TransformerMixin):
         for token in sent:
             if token in self.word_indices:
                 sent_words.append(self.word_indices[token])
-            else:
+            else: # word in sentence has no entry in word dictonary
                 if self.unk_policy == "random":
                     sent_words.append(self.word_indices["<unk>"])
                 elif self.unk_policy == "zero":
@@ -67,7 +67,7 @@ class EmbeddingsExtractor(BaseEstimator, TransformerMixin):
         #     print("ALL <unk>", sent)
         if add_tokens:
             sent_words.append(self.word_indices.get("</s>", 0))
-        return sent_words
+        return sent_words # word-index: [0, 54, 2229, ...]
 
     def words_to_indices(self, X, add_tokens=False): 
         """
@@ -76,7 +76,7 @@ class EmbeddingsExtractor(BaseEstimator, TransformerMixin):
         :return:
         """
         Xs = []
-        for sent in X:
+        for sent in X: 
             Xs.append(numpy.asarray(self.index_text(sent, add_tokens=add_tokens)))
         return numpy.asarray(Xs)
 
