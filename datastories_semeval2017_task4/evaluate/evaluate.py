@@ -87,11 +87,11 @@ if(False):
                      confusion_matrix=True, classification_report=True, save_pred=True, X_test_unprocessed=X_test_unprocessed)
 
 #_______________________________Evaluate HTW Data_______________________________
-if(False):
+if(True):
     file_name = "{}/evaluation_htw_data_{}_{}".format(preprocess_typ,
                                              preprocess_typ, model_file_number)
     X_test_unprocessed = pickle.load(
-        open("{}htw_data_X_test_unprocessed.pickle".format(pickle_path), "rb"))
+        open("{}htw_X_data_unprocessed.pickle".format(pickle_path), "rb"))
 
     if os.path.exists("{}htw_data_testing_nn_{}.pickle".format(pickle_path, preprocess_typ)):
         testing_data = pickle.load(
@@ -99,9 +99,9 @@ if(False):
     else:
         print("decode data to word vectors")
         X_test = pickle.load(
-            open("{}htw_data_X_train_clean_{}.pickle".format(pickle_path, preprocess_typ), "rb"))
+            open("{}htw_X_clean_data_{}.pickle".format(pickle_path, preprocess_typ), "rb"))
         y_test = pickle.load(
-            open("{}htw_data_y_test.pickle".format(pickle_path), "rb"))
+            open("{}htw_y_data.pickle".format(pickle_path), "rb"))
 
         sys.path.insert(
             0, "C:/Users/Flo/Projekte/Bachelor_Thesis_Sentiment_Analyse/datastories_semeval2017_task4")
