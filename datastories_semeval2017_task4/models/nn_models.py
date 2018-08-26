@@ -3,12 +3,11 @@ from keras.engine import Input
 from keras.engine import Model
 from keras.layers import Dropout, Dense, Bidirectional, LSTM, \
     Embedding, GaussianNoise, Activation, Flatten, \
-    RepeatVector, MaxoutDense, GlobalMaxPooling1D, \
-    Convolution1D, MaxPooling1D, concatenate, Conv1D
+    RepeatVector, MaxoutDense
 from keras.models import Sequential
 from keras.optimizers import Adam
 from keras.regularizers import l2
-from kutilities.layers import AttentionWithContext, Attention, MeanOverTime
+from kutilities.layers import AttentionWithContext, Attention
 from sklearn import preprocessing
 
 def embeddings_layer(max_length, embeddings, trainable=False, masking=False, scale=False, normalize=False):
