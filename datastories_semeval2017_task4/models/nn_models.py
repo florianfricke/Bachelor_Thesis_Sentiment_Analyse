@@ -72,7 +72,7 @@ def build_attention_RNN(embeddings, classes, max_length, unit=LSTM, cells=64,
         if dropout_rnn > 0:
             model.add(Dropout(dropout_rnn))
 
-    if attention == "memory":
+    if attention == "memory": # memory is not used for Subtask A
         model.add(AttentionWithContext())
         if dropout_attention > 0:
             model.add(Dropout(dropout_attention))
