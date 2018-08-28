@@ -1,10 +1,4 @@
-epochs = 20
-batch_size = 20
-max textlength = 50
-preprocess-typ = ekphrasis
-attention model = simple
-best model with min val_loss
-dropout_attention = 0
+
 
 model accuracy (loss value, accuracy):
 [1.0456222589810689, 0.39589743611140127]
