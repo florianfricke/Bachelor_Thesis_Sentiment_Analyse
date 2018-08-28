@@ -17,12 +17,12 @@ from multinomial_naive_bayes.multinomial_naive_bayes import MultinomialNaiveBaye
 import pickle
 
 path = "data/labeled_sentiment_data/pickle_files/"
-preprocess_typ = "ekphrasis"
+preprocess_typ = "stopwords"
 
 runprocessing = False
-run_lexicon_method = True
-run_textblob = True
-run_mnb = True
+run_lexicon_method = False
+run_textblob = False
+run_mnb = False
 run_single_predictions = True
 
 ############################################################################
@@ -54,7 +54,7 @@ y_test = pickle.load(open("{}y_test_{}.pickle".format(path, preprocess_typ), "rb
 ############################################################################
 if(run_single_predictions):
     print("Run Single Predition")
-    text = ['Ich liebe euch', 'Ich hasse euch']
+    text = ['Ich liebe euch und so!!!!', 'Ich hasse euch']
     pred = PreprocessingText(text)
     clean_data = pred.ekphrasis_preprocessing()
     if(preprocess_typ == "stopwords"):
@@ -77,7 +77,7 @@ if(run_lexicon_method or run_single_predictions):
             transform_data(X_test), y_test, file_name=results_file_name, verbose=True, confusion_matrix=True, classification_report=True, save_pred=True)
     
     if(run_single_predictions):
-        print("Lexicon Method: {}".format(lexicon_model.predict(text)))
+        print("Lexicon Method: {}".format(lexicon_model.predict(transform_data(clean_data))))
 
 ############################################################################
 # textblob-de
@@ -93,7 +93,7 @@ if(run_textblob or run_single_predictions):
             transform_data(X_test), y_test, file_name=results_file_name, verbose=True, confusion_matrix=True, classification_report=True, save_pred=True)
 
     if(run_single_predictions):
-        print("textblob-de: {}".format(textblob_model.predict(text)))
+        print("textblob-de: {}".format(textblob_model.predict(transform_data(clean_data))))
 
 ############################################################################
 # Multinomial Naive Bayes
@@ -112,4 +112,5 @@ if(run_mnb or run_single_predictions):
             model, file_name=results_file_name, X_test=transform_data(X_test), verbose=True, accuracy=True, confusion_matrix=True, classification_report=True, save_pred=True)
     
     if(run_single_predictions):
-        print("Multinomial Naive Bayes: {}".format(mnb_model.predict(model, text)))
+        print("Multinomial Naive Bayes: {}".format(
+            mnb_model.predict(model, transform_data(clean_data))))
