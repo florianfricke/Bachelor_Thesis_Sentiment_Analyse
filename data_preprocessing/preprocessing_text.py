@@ -9,8 +9,10 @@ sys.path.insert(
 from ekphrasis.classes.preprocessor import TextPreProcessor
 from ekphrasis.classes.tokenizer import SocialTokenizer
 from ekphrasis.dicts.emoticons import emoticons
+from textblob_de.lemmatizers import PatternParserLemmatizer
 from tqdm import tqdm
 from nltk.corpus import stopwords
+from utilities.utilities import transform_data
 import pickle
 
 
@@ -60,6 +62,21 @@ class PreprocessingText:
                     clean_data.append(word)
         return clean_data
 
+    def lemmatize_words(self, data):
+        _lemmatizer = PatternParserLemmatizer()
+        lemmatized_data = []
+        if(type(data) == list):
+            for d in data:
+                text = ""
+                for word in d:
+                    text = text + " " + word
+                l = _lemmatizer.lemmatize(text)
+                lemmatized_data.append([i[0] for i in l])
+        if(type(data) == str):
+            l = _lemmatizer.lemmatize(data)
+            lemmatized_data.append([i[0] for i in l])
+        return lemmatized_data
+    
     def ekphrasis_preprocessing(self):
         X_clean = []
         if(type(self.text) == str):

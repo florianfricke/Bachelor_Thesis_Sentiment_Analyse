@@ -9,10 +9,12 @@ sys.path.insert(
 from ekphrasis.classes.preprocessor import TextPreProcessor
 from ekphrasis.classes.tokenizer import SocialTokenizer
 from ekphrasis.dicts.emoticons import emoticons
+from textblob_de.lemmatizers import PatternParserLemmatizer
 from tqdm import tqdm
 from nltk.corpus import stopwords
 from data.data_loader import DataLoader
 from utilities.utilities import save_data
+from utilities.utilities import transform_data
 import pickle
 
 class PreprocessingCorpus:
@@ -80,6 +82,17 @@ class PreprocessingCorpus:
     #             data_clean.append(d)
     #     return data_clean
 
+    def lemmatize_words(self, data):
+            _lemmatizer = PatternParserLemmatizer()
+            lemmatized_data = []
+            for d in tqdm(data):
+                text = ""
+                for word in d:
+                    text = text + " " + word
+                l = _lemmatizer.lemmatize(text)
+                lemmatized_data.append([i[0] for i in l])
+            return lemmatized_data
+
     def ekphrasis_preprocessing(self):
         X_clean = []
         for row in tqdm(self.X):
@@ -90,3 +103,22 @@ class PreprocessingCorpus:
         save_data(clean_data, path=path,
                   filename="{}X_clean_data_{}".format(self.corpus_name, preprocess_typ))
                   
+
+if __name__ == '__main__':
+    path = "data/labeled_sentiment_data/pickle_files/"
+    preprocess_typ = "lemmatized"
+    def lemmatize_words(data):
+            _lemmatizer = PatternParserLemmatizer()
+            lemmatized_data = []
+            for d in tqdm(data):
+                text = ""
+                for word in d:
+                    text = text + " " + word
+                l = _lemmatizer.lemmatize(text)
+                lemmatized_data.append([i[0] for i in l])
+            return lemmatized_data
+    data = pickle.load(
+        open("{}X_clean_data_stopwords.pickle".format(path), "rb"))
+    clean_data = lemmatize_words(data)
+    pickle.dump(clean_data, open(
+        "{}X_clean_data_lemmatized.pickle".format(path), "wb"))

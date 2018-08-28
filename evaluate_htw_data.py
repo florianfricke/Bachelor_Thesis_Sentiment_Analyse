@@ -34,6 +34,8 @@ if(runprocessing):
     clean_data = data.ekphrasis_preprocessing()
     if(preprocess_typ == "stopwords"):
         clean_data = data.remove_stopwords(clean_data)
+    if(preprocess_typ == "lemmatized"):
+        clean_data = data.lemmatize_words(clean_data)
     data.save_clean_data(clean_data, path, preprocess_typ)
 
 ############################################################################

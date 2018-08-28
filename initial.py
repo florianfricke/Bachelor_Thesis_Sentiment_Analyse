@@ -17,24 +17,27 @@ from multinomial_naive_bayes.multinomial_naive_bayes import MultinomialNaiveBaye
 import pickle
 
 path = "data/labeled_sentiment_data/pickle_files/"
-preprocess_typ = "stopwords"
+preprocess_typ = "ekphrasis"
 
 runprocessing = False
-run_lexicon_method = False
-run_textblob = False
-run_mnb = False
+run_lexicon_method = True
+run_textblob = True
+run_mnb = True
 run_single_predictions = True
 
 ############################################################################
 # Preprocess Data
 ############################################################################
 if(runprocessing):
+    print("preprocessing...")
     datafolders = [["labeled_sentiment_data/sb10k_corpus.tsv", "\t",
                      1, 4], ["labeled_sentiment_data/million_pos_corpus.tsv", "\t", 0, 1]]
     data = PreprocessingCorpus(datafolders=datafolders, save_data_path=path)
     clean_data = data.ekphrasis_preprocessing()
     if(preprocess_typ == "stopwords"):
         clean_data = data.remove_stopwords(clean_data)
+    if(preprocess_typ == "lemmatized"):
+        clean_data = data.lemmatize_words(clean_data)
     data.save_clean_data(clean_data, path, preprocess_typ)
 
     split_data = TrainTestSplit(save_data_path=path, preprocess_typ=preprocess_typ)
@@ -59,6 +62,8 @@ if(run_single_predictions):
     clean_data = pred.ekphrasis_preprocessing()
     if(preprocess_typ == "stopwords"):
         clean_data = pred.remove_stopwords(clean_data)
+    if(preprocess_typ == "lemmatized"):
+        clean_data = pred.lemmatize_words(clean_data)
     print(text)
 
 ############################################################################
@@ -99,11 +104,11 @@ if(run_textblob or run_single_predictions):
 # Multinomial Naive Bayes
 ############################################################################
 if(run_mnb or run_single_predictions):
-    results_file_name = "{}/evaluation_{}_mnb".format(
+    results_file_name = "{}/evaluation_{}_mnb_no_bow_parameters".format(
         preprocess_typ, preprocess_typ)
     print("run multinomial naive bayes")
     mnb_model = MultinomialNaiveBayes(
-        X_train, X_test, y_train, y_test, max_features=5000, min_df=2)
+        X_train, X_test, y_train, y_test)#,max_features=5000, min_df=2
     mnb_model.encoding_textdata()
     model = mnb_model.fit_model()
 
