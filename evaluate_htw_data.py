@@ -17,7 +17,7 @@ from multinomial_naive_bayes.multinomial_naive_bayes import MultinomialNaiveBaye
 import pickle
 
 path = "data/labeled_sentiment_data/pickle_files/"
-preprocess_typ = "ekphrasis"
+preprocess_typ = "lemmatized"
 
 runprocessing = True
 run_lexicon_method = True
@@ -59,7 +59,7 @@ if(run_lexicon_method):
         'data/sentiment_lexicons/')
     lexicon_model = LexiconMethod(sentiment_files)
     lexicon_metric_list = lexicon_model.performance_analysis(
-        transform_data(X_test), y_test, file_name=results_file_name, verbose=True, confusion_matrix=True, classification_report=True, save_pred=True)
+        transform_data(X_test), y_test, file_name=results_file_name, verbose=True, confusion_matrix=True, plotting_confusion_matrix=True, classification_report=True, save_pred=True)
 
 ############################################################################
 # textblob-de
@@ -71,7 +71,7 @@ if(run_textblob):
     print("run textblob-de")
     textblob_model = TextBlobSentimentAnalysis()
     metric_list = textblob_model.performance_analysis(
-        transform_data(X_test), y_test, file_name=results_file_name, verbose=True, confusion_matrix=True, classification_report=True, save_pred=True)
+        transform_data(X_test), y_test, file_name=results_file_name, verbose=True, confusion_matrix=True, plotting_confusion_matrix=True, classification_report=True, save_pred=True)
 
 ############################################################################
 # Multinomial Naive Bayes
@@ -86,5 +86,5 @@ if(run_mnb):
     mnb_model.encoding_textdata()
     model = mnb_model.fit_model()
     metric_list = mnb_model.performance_analysis(
-        model, file_name=results_file_name, X_test=transform_data(X_test), verbose=True, accuracy=True, confusion_matrix=True, classification_report=True, save_pred=True)
+        model, file_name=results_file_name, X_test=transform_data(X_test), verbose=True, accuracy=True, confusion_matrix=True, plotting_confusion_matrix=True, classification_report=True, save_pred=True)
 

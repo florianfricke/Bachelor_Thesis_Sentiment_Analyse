@@ -79,7 +79,7 @@ if(run_lexicon_method or run_single_predictions):
     
     if(run_lexicon_method):
         lexicon_metric_list = lexicon_model.performance_analysis(
-            transform_data(X_test), y_test, file_name=results_file_name, verbose=True, confusion_matrix=True, classification_report=True, save_pred=True)
+            transform_data(X_test), y_test, file_name=results_file_name, verbose=True, confusion_matrix=True, plotting_confusion_matrix=True, classification_report=True, save_pred=True)
     
     if(run_single_predictions):
         print("Lexicon Method: {}".format(lexicon_model.predict(transform_data(clean_data))))
@@ -95,7 +95,7 @@ if(run_textblob or run_single_predictions):
 
     if(run_textblob):
         metric_list = textblob_model.performance_analysis(
-            transform_data(X_test), y_test, file_name=results_file_name, verbose=True, confusion_matrix=True, classification_report=True, save_pred=True)
+            transform_data(X_test), y_test, file_name=results_file_name, verbose=True, confusion_matrix=True, plotting_confusion_matrix=True, classification_report=True, save_pred=True)
 
     if(run_single_predictions):
         print("textblob-de: {}".format(textblob_model.predict(transform_data(clean_data))))
@@ -104,17 +104,17 @@ if(run_textblob or run_single_predictions):
 # Multinomial Naive Bayes
 ############################################################################
 if(run_mnb or run_single_predictions):
-    results_file_name = "{}/evaluation_{}_mnb_no_bow_parameters".format(
+    results_file_name = "{}/evaluation_{}_mnb".format(
         preprocess_typ, preprocess_typ)
     print("run multinomial naive bayes")
     mnb_model = MultinomialNaiveBayes(
-        X_train, X_test, y_train, y_test)#,max_features=5000, min_df=2
+        X_train, X_test, y_train, y_test,max_features=5000, min_df=2)
     mnb_model.encoding_textdata()
     model = mnb_model.fit_model()
 
     if(run_mnb):
         metric_list = mnb_model.performance_analysis(
-            model, file_name=results_file_name, X_test=transform_data(X_test), verbose=True, accuracy=True, confusion_matrix=True, classification_report=True, save_pred=True)
+            model, file_name=results_file_name, X_test=transform_data(X_test), verbose=True, accuracy=True, confusion_matrix=True, plotting_confusion_matrix=True, classification_report=True, save_pred=True)
     
     if(run_single_predictions):
         print("Multinomial Naive Bayes: {}".format(
