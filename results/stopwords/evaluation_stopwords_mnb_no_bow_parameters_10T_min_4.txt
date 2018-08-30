@@ -1,0 +1,18 @@
+max_features=10000
+min_df=4
+
+model accuracy:
+0.6440999683644416
+confusion matrix:
+[[ 303  152   46]
+ [ 147 1317  393]
+ [  70  317  416]]
+classification report:
+             precision    recall  f1-score   support
+
+   negative       0.49      0.52      0.50       803
+    neutral       0.74      0.71      0.72      1857
+   positive       0.58      0.60      0.59       501
+
+avg / total       0.65      0.64      0.65      3161
+
