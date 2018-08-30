@@ -60,6 +60,11 @@ class PreprocessingCorpus:
 
     def remove_stopwords(self, data):
         stop_ger = stopwords.words('german')
+
+        allowed_stopwords = ['kein', 'keine', 'keinem', 'keinen', 'keiner', 'keines', 'nicht', 'nichts']
+        for a in allowed_stopwords:
+            stop_ger.remove(a)
+
         customstopwords = ['rt', 'mal', 'heute', 'gerade', 'erst', 'macht', 'eigentlich', 'warum',
                         'gibt', 'gar', 'immer', 'schon', 'beim', 'ganz', 'dass', 'wer', 'mehr', 'gleich', 'wohl']
         normalizedwords = ['<url>', '<email>', '<percent>', 'money>',
@@ -102,23 +107,3 @@ class PreprocessingCorpus:
     def save_clean_data(self, clean_data, path, preprocess_typ):
         save_data(clean_data, path=path,
                   filename="{}X_clean_data_{}".format(self.corpus_name, preprocess_typ))
-                  
-
-if __name__ == '__main__':
-    path = "data/labeled_sentiment_data/pickle_files/"
-    preprocess_typ = "lemmatized"
-    def lemmatize_words(data):
-            _lemmatizer = PatternParserLemmatizer()
-            lemmatized_data = []
-            for d in tqdm(data):
-                text = ""
-                for word in d:
-                    text = text + " " + word
-                l = _lemmatizer.lemmatize(text)
-                lemmatized_data.append([i[0] for i in l])
-            return lemmatized_data
-    data = pickle.load(
-        open("{}X_clean_data_stopwords.pickle".format(path), "rb"))
-    clean_data = lemmatize_words(data)
-    pickle.dump(clean_data, open(
-        "{}X_clean_data_lemmatized.pickle".format(path), "wb"))

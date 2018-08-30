@@ -42,6 +42,12 @@ class PreprocessingText:
 
     def remove_stopwords(self, data):
         stop_ger = stopwords.words('german')
+
+        allowed_stopwords = ['kein', 'keine', 'keinem',
+                             'keinen', 'keiner', 'keines', 'nicht', 'nichts']
+        for a in allowed_stopwords:
+            stop_ger.remove(a)
+        
         customstopwords = ['rt', 'mal', 'heute', 'gerade', 'erst', 'macht', 'eigentlich', 'warum',
                            'gibt', 'gar', 'immer', 'schon', 'beim', 'ganz', 'dass', 'wer', 'mehr', 'gleich', 'wohl']
         normalizedwords = ['<url>', '<email>', '<percent>', 'money>',

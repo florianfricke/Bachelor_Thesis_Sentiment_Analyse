@@ -110,5 +110,3 @@ class LexiconMethod:
         return metric_list
 
 
-
-
