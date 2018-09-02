@@ -7,7 +7,7 @@ from keras.layers import LSTM
 from kutilities.callbacks import MetricsCallback, PlottingCallback
 from kutilities.helpers.data_preparation import get_labels_to_categories_map, \
     get_class_weights2, onehot_to_categories
-from sklearn.metrics import f1_score, precision_score
+from sklearn.metrics import f1_score, precision_score, accuracy_score
 from sklearn.metrics import recall_score
 from keras.callbacks import TensorBoard
 
@@ -29,11 +29,11 @@ WV_DIM = 200
 # - if FINAL == False,  then the dataset will be split in {train, val, test}
 # - if FINAL == True,   then the dataset will be split in {train, val}.
 # of the labeled data will be kept for as a validation set for early stopping
-FINAL = False
+FINAL = True
 
 max_length = 50     # max tweet length
 DATAFOLDER = "C:/Users/Flo/Projekte/Bachelor_Thesis_Sentiment_Analyse/data/labeled_sentiment_data/pickle_files/"
-PREPROCESS_TYP = "ekphrasis"
+PREPROCESS_TYP = "stopwords2"
 
 ############################################################################
 # PERSISTENCE
@@ -83,14 +83,14 @@ nn_model = build_attention_RNN(embeddings, classes=3, max_length=max_length,    
                                unit=LSTM, layers=2, cells=150,
                                bidirectional=True,
                                attention=attention_model,  
-                               noise=0.3,
+                               noise=0.1,
                                final_layer=False,
-                               dropout_final=0.5,
-                               dropout_attention=0.5, #0.5
-                               dropout_words=0.3,
-                               dropout_rnn=0.3,
-                               dropout_rnn_U=0.3,
-                               clipnorm=1, lr=0.001, loss_l2=0.0001)   # gradient clipping and learning rate                           
+                               dropout_final=0.1,
+                               dropout_attention=0.1, #0.5
+                               dropout_words=0.1, #0.3
+                               dropout_rnn=0.1,
+                               dropout_rnn_U=0.1,
+                               clipnorm=1, lr=0.001, loss_l2=0.0001)   # gradient clipping and learning rate
 print(nn_model.summary())
 
 ############################################################################
@@ -101,11 +101,18 @@ metrics = {
               f1_score(y_test, y_pred, average='macro',
                        labels=[class_to_cat_mapping['positive'],
                                class_to_cat_mapping['negative']])),
+    "f1_weighted": (lambda y_test, y_pred:
+                    f1_score(y_test, y_pred, average='weighted',
+                       labels=[class_to_cat_mapping['positive'],
+                                class_to_cat_mapping['neutral'],
+                                class_to_cat_mapping['negative']])),
     "M_recall": (
         lambda y_test, y_pred: recall_score(y_test, y_pred, average='macro')),
     "M_precision": (
         lambda y_test, y_pred: precision_score(y_test, y_pred,
-                                               average='macro'))
+                                               average='macro')),
+    "accuracy": (
+        lambda y_test, y_pred: accuracy_score(y_test, y_pred))
 }
 
 classes = ['positive', 'negative', 'neutral']
@@ -121,8 +128,8 @@ if not FINAL:
     _datasets["3-test"] = testing
 
 metrics_callback = MetricsCallback(datasets=_datasets, metrics=metrics)
-plotting = PlottingCallback(grid_ranges=(0.5, 0.75), height=5,
-                            benchmarks={"SE17": 0.681}, plot_name="model_{}_{}".format(PREPROCESS_TYP, MODEL_FILE_NUMBER))
+plotting = PlottingCallback(grid_ranges=(0.5, 0.8), height=5,
+                            plot_name="model_{}_{}".format(PREPROCESS_TYP, MODEL_FILE_NUMBER))  # benchmarks={"SE17": 0.681},
 tensorboard = TensorBoard(log_dir='./logs')
 
 _callbacks = []
@@ -131,8 +138,8 @@ _callbacks.append(tensorboard)
 _callbacks.append(plotting)
 
 if PERSIST:
-    monitor = "val_loss" # 'val.macro_recall' 
-    mode = "min" # mode="max"
+    monitor = "val_acc" # 'val.macro_recall' 
+    mode = "max" # mode="max"
     checkpointer = ModelCheckpoint(filepath=best_model(),
                                    monitor=monitor, mode=mode,  
                                    verbose=1, save_best_only=True)
@@ -147,8 +154,8 @@ print("Class weights:",
       {cat_to_class_mapping[c]: w for c, w in class_weights.items()})
 
 # 50-50
-epochs = 50
-batch_size = 10
+epochs = 20
+batch_size = 20
 
 history = nn_model.fit(training[0], training[1],
                        validation_data=validation if not FINAL else testing,
@@ -166,6 +173,7 @@ file_information = "epochs = " + str(epochs) + "\nbatch_size = " + str(batch_siz
     "\nmax textlength = " + str(max_length) + "\npreprocess-typ = " + \
     PREPROCESS_TYP + "\nattention model = " + \
     str(attention_model) + "\nbest model with " + mode + " " + monitor
-file_information = file_information + "\ndropout_attention = 0.5\n3 LSTM Layer"
+file_information = file_information + \
+    "\ndropout_attention = 0.1\n2 LSTM Layer\nDropout & Noise = 0.1"
 performance_analysis(testing, nn_model, file_name=file_name, file_information=file_information, verbose=True, accuracy=True,
                      confusion_matrix=True, classification_report=True)
