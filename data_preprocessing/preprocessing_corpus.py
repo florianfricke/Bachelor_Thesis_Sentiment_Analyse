@@ -40,7 +40,7 @@ class PreprocessingCorpus:
                     'emphasis'},
             fix_html=True,  # fix HTML tokens
 
-            unpack_hashtags=True,  # perform word segmentation on hashtags
+            unpack_hashtags=False,  # perform word segmentation on hashtags
 
             # select a tokenizer. You can use SocialTokenizer, or pass your own if not text tokenized on whitespace
             # the tokenizer, should take as input a string and return a list of tokens 
@@ -58,7 +58,8 @@ class PreprocessingCorpus:
                 file[0], file[1], file[2], file[3]))
         return dataset                                                
 
-    def remove_stopwords(self, data):
+    def remove_stopwords(self, data, **kwargs):
+        specific_stopwords = kwargs.get('specific_stopwords', [])
         stop_ger = stopwords.words('german')
 
         allowed_stopwords = ['kein', 'keine', 'keinem', 'keinen', 'keiner', 'keines', 'nicht', 'nichts']
@@ -67,9 +68,9 @@ class PreprocessingCorpus:
 
         customstopwords = ['rt', 'mal', 'heute', 'gerade', 'erst', 'macht', 'eigentlich', 'warum',
                         'gibt', 'gar', 'immer', 'schon', 'beim', 'ganz', 'dass', 'wer', 'mehr', 'gleich', 'wohl']
-        normalizedwords = ['<url>', '<email>', '<percent>', 'money>',
+        normalizedwords = ['<url>', '<email>', '<percent>', '<money>',
                         '<phone>', '<user>', '<time>', '<url>', '<date>', '<number>']
-        stop_ger = stop_ger + customstopwords + normalizedwords
+        stop_ger = stop_ger + customstopwords + normalizedwords + specific_stopwords
         clean_data = []
 
         for d in data:
