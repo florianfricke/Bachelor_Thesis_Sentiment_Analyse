@@ -1,4 +1,4 @@
-neutral	bist du ein mann
+negative	bist du ein mann
 neutral	bin ich böse
 neutral	bist du verheiratet
 neutral	kennst du cortana
@@ -18,7 +18,7 @@ neutral	bist du eine künstliche intelligenz
 neutral	was weißt du alles
 neutral	bist du weiblich
 neutral	ist der aus
-negative	wie schmecken bunte wäscheklammern
+neutral	wie schmecken bunte wäscheklammern
 neutral	darf ich dich mal anfassen
 negative	seh ich behindert aus
 neutral	kennst du den terminator
@@ -27,10 +27,10 @@ neutral	bin ich ein einbrecher
 neutral	was denkst du über cortana
 neutral	bist du ein mensch
 neutral	bist du eine frau
-neutral	hast du eine freundin
-neutral	bin ich lieb
+positive	hast du eine freundin
+positive	bin ich lieb
 neutral	magst du siri
-neutral	bist du intelligent
+positive	bist du intelligent
 neutral	ist das ein hund
 neutral	wie alt bist du denn
 neutral	kannst du mir dein alter sagen
@@ -262,7 +262,7 @@ negative	warum fährst du so langsam
 negative	du bist lahm
 negative	du bist viel zu langsam
 negative	der roboter ist aber echt lahm
-neutral	lauf bitte schneller
+negative	lauf bitte schneller
 negative	der roboter ist aber lahm
 negative	du bist aber nicht besonders schnell
 negative	schnell ist der roboter aber nicht
@@ -292,8 +292,8 @@ neutral	kannst du dich noch erinnern was das hier ist
 neutral	kannst du meine hand sehen
 neutral	kann der auch lieder singen
 neutral	kannst du hüpfen
-neutral	sing doch mal was
-neutral	kannst du ein lied singen
+positive	sing doch mal was
+positive	kannst du ein lied singen
 neutral	sag mal so so sing mal ein lied oder so
 neutral	kannst du mir was zu essen geben
 neutral	ich möchte mehr über den heimcomputer wissen
@@ -326,24 +326,24 @@ neutral	sag mir doch bitte wie spät es ist
 neutral	kann ich dich nach der zeit fragen
 neutral	weißt du wieviel uhr es ist
 neutral	was sagt die uhr
-negative	kannst du mir dein
-negative	sagst du mir dein gewicht
-negative	wie viel wiegst du so
+neutral	kannst du mir dein
+neutral	sagst du mir dein gewicht
+neutral	wie viel wiegst du so
 negative	der roboter ist bestimmt schwer
-negative	was wiegst du
-negative	verräst du mir dein gewicht
+neutral	was wiegst du
+neutral	verräst du mir dein gewicht
 negative	bist du schwer
-negative	bist du schwerer als ein mensch
-negative	was wiegst du so
-negative	kannst du mir sagen wieviel du wiegst
+neutral	bist du schwerer als ein mensch
+neutral	was wiegst du so
+neutral	kannst du mir sagen wieviel du wiegst
 negative	wie schwer kann der schon sein
-negative	wie viel wiegst du
+neutral	wie viel wiegst du
 negative	du bist bestimmt schwer
-negative	was wiegst du eigentlich
-negative	echt wie viel wiegst denn du
-negative	wie schwer ist so ein roboter
-negative	wiegst du viel
-negative	bist du sehr schwer
+neutral	was wiegst du eigentlich
+neutral	echt wie viel wiegst denn du
+neutral	wie schwer ist so ein roboter
+neutral	wiegst du viel
+neutral	bist du sehr schwer
 positive	huhu
 positive	na du roboter
 positive	sei gegrüßt roboter
@@ -412,7 +412,7 @@ positive	bis zum nächsten mal roboter
 positive	ich verabschiede mich jetzt
 positive	bis die tage roboter
 positive	auf wiedersehen roboter
-positive	ich gehe jetzt
+neutral	ich gehe jetzt
 positive	bye
 positive	bis dann tesaro
 positive	sei mal lustig
@@ -465,14 +465,14 @@ neutral	darf ich schon mal vorgehen
 neutral	kannnst du sprechen
 neutral	kannst du hören was ich sage
 neutral	bist du oft hier
-neutral	bist du klüger als google
-neutral	bist du besser als siri
-neutral	bist du gern hier
-neutral	bist du besser als cortana
+positive	bist du klüger als google
+positive	bist du besser als siri
+positive	bist du gern hier
+positive	bist du besser als cortana
 neutral	kannnst du etwas sagen
 neutral	kannst du hören
 neutral	darf ich dich anfassen
-neutral	bist du besser als ich
+positive	bist du besser als ich
 neutral	kannst du mich hören
 neutral	freust du dich mich zu sehen
 neutral	sprichst du
@@ -483,7 +483,7 @@ neutral	bist du klüger als siri
 positive	sind deine eltern stolz auf dich
 neutral	kannst du sprechen
 positive	bist du ein toller roboter
-neutral	sind deine sehr eltern stolz auf dich
+positive	sind deine sehr eltern stolz auf dich
 neutral	bist du besser als google
 neutral	bist du klüger als cortana
 positive	bist du gut im witze erzählen
@@ -527,7 +527,7 @@ positive	Ja klar.
 neutral	Na gut.
 positive	Na klar.
 positive	Natürlich.
-neutral	Noch mehr.
+positive	Noch mehr.
 neutral	Okay.
 positive	Okay, dann kommen wir mal wieder.
 positive	Sehr gern.
@@ -617,7 +617,7 @@ neutral	Ja das ist sie.
 neutral	Na dann mal weiter.
 positive	Ok. Ich bin fertig.
 positive	sehr interessant.
-positive	Achso.
+neutral	Achso.
 negative	Arschloch.
 negative	Das stinkt hast du geforzt?
 negative	Der hat gar keine Haare.
@@ -631,7 +631,7 @@ neutral	Glaub ich nicht. Ich glaub der fährt so vorwärts.
 negative	Hä, wo will er denn hin?
 neutral	Mama kommst du mit?
 negative	Mist.
-negative	Mmh.
+neutral	Mmh.
 neutral	Na dann.
 negative	Oh Mist schon wieder.
 neutral	Oh was.
@@ -642,7 +642,7 @@ positive	Witzig das Ding.
 negative	Oh aus dem Weg.
 neutral	Bis zum nächsten Mal. Tschau.
 neutral	Tschüss.
-neutral	Tschüss Tesaro.
+positive	Tschüss Tesaro.
 neutral	Hallo.
 positive	Hallo lieber Roboter.
 neutral	Hallo Tesaro.
@@ -689,8 +689,8 @@ negative	Alter hab ich Recht?
 negative	Anstrengend heh?
 negative	Bin ich böse?
 negative	Bin ich ein Einbrecher?
-neutral	Bin ich lieb?
-neutral	Bist du krank?
+positive	Bin ich lieb?
+negative	Bist du krank?
 neutral	Bist du reich?
 positive	Dann sag es mir mal bitte.
 neutral	Darf ich jetzt auch mal?
@@ -717,13 +717,13 @@ neutral	Magst du Emilio?
 neutral	Putzt du dir alleine die Zähne?
 neutral	Roboter darf ich schonmal vorgehen?
 neutral	Sag mal so so sing mal ein Lied oder so.
-neutral	Seh ich behindert aus?
+negative	Seh ich behindert aus?
 positive	Seh ich cool aus?
 neutral	Sieht der alles Schwarz-Weiß?
 neutral	Sieht der auch farbig?
 neutral	Tanz ich grade?
 neutral	Und selbst?
-neutral	Und wie gehts dir so?
+positive	Und wie gehts dir so?
 neutral	Wann sind wir da?
 neutral	Was ist das? Sag es mir mal.
 neutral	Was ist ein plus eins?
@@ -858,8 +858,8 @@ neutral	von wem wurdest du geschaffen
 neutral	hast du dich gebaut
 neutral	ich hätte gerne eine führung
 neutral	kannst du mir bitte eine führung geben
-neutral	erzähl mal was
-neutral	hilfe
+positive	erzähl mal was
+negative	hilfe
 neutral	ich brauche hilfe
 neutral	keine ahnung was kann ich dich denn noch fragen
 neutral	was kannst du mir denn sonst noch so erzählen
@@ -897,7 +897,7 @@ neutral	weißt du die uhrzeit
 neutral	wieviel wiegst du eigentlich
 neutral	wie schwer bist du
 neutral	wie viel wiegen sie
-neutral	der ist bestimmt schwer
+negative	der ist bestimmt schwer
 neutral	wie schwer wird der wohl sein
 neutral	sag mir dein gewicht
 neutral	nenne mir dein gewicht
@@ -960,8 +960,8 @@ neutral	siehst du mich
 neutral	roboter darf ich schonmal vorgehen
 neutral	verstehst du mich
 neutral	wohnst du hier
-neutral	bist du witzig
-neutral	bist du ein komiker
+positive	bist du witzig
+positive	bist du ein komiker
 neutral	bist du ein komisch
 neutral	wohnst du hier im museum
 negative	auf keinen fall
