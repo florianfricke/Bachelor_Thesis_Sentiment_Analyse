@@ -5,4 +5,6 @@
 /datastories_semeval2017_task4/embeddings/embedtweets.de.52d.pickle
 /datastories_semeval2017_task4/embeddings/embedtweets.de.200d
 /datastories_semeval2017_task4/embeddings/embedtweets.de.200d.pickle
+/data/labeled_sentiment_data/scare_app_reviews
 **/*.hdf5
+/data/labeled_sentiment_data/scare_app_reviews.tsv
