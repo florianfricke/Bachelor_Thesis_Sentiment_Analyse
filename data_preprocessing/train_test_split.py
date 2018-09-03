@@ -11,9 +11,10 @@ from sklearn.model_selection import train_test_split
 from utilities.utilities import save_data
 
 class TrainTestSplit:
-    def __init__(self, save_data_path, preprocess_typ):
-        self.X = pickle.load(open("{}X_clean_data_{}.pickle".format(save_data_path, preprocess_typ), "rb"))
-        self.y = pickle.load(open("{}y_data.pickle".format(save_data_path), "rb"))
+    def __init__(self, save_data_path, preprocess_typ, **kwargs):
+        self.corpus_name = kwargs.get('corpus_name', "")
+        self.X = pickle.load(open("{}{}X_clean_data_{}.pickle".format(save_data_path, self.corpus_name, preprocess_typ), "rb"))
+        self.y = pickle.load(open("{}{}y_data.pickle".format(save_data_path, self.corpus_name), "rb"))
         self.save_data_path = save_data_path
         self.preprocess_typ = preprocess_typ
 
@@ -27,12 +28,12 @@ class TrainTestSplit:
             len(X_train), len(X_test)))
         
         save_data(X_train, path=self.save_data_path,
-                  filename="X_train_{}".format(self.preprocess_typ))
+                  filename="{}X_train_{}".format(self.corpus_name, self.preprocess_typ))
         save_data(X_test, path=self.save_data_path,
-                  filename="X_test_{}".format(self.preprocess_typ))
+                  filename="{}X_test_{}".format(self.corpus_name, self.preprocess_typ))
         save_data(y_train, path=self.save_data_path,
-                  filename="y_train_{}".format(self.preprocess_typ))
+                  filename="{}y_train_{}".format(self.corpus_name, self.preprocess_typ))
         save_data(y_test, path=self.save_data_path,
-                  filename="y_test_{}".format(self.preprocess_typ))
+                  filename="{}y_test_{}".format(self.corpus_name, self.preprocess_typ))
         return X_train, X_test, y_train, y_test
 
