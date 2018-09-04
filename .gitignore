@@ -8,3 +8,4 @@
 /data/labeled_sentiment_data/scare_app_reviews
 **/*.hdf5
 /data/labeled_sentiment_data/scare_app_reviews.tsv
+**/scare_*
