@@ -28,7 +28,6 @@ https://github.com/cbaziotis/ekphrasis
 <br><br>
 Die Daten unterscheiden sich in ihren Vorverarbeitungsschritten. <br>
 Daten: ekphrasis, ekphrasis ohne Stopwörter, ekphrasis ohne Stopwörter und Lemmatisierung<br>
-alle mit Stoppwörter2 vorverarbeiteten Daten erlauben die Stoppwörter: kein, keine, keinem, keinen, keiner, keines, nicht, nichts
 
 
 ## Sentiment Analyse mit Künstlichem Neuronalem Netz
