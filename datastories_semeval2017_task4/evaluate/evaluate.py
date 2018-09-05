@@ -4,7 +4,7 @@ Created by Florian Fricke.
 
 import sys
 sys.path.insert(
-    0, "C:/Users/Flo/Projekte/Bachelor_Thesis_Sentiment_Analyse")
+    0, "C:/Users/flfr/Documents/Python_Scripts/Bachelor_Thesis_Sentiment_Analyse/")
 
 from sklearn import metrics
 from keras.models import load_model
@@ -55,6 +55,7 @@ def performance_analysis(testing, model, file_name="", file_information="", verb
                         pred, X_test_unprocessed[i]), file=f)
     return metric_list
 
+"""
 ############################################################################
 # Evaluate Data
 ############################################################################
@@ -63,33 +64,35 @@ preprocess_typ = "ekphrasis"
 model_file_number = 4
 file_information = ""
 attention_mechanism = True
+corpusname = "sb10k_and_one_million_posts_corpus"
 
 print("load model_{}_{}".format(preprocess_typ, model_file_number))
 if(attention_mechanism):
     from kutilities.layers import Attention
     nn_model = load_model(
-        'results_artificial_neural_network/{}/model_{}_{}.hdf5'.format(preprocess_typ, preprocess_typ, model_file_number), 
+        'results_artificial_neural_network/{}/{}model_{}_{}.hdf5'.format(
+            preprocess_typ, corpusname+"/" if corpusname != "" else corpusname, preprocess_typ, model_file_number),
         custom_objects={'Attention': Attention})
 else:
     nn_model = load_model(
-        'results_artificial_neural_network/{}/model_{}_{}.hdf5'.format(preprocess_typ, preprocess_typ, model_file_number))
+        'results_artificial_neural_network/{}/{}model_{}_{}.hdf5'.format(preprocess_typ, corpusname+"/" if corpusname != "" else corpusname, preprocess_typ, model_file_number))
 
 #___________________Evaluate sb10k + One Million Posts Korpus___________________
 if(False):
-    file_name = "{}/evaluation_new_{}_{}".format(preprocess_typ,
-                                             preprocess_typ, model_file_number)
+    file_name = "{}{}/evaluation_new_{}_{}".format(preprocess_typ, corpusname+"/" if corpusname != "" else corpusname,
+                                                   preprocess_typ, model_file_number)
     X_test_unprocessed = pickle.load(
-        open("{}X_data_unprocessed.pickle".format(pickle_path), "rb"))
+        open("{}{}X_data_unprocessed.pickle".format(pickle_path, corpusname+"_" if corpusname != "" else corpusname,), "rb"))
     testing_data = pickle.load(
-        open("{}testing_data_nn_{}.pickle".format(pickle_path, preprocess_typ), "rb"))
+        open("{}{}testing_data_nn_{}.pickle".format(pickle_path, corpusname+"_" if corpusname != "" else corpusname, preprocess_typ), "rb"))
 
     performance_analysis(testing_data, nn_model, file_name=file_name, file_information=file_information, verbose=True, accuracy=True,
-                     confusion_matrix=True, classification_report=True, save_pred=True, X_test_unprocessed=X_test_unprocessed)
+                         confusion_matrix=True, classification_report=True, save_pred=True, X_test_unprocessed=X_test_unprocessed)
 
 #_______________________________Evaluate HTW Data_______________________________
 if(True):
     file_name = "{}/evaluation_htw_data_{}_{}".format(preprocess_typ,
-                                             preprocess_typ, model_file_number)
+                                                      preprocess_typ, model_file_number)
     X_test_unprocessed = pickle.load(
         open("{}htw_X_data_unprocessed.pickle".format(pickle_path), "rb"))
 
@@ -107,15 +110,17 @@ if(True):
             0, "C:/Users/Flo/Projekte/Bachelor_Thesis_Sentiment_Analyse/datastories_semeval2017_task4")
         from utilities.data_loader import Task4Loader
         from utilities.data_loader import get_embeddings
-        
+
         embeddings, word_indices = get_embeddings(
             corpus="embedtweets.de", dim=200)
         loader = Task4Loader(word_indices, text_lengths=50, loading_data=False,
-                            datafolder=pickle_path, preprocess_typ=preprocess_typ)
-        testing_data=loader.decode_data_to_embeddings(X_test, y_test)  # decode data to word vectors
+                             datafolder=pickle_path, preprocess_typ=preprocess_typ)
+        testing_data = loader.decode_data_to_embeddings(
+            X_test, y_test)  # decode data to word vectors
 
         pickle.dump(testing_data, open("{}htw_data_testing_nn_{}.pickle".format(
             pickle_path, preprocess_typ), "wb"))
 
     performance_analysis(testing_data, nn_model, file_name=file_name, file_information=file_information, verbose=True, accuracy=True,
-                        confusion_matrix=True, classification_report=True, save_pred=True, X_test_unprocessed=X_test_unprocessed)
+                         confusion_matrix=True, classification_report=True, save_pred=True, X_test_unprocessed=X_test_unprocessed)
+"""
