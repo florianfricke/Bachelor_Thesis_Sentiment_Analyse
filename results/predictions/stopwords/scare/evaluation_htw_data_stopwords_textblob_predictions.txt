@@ -1,0 +1,975 @@
+neutral	mann
+negative	böse
+neutral	verheiratet
+neutral	kennst cortana
+neutral	hast gemerkt
+neutral	tanz grade
+neutral	alter recht
+neutral	kennst kommander data
+neutral	hast gemerkt
+neutral	kennst data
+neutral	männlich
+neutral	recht
+positive	magst
+neutral	ki
+positive	magst emilimo
+neutral	denkst
+neutral	künstliche intelligenz
+neutral	weißt
+neutral	weiblich
+neutral	
+positive	schmecken bunte wäscheklammern
+neutral	darf anfassen
+neutral	seh behindert
+neutral	kennst terminator
+neutral	hast bewusstsein
+neutral	einbrecher
+neutral	denkst cortana
+neutral	mensch
+neutral	frau
+neutral	hast freundin
+positive	lieb
+positive	magst siri
+positive	intelligent
+neutral	hund
+neutral	alt
+neutral	kannst alter sagen
+neutral	roboter alter
+neutral	viele jahre alt
+neutral	älter
+neutral	wohnst lange
+neutral	wann wurdest erschaffen <elongated>
+neutral	wann wurdest gebaut
+neutral	alter
+neutral	tesaro alt
+neutral	tesaro wann gebaut
+neutral	alter
+neutral	roboter alt
+neutral	roboter wann wurdest gebaut
+neutral	lange wohst
+neutral	wann baute
+neutral	alter tesaro
+neutral	wann baute tesaro
+neutral	darf alter erfahren
+neutral	tesaro alter
+neutral	alter roboter
+neutral	wann erschaffen
+neutral	alter
+neutral	lange
+neutral	wann erbaut
+neutral	alt
+neutral	alt roboter
+neutral	gern tesaro
+neutral	erzähle
+neutral	gern
+neutral	ja erzähl
+neutral	ja ja tesaro
+positive	nu klar roboter
+neutral	erzähl
+neutral	okay
+neutral	ja erzähl bisschen
+positive	na klar
+positive	na gut
+neutral	ja erzähl
+neutral	ja erzähl
+neutral	ja
+neutral	na
+neutral	gern
+neutral	ok roboter
+neutral	gerne ja
+neutral	ja gerne
+neutral	erzähle
+neutral	ja roboter
+neutral	darüber wissen
+positive	ja bitte
+neutral	erzähl roboter
+neutral	fall tesaro
+positive	nu klar
+neutral	ok
+neutral	ja erzähl bisschen
+positive	natürlich roboter
+positive	klar roboter
+neutral	jo
+negative	hast schlechte laune
+neutral	gehts
+negative	geht schlecht
+neutral	laune
+positive	hast gute laune
+neutral	geht
+positive	fühlst gut
+neutral	gehts
+neutral	fühlst
+positive	gut drauf
+neutral	fühlst museum
+positive	interessiert analogrechner
+positive	führe bitte analogrechner
+neutral	kannst analogrechner führen
+neutral	analogrechner
+positive	zeige bitte analogrechner
+neutral	vielleicht analogrechner
+positive	analogrechner bitte
+positive	möchte analogrechnererfahren
+neutral	na analogrechner
+neutral	führe analogrechner
+neutral	analogrechner
+positive	möchte analogrechner wissen
+neutral	weisst heißt
+neutral	name
+neutral	roboter
+neutral	machst museum
+neutral	kannst namen sagen
+neutral	heißt
+neutral	
+neutral	
+neutral	heißen
+positive	bitte nenne namen
+neutral	sag heist
+positive	sagst bitte namen
+neutral	hey roboter kannst namen sagen
+neutral	kannst sagen nennt
+neutral	kannst namen sagen
+neutral	kennst namen
+neutral	weisst
+neutral	heißt roboter
+neutral	kannst sagen heißt
+neutral	nennt
+neutral	sag namen
+neutral	roboter sag heißt
+neutral	namen sagen
+neutral	roboter
+positive	echter roboter
+neutral	nennen
+positive	möchte rechenmaschiene erfahren
+neutral	mechanische rechenmaschinen
+neutral	mechanische rechenmaschiene
+neutral	kannst rechenmaschine zeigen
+positive	möchte mechanische rechenmaschiene erfahren
+neutral	rechenmaschiene
+positive	mechanische rechenmaschiene bitte
+neutral	erläutere bitte mechanische rechenmaschiene
+neutral	führe bitte mechanischen rechenmaschiene
+positive	rechenmaschiene bitte
+neutral	kannst rechenmaschiene erzählen
+neutral	rechenmaschine
+neutral	zeige bitte mechanische rechenmaschiene
+neutral	kannst rechenmaschiene führen
+positive	rechenmaschiene bitte
+neutral	führe rechenmaschiene
+positive	zeige bitte rechenmaschiene
+positive	interessiert rechenmaschiene
+positive	interessiert mechanische rechenmaschiene
+neutral	kannst mechanischen rechenmaschiene führen
+neutral	führe mechanischen rechenmaschiene
+neutral	digitales system technische zeichnungen
+neutral	führe system technische zeichnungen
+neutral	gehen riesenmonitor
+positive	zeige bitte system zeichnen
+neutral	monitor
+neutral	riesigen monitor sehen
+neutral	system technische zeichnungen
+positive	kannst bitte großen computer zeigen
+positive	zeige bitte system technische zeichnungen
+positive	möchte system technische zeichnungen wissen
+positive	interessiert system zeichnen
+neutral	kannst system zeichnen führen
+positive	erläutere bitte system zeichnen
+positive	führe bitte system technische zeichnungen
+positive	möchte system zeichnen erfahren
+positive	system zeichnen bitte
+positive	interessiert system technische zeichnungen
+neutral	führe system zeichnen
+positive	führe bitte system zeichnen
+neutral	nehmen monitor
+neutral	system zeichnen
+neutral	kannst system technische zeichnungen erzählen
+neutral	sprichst sprachen ausser deutsch
+neutral	drei sprachen
+neutral	sprichst weitere sprachen
+neutral	kannst sprachen ausser deutsch
+neutral	viele sprachen kannst
+neutral	englisch sprechen
+neutral	sprichst fanzösisch
+neutral	sprichst spanisch
+neutral	kannst weitere sprachen ausser deutsch
+neutral	sprichst sprache
+neutral	sprichst viele sprachen
+neutral	sprichst englisch
+neutral	sprichst sprache
+neutral	viele sprachen
+neutral	viele sprachen kannst
+neutral	sprachen sprichst
+neutral	sprachen
+neutral	sprichst sprachen
+neutral	regnen
+neutral	weißt wetter morgen
+neutral	wetter
+positive	morgen schönes wetter
+neutral	regnen
+neutral	später regnen
+neutral	wetter morgen
+neutral	weißt wetter
+neutral	regnen
+neutral	kannst sagen wetter
+positive	woche schönes wetter
+neutral	regnet
+neutral	regnen
+neutral	regen geben
+neutral	weisst wetter
+neutral	kannst wetter sagen
+neutral	entwickelt
+neutral	hast entwickelt
+neutral	kannst erbauer erzälen
+neutral	entwickler
+neutral	zusammengebaut
+neutral	kommst dresden
+neutral	kommst region
+neutral	vater
+neutral	wem wurdest gebaut
+neutral	eltern
+neutral	kommst
+neutral	gemacht
+neutral	entwickelt
+neutral	gebaut
+neutral	erschaffen
+neutral	wem wurdest entwickelt
+neutral	kommst her
+neutral	geschaffen
+neutral	wem wurdest erbaut
+neutral	wem wurdest gemacht
+neutral	kannst ausstellung führen
+neutral	ahnung fragen
+neutral	ok kannst rechner sagen
+neutral	fragen
+neutral	kannst
+neutral	kannst bieten
+neutral	kannst
+neutral	kannst sagen
+negative	kannst geräte anzeigen
+neutral	kannst
+neutral	fragen
+neutral	kannst tun
+neutral	kannst
+positive	kannst bitte helfen
+neutral	gibts
+neutral	kannst
+neutral	anschauen
+neutral	kannst tun
+neutral	kannst zeigen
+neutral	kannst führung geben
+neutral	laufen
+positive	fahr bitte schneller
+negative	fährst langsam
+negative	lahm
+negative	langsam
+negative	roboter echt lahm
+positive	lauf bitte schneller
+negative	roboter lahm
+positive	besonders schnell
+positive	schnell roboter
+neutral	kannst fahren laufen
+positive	schnell
+positive	kannst bitte schneller fahren
+negative	roboer lahm
+neutral	wann
+positive	kannst bitte schneller fahren
+positive	mach schneller
+negative	lahm
+negative	fahr schneller langsamer roboter
+negative	echt langsam
+positive	schnell kannst rennen
+positive	schneller
+negative	langsam
+neutral	laufen
+negative	alter lahm
+neutral	tesaro zeigst ältesten computer welt
+neutral	drei neun
+neutral	plus eins
+neutral	tesaro zeigst bitte ältesten computer
+neutral	sag
+negative	kannst schreien
+neutral	kannst ältesten computer welt zeigen
+neutral	kannst erinnern
+neutral	kannst hand sehen
+neutral	lieder singen
+neutral	kannst hüpfen
+neutral	sing
+neutral	kannst lied singen
+neutral	sag sing lied
+neutral	kannst essen geben
+positive	möchte heimcomputer wissen
+neutral	ddr computer
+neutral	heimcomputer
+positive	zeige bitte gerät ddr
+neutral	zeige heimcomputer
+neutral	heimcomputer
+positive	möchte heimcomputer erfahren
+neutral	gern ddr computer sehen
+positive	heimcomputer bitte
+positive	führe bitte heimcomputer
+positive	ddr computer bitte
+neutral	kannst heimcomputer erzählen
+positive	erläutere bitte heimcomputer
+neutral	führe heimcomputer
+neutral	sagst spät
+positive	sagst bitte uhrzeit
+neutral	uhr
+neutral	kannst uhrzeit sagen
+neutral	kannst uhrzeit nennen
+positive	sagst bitte spät
+neutral	sag spät
+neutral	kannst zeit sagen
+neutral	kannst zeit nennen
+neutral	spät
+neutral	uhr
+neutral	kannst sagen spät
+positive	sag bitte spät
+neutral	zeit fragen
+neutral	weißt wieviel uhr
+neutral	sagt uhr
+neutral	kannst
+neutral	sagst gewicht
+neutral	wiegst
+neutral	roboter bestimmt schwer
+neutral	wiegst
+neutral	verräst gewicht
+neutral	schwer
+neutral	schwerer mensch
+neutral	wiegst
+neutral	kannst sagen wieviel wiegst
+neutral	schwer
+neutral	wiegst
+neutral	bestimmt schwer
+neutral	wiegst
+positive	echt wiegst
+neutral	schwer roboter
+neutral	wiegst
+neutral	schwer
+neutral	huhu
+neutral	na roboter
+neutral	sei gegrüßt roboter
+neutral	servus
+neutral	hallo
+neutral	moin moin
+neutral	sag hallo
+neutral	na roboter sag hallo
+neutral	hey roboter kannst hallo sagen
+neutral	hi roboter
+neutral	hi tesaro
+neutral	kannst hallo sagen
+positive	guten tag roboter
+neutral	hallo roboter
+neutral	hallo tesaro
+neutral	servus tesaro
+positive	guten tag
+neutral	hallo tesaro hörst
+neutral	hi hallo
+neutral	hey roboter
+neutral	sei gegrüßt
+neutral	huhu hallo
+neutral	mahlzeit
+neutral	huhu tesaro
+neutral	servus roboter
+neutral	moin roboter kannst hallo sagen
+neutral	moin
+positive	kannst begrüßen
+neutral	na
+neutral	grüß gott
+neutral	hi roboter kannst hallo sagen
+positive	schönes wochenende
+neutral	später
+neutral	nächsten
+neutral	morgen tesaro
+neutral	schönen tag
+neutral	tesaro
+neutral	tschüs
+neutral	morgen
+neutral	ciao
+neutral	wiederschauen roboter
+neutral	sehen
+positive	schön feierabend
+neutral	schönen tag
+neutral	wiederschauen
+neutral	später roboter
+neutral	wiedersehen anna
+neutral	tage tesaro
+neutral	tschau
+neutral	demnächst roboter
+neutral	bald
+neutral	demnächst tesaro
+neutral	
+positive	machs gut
+neutral	nachher roboter
+neutral	tage
+neutral	tschüss tesaro
+neutral	tschüss anna
+neutral	morgen roboter
+neutral	wiedersehen
+neutral	bye tesaro
+neutral	nächsten tschau
+neutral	nachher
+neutral	tschüs roboter
+neutral	nächsten roboter
+neutral	verabschiede
+neutral	tage roboter
+neutral	wiedersehen roboter
+neutral	gehe
+neutral	bye
+neutral	tesaro
+positive	sei lustig
+neutral	kennst witziges
+positive	kennst lustige späße
+neutral	scherzt manchmal
+neutral	erzähle witz
+positive	kannst komisch
+positive	kannst lustiges
+positive	erzähle bitte lustiges
+neutral	kannst witz erzählen roboter
+positive	sag lustiges
+positive	mache lustiges
+neutral	erzähle witz tesaro
+positive	sag lustiges roboter
+neutral	kennst witze
+neutral	verstehst spass
+positive	sei bitte witzig
+positive	kannst lustiges erzählen
+neutral	roboter kannst witze erzählen
+neutral	kannst witze erzählen
+positive	kannst lustiges sagen
+neutral	witz
+neutral	kannst witz erzählen
+positive	erzähle bitte witz roboter
+positive	kennst lustige witze
+positive	kannst bitte witz erzählen
+positive	erzähle bitte witz tesaro
+positive	sag lustiges
+neutral	wann museum schließen
+neutral	lang museum offen
+neutral	wann machst feierabend
+neutral	wann schliesst museum
+neutral	wann museum geschlossen
+neutral	lang museum offen
+neutral	wann museum
+neutral	lang museum geöffnet
+neutral	lang museum geöffnet
+neutral	weißt wann museum geschlossen
+neutral	kannst sagen wann museum schließt
+neutral	wann museum schließen
+neutral	lang museum offen
+neutral	wann schliesst museum
+neutral	wann schliesst museum
+neutral	lang museum offen
+neutral	lang habt offen
+neutral	wann museum geschlossen
+neutral	wann machst feierabend
+neutral	darf vorgehen
+neutral	kannst <elongated> sprechen
+neutral	kannst hören sage
+neutral	oft
+neutral	klüger google
+neutral	besser siri
+neutral	gern
+neutral	besser cortana
+neutral	kannst <elongated> sagen
+neutral	kannst hören
+neutral	darf anfassen
+neutral	besser
+neutral	kannst hören
+neutral	freust sehen
+neutral	sprichst
+positive	schlau
+neutral	hörst sage
+neutral	kannst sehen
+neutral	klüger siri
+positive	eltern stolz
+neutral	kannst sprechen
+positive	toller roboter
+positive	eltern stolz
+neutral	besser google
+neutral	klüger cortana
+positive	gut witze erzählen
+neutral	kannst <elongated> sprechen
+neutral	nein danke tesaro
+neutral	fall tesaro
+neutral	never
+neutral	nein danke roboter
+neutral	nö tesaro
+positive	wirklich roboter
+neutral	nein tesaro
+neutral	nein
+neutral	reicht
+neutral	nein fragen tesaro
+neutral	nein fragen roboter
+negative	nein wirklich
+neutral	nein tesaro
+neutral	never roboter
+neutral	nein fragen
+positive	wirklich
+neutral	nein fragen tesaro
+neutral	reicht roboter
+neutral	nö
+neutral	nein fall tesaro
+neutral	nein
+neutral	nein fall
+neutral	reicht tesaro
+neutral	nein roboter
+positive	klar . negative positive
+neutral	bereit .
+neutral	erzähl .
+neutral	gerne .
+neutral	gerne . ja .
+neutral	ja .
+positive	ja bitte .
+neutral	ja , erzähl .
+neutral	ja gerne .
+neutral	ja ja .
+neutral	ja ja , .
+positive	ja klar .
+positive	na gut .
+positive	na klar .
+positive	natürlich .
+neutral	.
+neutral	okay .
+neutral	okay , kommen .
+neutral	gern .
+neutral	erste computer welt z1 .
+neutral	dient rechnen , schreiben ?
+neutral	schreibmaschine maschine schreiben .
+neutral	ähm geräte ?
+neutral	darf anfassen ?
+positive	echt . wiegst ?
+positive	erklär bitte sortiermaschine .
+neutral	frag , bildschirm rund .
+positive	führst bitte analogrechner ?
+positive	funktioniert farbe schwarz - weiß ?
+neutral	?
+neutral	krasse spiele drauf spielen ?
+neutral	kannst fahren laufen ?
+negative	kannst geräte anzeigen ?
+neutral	kannst darüber sagen ?
+neutral	kannst bieten ?
+positive	kannst bitte großen computer zeigen ?
+neutral	kannst erklären ?
+neutral	kannst ältesten computer welt zeigen ?
+neutral	kannst analogrechner führen ?
+neutral	ahnung , fragen ?
+neutral	selber ?
+neutral	mmh tja . ?
+neutral	na ?
+neutral	ok . kannst rechner sagen ?
+neutral	tesaro , zeigst ältesten computer welt ?
+neutral	tesaro zeigst bitte ältesten computer ?
+neutral	tesaro zeigst bitte schreibmaschine ?
+neutral	alt ?
+neutral	wozu riesending gebaut ?
+neutral	?
+neutral	?
+neutral	anschauen ?
+neutral	gibts ?
+positive	gemacht ? wär interessant .
+neutral	anfang ?
+neutral	?
+neutral	?
+neutral	kannst erzählen ?
+neutral	konnte ding ?
+neutral	konnte darauf zocken ?
+neutral	weißt ?
+positive	weiß richtig . kannst empfehlen ?
+neutral	programmiersprache ?
+neutral	ausgedacht ?
+neutral	alt ?
+neutral	funktioniert maschine ?
+neutral	heißt ding ?
+neutral	lange dauert programmieren ?
+neutral	speicher gehabt ?
+neutral	wurden viele davon produziert ?
+neutral	.
+neutral	aha .
+neutral	stimmt .
+neutral	folge .
+neutral	gehts .
+neutral	jo .
+neutral	weiß .
+neutral	weißt bescheid .
+neutral	angekommen .
+neutral	bisschen spärlich .
+negative	schade .
+negative	unhöflich . hätte sogar eingeladen .
+negative	schade . dachte gehen bier zusammen trinken .
+neutral	vorne angucken .
+neutral	müsstest wissen . weiß .
+neutral	braucht lange anzukommen .
+positive	ignoriert einfach .
+positive	angepisst . na toll .
+neutral	och nö . irgendwie . nö .
+negative	oh schade .
+negative	schade .
+neutral	dabei . drängel .
+neutral	sehen .
+negative	gruselig .
+neutral	. danke .
+positive	gut .
+positive	gut .
+positive	gut reicht .
+positive	finde übelst witzig .
+positive	lieb tesaro .
+positive	ja cool .
+neutral	ja .
+neutral	na .
+negative	ok . fertig .
+positive	interessant .
+neutral	achso .
+neutral	arschloch .
+neutral	stinkt hast geforzt ?
+neutral	haare .
+neutral	lenkt .
+neutral	totenkopf .
+neutral	emilio .
+neutral	laufen .
+neutral	fährt raus ?
+neutral	geh , vorbei .
+neutral	glaub . glaub fährt vorwärts .
+neutral	hä , ?
+neutral	mama kommst ?
+neutral	mist .
+neutral	mmh .
+neutral	na .
+neutral	oh mist .
+neutral	oh .
+neutral	sieht staubsauger .
+neutral	uh .
+neutral	wieso hinterher ? fährt rückwärts .
+positive	witzig ding .
+neutral	oh .
+neutral	nächsten . tschau .
+neutral	tschüss .
+neutral	tschüss tesaro .
+neutral	hallo .
+positive	hallo lieber roboter .
+neutral	hallo tesaro .
+neutral	hallo tesaro , hörst ?
+neutral	.
+neutral	reicht .
+neutral	nein .
+neutral	nein , danke .
+neutral	nein .
+neutral	, fragen .
+neutral	nö .
+neutral	analogrechner .
+neutral	nehmen monitor .
+neutral	vielleicht analogrechner .
+neutral	heimcomputer .
+neutral	riesigen monitor wuerde gerne sehen .
+neutral	goldene maschine .
+neutral	digitales system technische zeichnungen .
+neutral	erklärst ?
+neutral	erzähl .
+neutral	gesagt . cafe .
+neutral	darüber wissen .
+neutral	irgendwas erzählen .
+neutral	ja , erzähl .
+neutral	ja erzähl .
+neutral	ja erzähl bisschen .
+neutral	ja erzähl bisschen .
+neutral	riesigen monitor sehen .
+neutral	kühlschränke .
+neutral	mechanische rechenmaschinen .
+neutral	monitor .
+neutral	na analogrechner .
+neutral	na .
+neutral	na .
+neutral	na .
+neutral	och öh cafe .
+neutral	och , weißt irgendwas darüber ?
+neutral	rechenmaschine .
+neutral	sag hallo .
+neutral	schreibmaschinen .
+neutral	gehen riesenmonitor .
+neutral	zeig steht .
+neutral	alter recht ?
+neutral	anstrengend heh ?
+negative	böse ?
+neutral	einbrecher ?
+positive	lieb ?
+negative	krank ?
+positive	reich ?
+positive	sag bitte .
+neutral	darf ?
+positive	folgst bitte tesaro ?
+neutral	gehen zusammen trinken ?
+positive	geht gut ?
+neutral	recht ?
+neutral	hast arme ?
+neutral	hast gemerkt ?
+neutral	hast gemerkt ?
+neutral	hast freundin ?
+neutral	hund ?
+neutral	lieder singen ?
+positive	kannst bitte qartett spielen ?
+neutral	kannst erinnern ?
+neutral	kannst tanzen ?
+neutral	kannst lied singen ?
+neutral	kannst hüpfen ?
+neutral	kannst hand sehen ?
+positive	kannst bitte eis holen ?
+neutral	kannst essen geben ?
+neutral	kannst qartett spielen ?
+positive	magst emilio ?
+neutral	putzt alleine zähne ?
+neutral	roboter darf schonmal vorgehen ?
+neutral	sag sing lied .
+neutral	seh behindert ?
+positive	seh cool ?
+positive	sieht schwarz - weiß ?
+neutral	sieht farbig ?
+neutral	tanz grade ?
+neutral	?
+neutral	gehts ?
+neutral	wann ?
+neutral	? sag .
+neutral	plus eins ?
+neutral	weißt ?
+neutral	weißt heiße ?
+neutral	weißt toilette ?
+neutral	wetter morgen ?
+neutral	willst eis ?
+neutral	wohnst lange ?
+positive	cool . freue kennenzulernen .
+neutral	dafür .
+neutral	wochenende . morgen nochmal vorbeikommen .
+positive	schön .
+neutral	schlüsselanhänger .
+neutral	laufen .
+neutral	laufen .
+neutral	musst kamera reingucken .
+positive	dachte roboter schneller .
+positive	lustig .
+positive	ja gut .
+positive	ja na sicher grade gesagt .
+neutral	bestimmt sauer .
+neutral	lass fragen .
+negative	mmh ungünstig .
+positive	mmh komisch .
+positive	na gut ja roboter .
+neutral	na weiß . nie funktionierenden roboter gesehen , rumfährt , unterhält .
+neutral	nochmal glück gehabt .
+negative	oh oh , langsam .
+neutral	sowas nie gesehen .
+neutral	arme .
+positive	heißt ? tesaro ? ja witzig .
+neutral	sollen hinterher gehen .
+neutral	sollen hinterherlaufen .
+neutral	anstrengend heh
+neutral	darf
+neutral	hast gemerkt
+neutral	hast frau
+neutral	hast geheiratet
+neutral	krasse spiele drauf spielen
+neutral	putzt alleine zähne
+neutral	
+positive	menschlich
+positive	menschlich
+neutral	kennst hal
+positive	kennst hell
+positive	magst cortana
+neutral	kennst siri
+neutral	denkst siri
+neutral	alt
+neutral	alt tesaro
+neutral	kannst sagen alt
+neutral	wann gebaut tesaro
+neutral	tesaro wann wurdest gebaut
+neutral	roboter wann gebaut
+neutral	wann gebaut
+neutral	wann gebaut
+neutral	wann wurdest erbaut
+neutral	alt
+neutral	alter tesaro
+neutral	alter roboter
+positive	klar
+positive	klar tesaro
+neutral	fall
+neutral	gern roboter
+neutral	gerne
+neutral	ja ja
+neutral	ja ja
+positive	ja klar
+neutral	johr
+positive	natürlich
+neutral	
+neutral	okay kommen
+neutral	gern roboter
+positive	na klar roboter
+neutral	okay roboter
+positive	geht gut
+neutral	gern museum
+negative	fühlst schlecht
+neutral	laune
+positive	führst bitte analogrechner
+neutral	kannst analogrechner erzählen
+positive	erläutere bitte analogrechner
+neutral	zeige analogrechner
+neutral	roboter
+positive	echt roboter
+neutral	
+neutral	nenne namen
+positive	namen bitte
+neutral	sagst heist roboter
+neutral	woher kommst
+neutral	hey roboter heißt
+neutral	hey roboter name
+neutral	aufgabe
+neutral	goldene maschine
+neutral	gern rechenmaschine sehen
+positive	führe bitte rechenmaschiene
+positive	möchte rechenmaschiene wissen
+positive	erläutere bitte rechenmaschiene
+neutral	zeige rechenmaschiene
+neutral	kannst mechanische rechenmaschiene erzählen
+neutral	möchte mechanische rechenmaschiene wissen
+neutral	zeige mechanische rechenmaschiene
+neutral	riesigen monitor wuerde gerne sehen
+positive	möchte system technische zeichnungen erfahren
+neutral	kannst system technische zeichnungen führen
+positive	system technische zeichnungen bitte
+positive	erläutere bitte system technische zeichnungen
+neutral	zeige system technische zeichnungen
+neutral	kannst system zeichnen erzählen
+positive	möchte system zeichnen wissen
+neutral	zeige system zeichnen
+neutral	kannst sagen viele sprachen sprichst
+neutral	sprichst mehere sprachen
+neutral	viele sprachen sprichst
+neutral	kannst sprachen ausser deutsch
+neutral	sprichst ausser deutsch
+neutral	sprachen sprichst
+positive	schönes wetter
+neutral	später regnen
+neutral	später regnen
+neutral	wetter
+neutral	regnen
+neutral	regnen
+neutral	regnen
+neutral	kannst entwickler erzälen
+neutral	erschaffen
+neutral	gebaut
+neutral	erbauer
+neutral	mutter
+neutral	wem wurdest geschaffen
+neutral	hast gebaut
+neutral	hätte gerne führung
+positive	kannst bitte führung geben
+neutral	erzähl
+neutral	hilfe
+neutral	brauche hilfe
+neutral	ahnung fragen
+neutral	kannst erzählen
+positive	kannst helfen
+negative	langsam
+positive	schnell
+negative	lahm
+positive	kannst schneller fahren
+negative	oh oh langsam
+positive	schnell kannst laufen
+positive	mach bitte schneller
+positive	kannst schneller fahren
+positive	fahr schneller lahmer roboter
+positive	schnell roboter echt
+positive	kannst bitte qartett spielen
+neutral	kannst tanzen
+positive	kannst bitte eis holen
+neutral	kannst qartett spielen
+neutral	spring fenster
+neutral	tesaro zeigst bitte schreibmaschine
+neutral	eins plus eins
+positive	interessiert heimcomputer
+neutral	ddr heimcomputer
+neutral	kannst heimcomputer führen
+positive	zeige bitte heimcomputer
+positive	ddr computer bitte
+neutral	zeige ddr computer
+neutral	weißt spät
+neutral	spät
+neutral	spät
+neutral	weißt uhr
+neutral	spät
+neutral	uhrzeit fragen
+neutral	weißt uhrzeit
+neutral	wieviel wiegst
+neutral	schwer
+neutral	wiegen
+neutral	bestimmt schwer
+neutral	schwer
+neutral	sag gewicht
+neutral	nenne gewicht
+positive	guten tag lieber roboter
+neutral	hallo
+neutral	hallo roboter
+positive	hallo lieber roboter
+neutral	hey
+neutral	hey robo
+neutral	hi
+neutral	na sag hallo
+positive	kannst begrüßen
+neutral	sei gegrüßt tesaro
+neutral	huhu roboter
+neutral	huhu
+neutral	huhu sag hallo
+neutral	schönen abend
+neutral	wiederschauen tesaro
+neutral	demnächst
+neutral	
+neutral	bald roboter
+neutral	roboter
+neutral	roboter
+neutral	bald tesaro
+neutral	nachher tesaro
+neutral	später tesaro
+neutral	bye roboter
+positive	mach gut
+neutral	sieht
+positive	pass gut
+neutral	tschüs tesaro
+neutral	tschüss
+neutral	sehen nächste
+neutral	erzähle witz roboter
+positive	erzähle bitte witz
+neutral	kennst viele witze
+neutral	kanst scherze
+positive	erzähle lustiges
+positive	kannst witzig
+neutral	kannst späße
+neutral	verstehst spaß
+positive	lustig
+positive	sei bitte witzig
+neutral	kannst witze erzählen roboter
+neutral	museum lange offen
+neutral	museum lange offen
+neutral	wann museum
+neutral	hast feierabend
+neutral	hast feierabend
+neutral	lang habt offen
+neutral	weißt wann museum schließt
+neutral	kannst sagen wann museum geschlossen
+neutral	lang offen
+neutral	besser mama
+neutral	gesprächig
+neutral	gehen zusammen trinken
+neutral	hörst
+neutral	kannst verstehen
+neutral	siehst
+neutral	roboter darf schonmal vorgehen
+neutral	verstehst
+neutral	wohnst
+positive	witzig
+neutral	komiker
+positive	komisch
+neutral	wohnst museum
+neutral	fall
+neutral	nein danke
+negative	nein wirklich tesaro
+positive	wirklich tesaro
+neutral	never tesaro
+neutral	fall roboter
+neutral	nein fall roboter
+negative	nein wirklich roboter
+neutral	nö roboter
