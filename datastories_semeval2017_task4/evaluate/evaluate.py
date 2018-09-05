@@ -58,7 +58,9 @@ def performance_analysis(testing, model, file_name="", file_information="", verb
 ############################################################################
 # Evaluate Data
 ############################################################################
-pickle_path = "data/labeled_sentiment_data/pickle_files/"
+corpus_name = "htw"
+pickle_path = "data/labeled_sentiment_data/pickle_files/{}/".format(
+    corpus_name)
 preprocess_typ = "ekphrasis"
 model_file_number = 4
 file_information = ""

@@ -18,9 +18,9 @@ import pickle
 
 corpus_name="scare"
 path = "data/labeled_sentiment_data/pickle_files/"
-preprocess_typ = "stopwords"
+preprocess_typ = "ekphrasis"
 
-runprocessing = True
+runprocessing = False
 run_lexicon_method = False
 run_textblob = False
 run_mnb = True
@@ -63,7 +63,8 @@ y_test = pickle.load(
 # Lexicon Method
 ############################################################################
 if(run_lexicon_method):
-    results_file_name = "{}/evaluation_{}_data_{}_lexiconmethod".format(preprocess_typ, corpus_name, preprocess_typ)
+    results_file_name = "{}/{}evaluation_data_{}_lexiconmethod".format(
+        preprocess_typ, corpus_name+"/" if corpus_name != "" else corpus_name, preprocess_typ)
 
     print("run lexicon-method")
     sentiment_files = get_filenames_from_directory(
@@ -76,8 +77,8 @@ if(run_lexicon_method):
 # textblob-de
 ############################################################################
 if(run_textblob):
-    results_file_name = "{}/evaluation_{}_data_{}_textblob".format(
-        preprocess_typ, corpus_name, preprocess_typ)
+    results_file_name = "{}/{}evaluation_data_{}_textblob".format(
+        preprocess_typ, corpus_name+"/" if corpus_name != "" else corpus_name, preprocess_typ)
 
     print("run textblob-de")
     textblob_model = TextBlobSentimentAnalysis()
@@ -88,14 +89,14 @@ if(run_textblob):
 # Multinomial Naive Bayes
 ############################################################################
 if(run_mnb):
-    results_file_name = "{}/evaluation_{}_data_{}_mnb".format(
-        preprocess_typ, corpus_name, preprocess_typ)
+    results_file_name = "{}/{}evaluation_data_{}_mnb_no_bow_parameter".format(
+        preprocess_typ, corpus_name+"/" if corpus_name != "" else corpus_name, preprocess_typ)
 
     print("run multinomial naive bayes")
     mnb_model = MultinomialNaiveBayes(
-        X_train, X_test, y_train, y_test, max_features=5000, min_df=2)
+        X_train, X_test, y_train, y_test)#, max_features=5000, min_df=2
     mnb_model.encoding_textdata()
     model = mnb_model.fit_model()
     metric_list = mnb_model.performance_analysis(
-        model, file_name=results_file_name, X_test=transform_data(X_test), verbose=True, accuracy=True, confusion_matrix=True, plotting_confusion_matrix=True, classification_report=True, save_pred=True)
+        model, file_name=results_file_name, X_test=transform_data(X_test), verbose=True, accuracy=True, confusion_matrix=True, plotting_confusion_matrix=True, classification_report=True, save_pred=False)
 
