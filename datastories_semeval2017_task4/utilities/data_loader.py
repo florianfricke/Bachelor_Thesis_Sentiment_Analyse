@@ -57,10 +57,9 @@ def prepare_text_only_dataset(X, pipeline):
     return X
 
 class Task4Loader:
-    def __init__(self, word_indices, text_lengths, loading_data=True, datafolder="data/labeled_sentiment_data/pickle_files/", preprocess_typ="ekphrasis", **kwargs):
+    def __init__(self, word_indices, text_lengths, loading_data=True, datafolder="", preprocess_typ="ekphrasis", **kwargs):
         self.word_indices = word_indices
         self.y_one_hot = kwargs.get("y_one_hot", True)
-        corpus_name = kwargs.get("corpus_name", "")
 
         self.pipeline = Pipeline([
             ('ext', EmbeddingsExtractor(word_indices=word_indices,
@@ -70,13 +69,13 @@ class Task4Loader:
         if(loading_data):
             print("Loading data...")
             self.X_train = pickle.load(open(
-                "{}{}X_train_{}.pickle".format(datafolder, corpus_name+"_" if corpus_name !="" else corpus_name, preprocess_typ), "rb"))
+                "{}X_train_{}.pickle".format(datafolder, preprocess_typ), "rb"))
             self.X_test = pickle.load(open(
-                "{}{}X_test_{}.pickle".format(datafolder, corpus_name+"_" if corpus_name !="" else corpus_name, preprocess_typ), "rb"))
+                "{}X_test_{}.pickle".format(datafolder, preprocess_typ), "rb"))
             self.y_train = pickle.load(open(
-                "{}{}y_train_{}.pickle".format(datafolder, corpus_name+"_" if corpus_name !="" else corpus_name, preprocess_typ), "rb"))
+                "{}y_train_{}.pickle".format(datafolder, preprocess_typ), "rb"))
             self.y_test = pickle.load(open(
-                "{}{}y_test_{}.pickle".format(datafolder, corpus_name+"_" if corpus_name !="" else corpus_name, preprocess_typ), "rb"))
+                "{}y_test_{}.pickle".format(datafolder, preprocess_typ), "rb"))
 
             print("-------------------\ntraining set stats\n-------------------")
             print_dataset_statistics(self.y_train)

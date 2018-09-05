@@ -13,7 +13,7 @@ from keras.callbacks import TensorBoard
 
 import sys
 sys.path.insert(
-    0, "C:/Users/flfr/Documents/Python_Scripts/Bachelor_Thesis_Sentiment_Analyse/datastories_semeval2017_task4")
+    0, "C:/Users/Flo/Projekte/Bachelor_Thesis_Sentiment_Analyse/datastories_semeval2017_task4")
 
 from models.nn_models import build_attention_RNN
 from utilities.data_loader import get_embeddings, Task4Loader, prepare_dataset
@@ -32,17 +32,18 @@ WV_DIM = 200
 FINAL = True
 
 max_length = 50     # max tweet length
-DATAFOLDER = "C:/Users/flfr/Documents/Python_Scripts/Bachelor_Thesis_Sentiment_Analyse/data/labeled_sentiment_data/pickle_files/"
-PREPROCESS_TYP = "stopwords"
-COPRPUSNAME="scare"
+DATAFOLDER = "C:/Users/Flo/Projekte/Bachelor_Thesis_Sentiment_Analyse/data/labeled_sentiment_data/pickle_files/"
+PREPROCESS_TYP = "ekphrasis"
+COPRPUSNAME = "sb10k_and_one_million_posts_corpus"
+
 ############################################################################
 # PERSISTENCE
 ############################################################################
 # if True save model checkpoints, as well as the corresponding word indices
 # set PERSIST = True, in order to be able to use the trained model later
 PERSIST = True
-RESULT_PATH = "results_artificial_neural_network/{}/{}".format(
-    PREPROCESS_TYP, COPRPUSNAME+"/" if COPRPUSNAME != "" else COPRPUSNAME)
+RESULT_PATH = "results_artificial_neural_network/{}/{}/".format(
+    PREPROCESS_TYP, COPRPUSNAME)
 
 MODEL_FILE_NUMBER = len(
     glob.glob(os.path.join(RESULT_PATH, "model_history_{}*.pickle".format(PREPROCESS_TYP)))) + 1
@@ -62,38 +63,38 @@ if PERSIST:
         pickle.dump(word_indices, open(best_model_word_indices(), 'wb'))
 
 loader = Task4Loader(word_indices, text_lengths=max_length, loading_data=True,
-                     datafolder=DATAFOLDER, preprocess_typ=PREPROCESS_TYP, corpus_name=COPRPUSNAME)
+                     datafolder=DATAFOLDER+COPRPUSNAME+"/", preprocess_typ=PREPROCESS_TYP)
 
 if FINAL:
     print("\n > running in FINAL mode!\n")
     training, testing = loader.load_final() #Processing Data
 else:
     training, validation, testing = loader.load_train_val_test()
-    pickle.dump(validation, open("{}{}validation_data_nn_{}.pickle".format(
+    pickle.dump(validation, open("{}{}/validation_data_nn_{}.pickle".format(
         DATAFOLDER, COPRPUSNAME, PREPROCESS_TYP), "wb"))
     # training[0], training[1] = text, sentiment
 
-pickle.dump(training, open("{}{}training_data_nn_{}.pickle".format(
-    DATAFOLDER, COPRPUSNAME+"_" if COPRPUSNAME != "" else COPRPUSNAME, PREPROCESS_TYP), "wb"))
-pickle.dump(testing, open("{}{}testing_data_nn_{}.pickle".format(
-    DATAFOLDER, COPRPUSNAME+"_" if COPRPUSNAME != "" else COPRPUSNAME, PREPROCESS_TYP), "wb"))
+pickle.dump(training, open("{}{}/training_data_nn_{}.pickle".format(
+    DATAFOLDER, COPRPUSNAME, PREPROCESS_TYP), "wb"))
+pickle.dump(testing, open("{}{}/testing_data_nn_{}.pickle".format(
+    DATAFOLDER, COPRPUSNAME, PREPROCESS_TYP), "wb"))
 
 ############################################################################
 # NN MODEL
 ############################################################################
 print("Building NN Model...")
-attention_model = None # simple, None
+attention_model = "simple" # simple, None
 nn_model = build_attention_RNN(embeddings, classes=3, max_length=max_length,    #classes = pos., neg, neutral
                                unit=LSTM, layers=2, cells=150,
                                bidirectional=True,
                                attention=attention_model,  
-                               noise=0.3,
+                               noise=0.1, #0.3
                                final_layer=False,
-                               dropout_final=0.3,
-                               dropout_attention=0.5, #0.5
-                               dropout_words=0.3, #0.3
-                               dropout_rnn=0.3,
-                               dropout_rnn_U=0.3,
+                               dropout_final=0.1,
+                               dropout_attention=0.1, #0.5
+                               dropout_words=0.1,
+                               dropout_rnn=0.1,
+                               dropout_rnn_U=0.1,
                                clipnorm=1, lr=0.001, loss_l2=0.0001)   # gradient clipping and learning rate
 print(nn_model.summary())
 
@@ -133,8 +134,8 @@ if not FINAL:
 
 metrics_callback = MetricsCallback(datasets=_datasets, metrics=metrics)
 plotting = PlottingCallback(grid_ranges=(0.5, 0.9), height=5,
-                            plot_name="model_{}{}_{}".format(COPRPUSNAME+"_" if COPRPUSNAME != "" else COPRPUSNAME, PREPROCESS_TYP, MODEL_FILE_NUMBER))  # benchmarks={"SE17": 0.681},
-tensorboard = TensorBoard(log_dir='./logs/{}'.format(COPRPUSNAME+"/" if COPRPUSNAME != "" else COPRPUSNAME))
+                            plot_name="model_{}_{}_{}".format(COPRPUSNAME, PREPROCESS_TYP, MODEL_FILE_NUMBER))  # benchmarks={"SE17": 0.681},
+tensorboard = TensorBoard(log_dir='./logs/{}'.format(COPRPUSNAME))
 
 _callbacks = []
 _callbacks.append(metrics_callback)
@@ -159,7 +160,7 @@ print("Class weights:",
 
 # 50-50
 epochs = 20
-batch_size = 500
+batch_size = 20
 
 history = nn_model.fit(training[0], training[1],
                        validation_data=validation if not FINAL else testing,
@@ -172,13 +173,12 @@ pickle.dump(history.history, open("{}model_history_{}_{}.pickle".format(
 ############################################################################
 # Evaluation
 ############################################################################
-file_name = "{}/{}evaluation_{}_{}".format(PREPROCESS_TYP, COPRPUSNAME +
-                                         "/" if COPRPUSNAME != "" else COPRPUSNAME, PREPROCESS_TYP, MODEL_FILE_NUMBER)
+file_name = "{}/{}/evaluation_{}_{}".format(PREPROCESS_TYP, COPRPUSNAME, PREPROCESS_TYP, MODEL_FILE_NUMBER)
 file_information = "epochs = " + str(epochs) + "\nbatch_size = " + str(batch_size) + \
     "\nmax textlength = " + str(max_length) + "\npreprocess-typ = " + \
     PREPROCESS_TYP + "\nattention model = " + \
     str(attention_model) + "\nbest model with " + mode + " " + monitor
 file_information = file_information + \
-    "\ndropout_attention = 0.5\n2 LSTM Layer\nDropout & Noise = 0.3"
+    "\ndropout_attention = 0.1\n2 LSTM Layer\nDropout & Noise = 0.1"
 performance_analysis(testing, nn_model, file_name=file_name, file_information=file_information, verbose=True, accuracy=True,
-                     confusion_matrix=True, classification_report=True)
+                     confusion_matrix=True, plotting_confusion_matrix=True, classification_report=True)

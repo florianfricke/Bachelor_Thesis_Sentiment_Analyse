@@ -2,16 +2,15 @@
 Created by Florian Fricke.
 """
 
-import sys
-sys.path.insert(
-    0, "C:/Users/flfr/Documents/Python_Scripts/Bachelor_Thesis_Sentiment_Analyse/")
-
 from sklearn import metrics
 from keras.models import load_model
 import pickle
 import os
+import matplotlib.pyplot as plt
+import itertools
+import numpy as np
 
-def performance_analysis(testing, model, file_name="", file_information="", verbose=True, accuracy=True, confusion_matrix=True, classification_report=True, **kwargs):
+def performance_analysis(testing, model, file_name="", file_information="", verbose=True, accuracy=True, confusion_matrix=True, plotting_confusion_matrix=True, classification_report=True, **kwargs):
     with open('results_artificial_neural_network/{}.txt'.format(file_name), 'w') as f:
         print(file_information, file=f)
         y_pred = model.predict(testing[0])
@@ -31,6 +30,27 @@ def performance_analysis(testing, model, file_name="", file_information="", verb
             if(verbose):
                 print("\nconfusion matrix:", file=f)
                 print(confusion_matrix, file=f)
+
+            if(plotting_confusion_matrix):
+                import matplotlib as mpl
+                mpl.rcParams.update(mpl.rcParamsDefault)
+                from matplotlib import rcParams
+                rcParams.update({'figure.autolayout': True})
+
+                # Plot non-normalized confusion matrix
+                plt.figure(dpi=600)
+                plot_confusion_matrix(confusion_matrix, classes=['positiv', 'neutral', 'negativ'],
+                                        title='Wahrheitsmatrix')
+                plt.savefig(
+                    'results_artificial_neural_network/{}_confusion_matrix_1.png'.format(file_name))
+
+                # Plot normalized confusion matrix
+                plt.figure(dpi=600)
+                plot_confusion_matrix(confusion_matrix, classes=['positiv', 'neutral', 'negativ'], normalize=True,
+                                        title='normalisierte Wahrheitsmatrix')
+                plt.savefig(
+                    'results_artificial_neural_network/{}_confusion_matrix_2.png'.format(file_name))
+
 
         if(classification_report):
             classification_report = metrics.classification_report(
@@ -55,9 +75,40 @@ def performance_analysis(testing, model, file_name="", file_information="", verb
                         pred, X_test_unprocessed[i]), file=f)
     return metric_list
 
+
+def plot_confusion_matrix(cm, classes,
+                          normalize=False,
+                          title='Wahrheitsmatrix',
+                          cmap=plt.cm.Blues):
+    if normalize:
+        cm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
+
+    plt.imshow(cm, interpolation='nearest', cmap=cmap)
+    plt.title(title)
+    plt.colorbar()
+    tick_marks = np.arange(len(classes))
+    plt.xticks(tick_marks, classes, rotation=45)
+    plt.yticks(tick_marks, classes)
+
+    fmt = '.2f' if normalize else 'd'
+    thresh = cm.max() / 2.
+    for i, j in itertools.product(range(cm.shape[0]), range(cm.shape[1])):
+        plt.text(j, i, format(cm[i, j], fmt),
+                 horizontalalignment="center",
+                 color="white" if cm[i, j] > thresh else "black")
+
+    # plt.tight_layout()
+    plt.ylabel('Tatsächliche Klasse')
+    plt.xlabel('Vorhergesagte Klasse')
+
+
+"""
 ############################################################################
 # Evaluate Data
 ############################################################################
+import sys
+sys.path.insert(
+    0, "C:/Users/Flo/Projekte/Bachelor_Thesis_Sentiment_Analyse/")
 corpus_name = "htw"
 pickle_path = "data/labeled_sentiment_data/pickle_files/{}/".format(
     corpus_name)
@@ -125,3 +176,4 @@ if(True):
 
     performance_analysis(testing_data, nn_model, file_name=file_name, file_information=file_information, verbose=True, accuracy=True,
                          confusion_matrix=True, classification_report=True, save_pred=True, X_test_unprocessed=X_test_unprocessed)
+"""
