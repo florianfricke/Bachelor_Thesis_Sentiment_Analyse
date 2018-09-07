@@ -1,0 +1,27 @@
+epochs = 20
+batch_size = 20
+max textlength = 50
+preprocess-typ = lemmatized
+attention model = simple
+best model with max val_acc
+dropout_attention = 0.1
+2 LSTM Layer
+Dropout & Noise = 0.1
+
+model accuracy (loss value, accuracy):
+[0.87879800419383547, 0.67889908249338227]
+
+confusion matrix:
+[[ 358  384   61]
+ [ 292 1444  121]
+ [  31  126  344]]
+
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.53      0.45      0.48       803
+          1       0.74      0.78      0.76      1857
+          2       0.65      0.69      0.67       501
+
+avg / total       0.67      0.68      0.67      3161
+

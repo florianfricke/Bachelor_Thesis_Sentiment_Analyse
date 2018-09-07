@@ -1,0 +1,26 @@
+epochs = 20
+batch_size = 20
+max textlength = 50
+preprocess-typ = stopwords
+attention model = None
+best model with max val_acc
+2 LSTM Layer
+Dropout & Noise = 0.3
+
+model accuracy (loss value, accuracy):
+[0.76583221970536741, 0.61436254372516785]
+
+confusion matrix:
+[[628  87  88]
+ [726 968 163]
+ [ 98  57 346]]
+
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.43      0.78      0.56       803
+          1       0.87      0.52      0.65      1857
+          2       0.58      0.69      0.63       501
+
+avg / total       0.71      0.61      0.62      3161
+
