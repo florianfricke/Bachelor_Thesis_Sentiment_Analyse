@@ -4,6 +4,7 @@ Created by Florian Fricke.
 
 from sklearn import metrics
 from keras.models import load_model
+import sys
 import pickle
 import os
 import matplotlib.pyplot as plt
@@ -102,13 +103,13 @@ def plot_confusion_matrix(cm, classes,
     plt.xlabel('Vorhergesagte Klasse')
 
 
-"""
+
+
+
+
 ############################################################################
 # Evaluate Data
 ############################################################################
-import sys
-sys.path.insert(
-    0, "C:/Users/Flo/Projekte/Bachelor_Thesis_Sentiment_Analyse/")
 corpus_name = "htw"
 pickle_path = "data/labeled_sentiment_data/pickle_files/{}/".format(
     corpus_name)
@@ -160,7 +161,7 @@ if(True):
             open("{}y_data.pickle".format(pickle_path), "rb"))
 
         sys.path.insert(
-            0, "C:/Users/Flo/Projekte/Bachelor_Thesis_Sentiment_Analyse/datastories_semeval2017_task4")
+            0, "{}/datastories_semeval2017_task4".format(os.getcwd()))
         from utilities.data_loader import Task4Loader
         from utilities.data_loader import get_embeddings
 
@@ -176,4 +177,3 @@ if(True):
 
     performance_analysis(testing_data, nn_model, file_name=file_name, file_information=file_information, verbose=True, accuracy=True,
                          confusion_matrix=True, classification_report=True, save_pred=True, X_test_unprocessed=X_test_unprocessed)
-"""

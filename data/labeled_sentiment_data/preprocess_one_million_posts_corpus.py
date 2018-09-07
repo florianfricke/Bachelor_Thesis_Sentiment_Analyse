@@ -2,9 +2,6 @@
 Created by Florian Fricke.
 """
 
-import sys
-sys.path.insert(0, "C:/Users/Flo/Projekte/Bachelor_Thesis_Sentiment_Analyse")
-
 import csv
 
 def preprocess_one_million_posts_corpus(csvfile, tsvfile):

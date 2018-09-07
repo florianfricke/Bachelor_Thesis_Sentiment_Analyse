@@ -2,9 +2,6 @@
 Created by Florian Fricke.
 """
 
-import sys
-sys.path.insert(0, "C:/Users/Flo/Projekte/Bachelor_Thesis_Sentiment_Analyse")
-
 from textblob_de import TextBlobDE as TextBlob
 from sklearn import metrics
 from tqdm import tqdm

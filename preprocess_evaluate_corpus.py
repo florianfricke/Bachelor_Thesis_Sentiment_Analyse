@@ -2,10 +2,6 @@
 Created by Florian Fricke.
 """
 
-import sys
-sys.path.insert(
-    0, "C:/Users/Flo/Projekte/Bachelor_Thesis_Sentiment_Analyse")
-
 from utilities.utilities import get_filenames_from_directory
 from utilities.utilities import transform_data
 from data_preprocessing.preprocessing_corpus import PreprocessingCorpus
