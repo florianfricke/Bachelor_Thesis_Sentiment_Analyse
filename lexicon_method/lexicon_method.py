@@ -2,9 +2,6 @@
 Created by Florian Fricke.
 """
 
-import sys
-sys.path.insert(0, "C:/Users/Flo/Projekte/Bachelor_Thesis_Sentiment_Analyse")
-
 from sklearn import metrics
 from os.path import join
 from tqdm import tqdm

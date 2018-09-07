@@ -2,9 +2,6 @@
 Created by Florian Fricke.
 """
 
-import sys
-sys.path.insert(
-    0, "C:/Users/Flo/Projekte/Bachelor_Thesis_Sentiment_Analyse")
 import os
 from utilities.utilities import clean_text
 from os.path import join

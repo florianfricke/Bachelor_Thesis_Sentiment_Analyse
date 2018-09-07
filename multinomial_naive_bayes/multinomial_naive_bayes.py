@@ -2,10 +2,6 @@
 Created by Florian Fricke.
 """
 
-import sys
-sys.path.insert(
-    0, "C:/Users/Flo/Projekte/Bachelor_Thesis_Sentiment_Analyse")
-
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
