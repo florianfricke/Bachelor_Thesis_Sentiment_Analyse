@@ -103,10 +103,6 @@ def plot_confusion_matrix(cm, classes,
     plt.xlabel('Vorhergesagte Klasse')
 
 
-
-
-
-
 ############################################################################
 # Evaluate Data
 ############################################################################
@@ -114,7 +110,7 @@ corpus_name = "htw"
 pickle_path = "data/labeled_sentiment_data/pickle_files/{}/".format(
     corpus_name)
 preprocess_typ = "ekphrasis"
-model_file_number = 4
+model_file_number = 1
 file_information = ""
 attention_mechanism = True
 corpusname = "sb10k_and_one_million_posts_corpus"
