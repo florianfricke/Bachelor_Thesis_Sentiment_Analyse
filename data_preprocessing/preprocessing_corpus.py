@@ -14,16 +14,24 @@ from utilities.utilities import transform_data
 import pickle
 
 class PreprocessingCorpus:
-    def __init__(self, datafolders, save_data_path, **kwargs):
+    def __init__(self, datafolders, save_data_path, read_from_pickle=False, pickle_path="", **kwargs):
         self.datafolders = datafolders
-        self.dataset = self.get_data()
-        self.X = [d[1] for d in self.dataset]  # text
-        self.y = [d[0] for d in self.dataset]  # sentiment
-    
-        save_data(self.dataset, path=save_data_path, filename="dataset_unprocessed")
-        save_data(self.X, path=save_data_path,
-                  filename="X_data_unprocessed")
-        save_data(self.y, path=save_data_path, filename="y_data")
+        
+        if(read_from_pickle):
+            self.X = pickle.load(
+                open("{}/X_data_unprocessed.pickle".format(pickle_path), "rb"))
+            self.y = pickle.load(
+                open("{}/y_data.pickle".format(pickle_path), "rb"))
+        
+        else:
+            self.dataset = self.get_data()
+            self.X = [d[1] for d in self.dataset]  # text
+            self.y = [d[0] for d in self.dataset]  # sentiment
+        
+            save_data(self.dataset, path=save_data_path, filename="dataset_unprocessed")
+            save_data(self.X, path=save_data_path,
+                    filename="X_data_unprocessed")
+            save_data(self.y, path=save_data_path, filename="y_data")
 
         self.text_processor = TextPreProcessor(
             # terms that will be normalize e.g. test@gmx.de to <email>

@@ -9,6 +9,7 @@ import pickle
 import itertools
 import numpy as np
 import matplotlib.pyplot as plt
+import random
 
 def get_filenames_from_directory(path):
     files = [f for f in listdir(path) if isfile(join(path, f))]
@@ -69,3 +70,14 @@ def plot_confusion_matrix(cm, classes,
     plt.tight_layout()
     plt.ylabel('Tatsächliche Klasse')
     plt.xlabel('Vorhergesagte Klasse')
+
+
+def get_random_elements_from_list(list_name, n):
+    random_list = []
+    for i, line in enumerate(list_name):
+        if i < n:
+            random_list.append(line)
+        elif i >= n and random.random() < n/float(i+1):
+            replace = random.randint(0, len(random_list)-1)
+            random_list[replace] = line
+    return random_list

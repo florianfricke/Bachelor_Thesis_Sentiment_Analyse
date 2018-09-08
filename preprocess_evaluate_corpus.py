@@ -12,16 +12,16 @@ from lexicon_method.textblob_de import TextBlobSentimentAnalysis
 from multinomial_naive_bayes.multinomial_naive_bayes import MultinomialNaiveBayes
 import pickle
 
-corpus_name = "sb10k_and_one_million_posts_corpus"  # scare
+corpus_name = "mixed_corpus_1"  # scare
 testing_corpus_name = "htw"  # sb10k_and_one_million_posts_corpus
 path = "data/labeled_sentiment_data/pickle_files/"
 preprocess_typ = "ekphrasis"
 
-runprocessing = True
-run_lexicon_method = True
-run_textblob = True
+runprocessing = False
+run_lexicon_method = False
+run_textblob = False
 run_mnb = True
-run_single_predictions = True
+run_single_predictions = False
 
 ############################################################################
 # Preprocess Data
@@ -30,15 +30,20 @@ if(runprocessing):
     print("preprocess data")
     if(testing_corpus_name == "htw"):
         datafolders = [["labeled_sentiment_data/htw_data/join_data_clean.tsv", "\t", 0, 1]]
-    if(testing_corpus_name == "sb10k_and_one_million_posts_corpus"):
+    elif(testing_corpus_name == "sb10k_and_one_million_posts_corpus"):
         datafolders = [["labeled_sentiment_data/sb10k_corpus.tsv", "\t",
                         1, 4], ["labeled_sentiment_data/million_pos_corpus.tsv", "\t", 0, 1]]    
-    if(testing_corpus_name == "scare"):
+    elif(testing_corpus_name == "scare"):
         datafolders = [["labeled_sentiment_data/scare_app_reviews.tsv", "\t", 0, 1]]
+    else:
+        datafolders = []
 
     data = PreprocessingCorpus(
         datafolders=datafolders, 
-        save_data_path=path + (testing_corpus_name + "/" if testing_corpus_name != corpus_name else corpus_name + "/"))
+        save_data_path=path + (testing_corpus_name + "/" if testing_corpus_name != corpus_name else corpus_name + "/"),
+        read_from_pickle=True, 
+        pickle_path=path + (testing_corpus_name + "/" if testing_corpus_name != corpus_name else corpus_name + "/"))
+
     clean_data = data.ekphrasis_preprocessing()
     specific_stopwords = ["app", "wecker",
                           "google", "samsung", "apple", "android"]
