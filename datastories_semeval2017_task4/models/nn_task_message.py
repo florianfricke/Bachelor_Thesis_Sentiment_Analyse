@@ -32,7 +32,7 @@ WV_DIM = 200
 FINAL = True
 
 max_length = 50     # max tweet length
-DATAFOLDER = "C:/Users/Flo/Projekte/Bachelor_Thesis_Sentiment_Analyse/data/labeled_sentiment_data/pickle_files/"
+DATAFOLDER = "{}/data/labeled_sentiment_data/pickle_files/".format(os.getcwd())
 PREPROCESS_TYP = "ekphrasis"
 COPRPUSNAME = "sb10k_and_one_million_posts_corpus"
 

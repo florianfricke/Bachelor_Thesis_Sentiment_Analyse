@@ -3,15 +3,13 @@ Created by Florian Fricke.
 """
 
 from sklearn import metrics
-from keras.models import load_model
-import sys
-import pickle
-import os
 import matplotlib.pyplot as plt
 import itertools
 import numpy as np
 
 def performance_analysis(testing, model, file_name="", file_information="", verbose=True, accuracy=True, confusion_matrix=True, plotting_confusion_matrix=True, classification_report=True, **kwargs):
+    X_test_unprocessed = kwargs.get('X_test_unprocessed', False)
+    
     with open('results_artificial_neural_network/{}.txt'.format(file_name), 'w') as f:
         print(file_information, file=f)
         y_pred = model.predict(testing[0])
@@ -61,7 +59,7 @@ def performance_analysis(testing, model, file_name="", file_information="", verb
                 print("\nclassification report:", file=f)
                 print(classification_report, file=f)
 
-        if(kwargs.get('save_pred', False) and kwargs.get('X_test_unprocessed', False)):
+        if(kwargs.get('save_pred', False) and X_test_unprocessed):
             with open('results_artificial_neural_network/predictions/{}_predictions.txt'.format(file_name), 'w', encoding="utf-8") as f:
                 for i in range(len(y_pred)):
                     if y_pred[i] == 0:
@@ -75,7 +73,6 @@ def performance_analysis(testing, model, file_name="", file_information="", verb
                     print("{}\t{}".format(
                         pred, X_test_unprocessed[i]), file=f)
     return metric_list
-
 
 def plot_confusion_matrix(cm, classes,
                           normalize=False,
@@ -98,78 +95,6 @@ def plot_confusion_matrix(cm, classes,
                  horizontalalignment="center",
                  color="white" if cm[i, j] > thresh else "black")
 
-    # plt.tight_layout()
+    plt.tight_layout()
     plt.ylabel('Tatsächliche Klasse')
     plt.xlabel('Vorhergesagte Klasse')
-
-
-############################################################################
-# Evaluate Data
-############################################################################
-corpus_name = "htw"
-pickle_path = "data/labeled_sentiment_data/pickle_files/{}/".format(
-    corpus_name)
-preprocess_typ = "ekphrasis"
-model_file_number = 1
-file_information = ""
-attention_mechanism = True
-corpusname = "sb10k_and_one_million_posts_corpus"
-
-print("load model_{}_{}".format(preprocess_typ, model_file_number))
-if(attention_mechanism):
-    from kutilities.layers import Attention
-    nn_model = load_model(
-        'results_artificial_neural_network/{}/{}/model_{}_{}.hdf5'.format(
-            preprocess_typ, corpusname, preprocess_typ, model_file_number),
-        custom_objects={'Attention': Attention})
-else:
-    nn_model = load_model(
-        'results_artificial_neural_network/{}/{}/model_{}_{}.hdf5'.format(
-            preprocess_typ, corpusname, preprocess_typ, model_file_number))
-
-#___________________Evaluate sb10k + One Million Posts Korpus___________________
-if(False):
-    file_name = "{}/{}/evaluation_scare_{}_{}".format(preprocess_typ, corpusname,
-                                                   preprocess_typ, model_file_number)
-    X_test_unprocessed = pickle.load(
-        open("{}X_data_unprocessed.pickle".format(pickle_path), "rb"))
-    testing_data = pickle.load(
-        open("{}testing_data_nn_{}.pickle".format(pickle_path, preprocess_typ), "rb"))
-
-    performance_analysis(testing_data, nn_model, file_name=file_name, file_information=file_information, verbose=True, accuracy=True,
-                         confusion_matrix=True, classification_report=True, save_pred=True, X_test_unprocessed=X_test_unprocessed)
-
-#_______________________________Evaluate HTW Data_______________________________
-if(True):
-    file_name = "{}/{}/evaluation_htw_data_{}_{}".format(preprocess_typ, corpusname,
-                                                      preprocess_typ, model_file_number)
-    X_test_unprocessed = pickle.load(
-        open("{}X_data_unprocessed.pickle".format(pickle_path), "rb"))
-
-    if os.path.exists("{}testing_data_nn_{}.pickle".format(pickle_path, preprocess_typ)):
-        testing_data = pickle.load(
-            open("{}testing_data_nn_{}.pickle".format(pickle_path, preprocess_typ), "rb"))
-    else:
-        print("decode data to word vectors")
-        X_test = pickle.load(
-            open("{}X_clean_data_{}.pickle".format(pickle_path, preprocess_typ), "rb"))
-        y_test = pickle.load(
-            open("{}y_data.pickle".format(pickle_path), "rb"))
-
-        sys.path.insert(
-            0, "{}/datastories_semeval2017_task4".format(os.getcwd()))
-        from utilities.data_loader import Task4Loader
-        from utilities.data_loader import get_embeddings
-
-        embeddings, word_indices = get_embeddings(
-            corpus="embedtweets.de", dim=200)
-        loader = Task4Loader(word_indices, text_lengths=50, loading_data=False,
-                             datafolder=pickle_path, preprocess_typ=preprocess_typ)
-        testing_data = loader.decode_data_to_embeddings(
-            X_test, y_test)  # decode data to word vectors
-
-        pickle.dump(testing_data, open("{}testing_data_nn_{}.pickle".format(
-            pickle_path, preprocess_typ), "wb"))
-
-    performance_analysis(testing_data, nn_model, file_name=file_name, file_information=file_information, verbose=True, accuracy=True,
-                         confusion_matrix=True, classification_report=True, save_pred=True, X_test_unprocessed=X_test_unprocessed)
