@@ -8,4 +8,5 @@
 /data/labeled_sentiment_data/scare_app_reviews
 **/*.hdf5
 /data/labeled_sentiment_data/scare_app_reviews.tsv
+/data/labeled_sentiment_data/pickle_files/mixed_corpus_1
 **/scare_*
