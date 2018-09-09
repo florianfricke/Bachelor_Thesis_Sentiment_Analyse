@@ -1,0 +1,26 @@
+epochs = 20
+batch_size = 20
+max textlength = 50
+preprocess-typ = ekphrasis
+attention model = simple
+best model with max val_acc
+2 LSTM Layer
+Dropout & Noise = 0.1
+
+model accuracy (loss value, accuracy):
+[0.5857609797293287, 0.8084510627617678]
+
+confusion matrix:
+[[2391  458  151]
+ [ 270 1498   89]
+ [ 258  279 2463]]
+
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.80      0.81      3000
+          1       0.67      0.81      0.73      1857
+          2       0.91      0.82      0.86      3000
+
+avg / total       0.82      0.81      0.81      7857
+
