@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analyse</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static',filename='bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+
+</head>
+<body>
+    <div class="container-fluid">
+        <h1>Sentiment Analyse</h1>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Bitte Text eingeben...</label>
+            <textarea class="form-control data" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <button type="submit" class="btn btn-primary analyse">Stimmung analysieren</button>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <p>German-Polarity-Clues-Sentiment-Lexikon</p>
+                <i class="far fa-meh initial-smiley"></i>
+                <p class="result"></p>
+            </div>
+            <div class="col-sm">
+                <p>textblob-de</p>
+                <i class="far fa-meh initial-smiley"></i>
+                <p class="result"></p>
+            </div>
+            <div class="col-sm">
+                <p>Multinomial-Naive-Bayes-Klassifikator</p>
+                <i class="far fa-meh initial-smiley"></i>
+                <p class="result"></p>
+            </div>
+            <div class="col-sm">
+                <p>bidirektionales LSTM-Netz mit Attention-Mechanismus1</p>
+                <i class="far fa-meh initial-smiley"></i>
+                <p class="result"></p>
+            </div>
+            <div class="col-sm">
+                <p>bidirektionales LSTM-Netz mit Attention-Mechanismus2</p>
+                <i class="far fa-meh initial-smiley"></i>
+                <p class="result"></p>
+            </div>
+        </div>
+        <div class="loading">
+            <div class="loader"></div>
+        </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+<script src="{{ url_for('static',filename='jquery-3.3.1.min.js') }}"></script>
+<script src="{{ url_for('static',filename='bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static',filename='index.js') }}"></script>
+<script>
+    var $loading = $('.loading').hide();
+    $(document)
+    .ajaxStart(function () {
+        $loading.show();
+    })
+    .ajaxStop(function () {
+        $loading.hide();
+    });
+    $(".analyse").on("click", function () {
+        var $SCRIPT_ROOT = {{ request.script_root | tojson | safe }};
+        text = $(".data").val();
+        if (text == "") {
+            alert("Bitte Text eingeben!");
+        }
+        else {
+            $.getJSON($SCRIPT_ROOT + '/predicton', {
+                text: text,
+            }, function (data) {
+                // $("#result").text(data.result);
+                // alert(data.result)
+                // alert(typeof data.result)
+                result_data = data.result
+                smiley_classes = []
+                for (let index = 0; index < result_data.length; index++) {
+                    if (result_data[index] == "positive") {
+                        smiley_classes.push("fa-smile");
+                    }
+                    if (result_data[index] == "neutral") {
+                        smiley_classes.push("fa-meh");
+                    }
+                    if (result_data[index] == "negative") {
+                        smiley_classes.push("fa-frown");
+                    }
+                }
+                $(".col-sm").each(function (index) {
+                    $(this).children(".far").removeClass(function (index, className) {
+                        return (className.match(/(^|\s)fa-\S+/g) || []).join(' ');
+                    });
+                    $(this).children(".far").removeClass("initial-smiley");
+                    $(this).children(".far").addClass(smiley_classes[index]);
+                    $(this).children(".result").text(result_data[index])
+                });
+            });
+        }
+    });
+</script>
+</html>
