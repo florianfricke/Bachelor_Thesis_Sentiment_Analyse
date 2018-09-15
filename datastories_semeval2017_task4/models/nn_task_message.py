@@ -16,7 +16,7 @@ sys.path.insert(
     0, "{}/datastories_semeval2017_task4".format(os.getcwd()))
 
 from models.nn_models import build_attention_RNN
-from utilities.data_loader import get_embeddings, Task4Loader, prepare_dataset
+from utilities_nn.data_loader import get_embeddings, Task4Loader, prepare_dataset
 from evaluate.evaluate import performance_analysis
 
 numpy.random.seed(1337)  # for reproducibility
@@ -31,10 +31,10 @@ WV_DIM = 200
 # of the labeled data will be kept for as a validation set for early stopping
 FINAL = True
 
-max_length = 50     # max tweet length
+max_length = 50     # max text length
 DATAFOLDER = "{}/data/labeled_sentiment_data/pickle_files/".format(os.getcwd())
 PREPROCESS_TYP = "ekphrasis"
-COPRPUSNAME = "sb10k_and_one_million_posts_corpus"
+COPRPUSNAME = "mixed_corpus_1"
 
 ############################################################################
 # PERSISTENCE
@@ -83,18 +83,18 @@ pickle.dump(testing, open("{}{}/testing_data_nn_{}.pickle".format(
 # NN MODEL
 ############################################################################
 print("Building NN Model...")
-attention_model = None # simple, None
+attention_model = "simple" # "simple", None
 nn_model = build_attention_RNN(embeddings, classes=3, max_length=max_length,    #classes = pos., neg, neutral
                                unit=LSTM, layers=2, cells=150,
                                bidirectional=True,
                                attention=attention_model,  
-                               noise=0.3, #0.3
+                               noise=0.1, #0.3
                                final_layer=False,
-                               dropout_final=0.3,
-                               dropout_attention=0.3, #0.5
-                               dropout_words=0.3,
-                               dropout_rnn=0.3,
-                               dropout_rnn_U=0.3,
+                               dropout_final=0.1,
+                               dropout_attention=0.1, #0.5
+                               dropout_words=0.1,
+                               dropout_rnn=0.1,
+                               dropout_rnn_U=0.1,
                                clipnorm=1, lr=0.001, loss_l2=0.0001)   # gradient clipping and learning rate
 print(nn_model.summary())
 
@@ -133,7 +133,7 @@ if not FINAL:
     _datasets["3-test"] = testing
 
 metrics_callback = MetricsCallback(datasets=_datasets, metrics=metrics)
-plotting = PlottingCallback(grid_ranges=(0.5, 0.9), height=5,
+plotting = PlottingCallback(grid_ranges=(0.7, 1), height=5,
                             plot_name="model_{}_{}_{}".format(COPRPUSNAME, PREPROCESS_TYP, MODEL_FILE_NUMBER))  # benchmarks={"SE17": 0.681},
 tensorboard = TensorBoard(log_dir='./logs/{}'.format(COPRPUSNAME))
 
@@ -179,6 +179,6 @@ file_information = "epochs = " + str(epochs) + "\nbatch_size = " + str(batch_siz
     PREPROCESS_TYP + "\nattention model = " + \
     str(attention_model) + "\nbest model with " + mode + " " + monitor
 file_information = file_information + \
-    "\n2 LSTM Layer\nDropout & Noise = 0.3"
+    "\n2 LSTM Layer\nDropout & Noise = 0.1"
 performance_analysis(testing, nn_model, file_name=file_name, file_information=file_information, verbose=True, accuracy=True,
                      confusion_matrix=True, plotting_confusion_matrix=True, classification_report=True)

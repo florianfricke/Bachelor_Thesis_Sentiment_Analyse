@@ -2,7 +2,7 @@ import errno
 import os
 import pickle
 import numpy
-from utilities.ResourceManager import ResourceManager
+from utilities_nn.ResourceManager import ResourceManager
 
 class WordVectorsManager(ResourceManager):
     def __init__(self, corpus=None, dim=None, omit_non_english=False):
