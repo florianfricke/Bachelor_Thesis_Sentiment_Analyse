@@ -43,7 +43,7 @@ class LexiconMethod:
         elif word in self.negative_words:
             return -1
         else:
-            # print("{} - don't exist in sentiment lexicon".format(word))
+            print("{} - don't exist in sentiment lexicon".format(word))
             return 0
 
     def predict(self, textarray):

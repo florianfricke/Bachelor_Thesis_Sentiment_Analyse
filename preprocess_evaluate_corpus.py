@@ -12,16 +12,16 @@ from lexicon_method.textblob_de import TextBlobSentimentAnalysis
 from multinomial_naive_bayes.multinomial_naive_bayes import MultinomialNaiveBayes
 import pickle
 
-corpus_name = "mixed_corpus_1"  # scare
+corpus_name = "mixed_corpus_1"
 testing_corpus_name = "htw"  # sb10k_and_one_million_posts_corpus
 path = "data/labeled_sentiment_data/pickle_files/"
-preprocess_typ = "ekphrasis"
+preprocess_typ = "lemmatized"
 
 runprocessing = False
 run_lexicon_method = False
 run_textblob = False
-run_mnb = True
-run_single_predictions = False
+run_mnb = False
+run_single_predictions = True
 
 ############################################################################
 # Preprocess Data
@@ -86,7 +86,8 @@ else:
 ############################################################################
 if(run_single_predictions):
     print("Run Single Predition")
-    text = ['Ich liebe euch und so!!!!', 'Ich hasse euch']
+    text = ['Ich liebe euch und so!!!! Es gefällt mir hier.']
+    # text = ['Alles Mist hier!!!! Ich hasse euch']
     pred = PreprocessingText(text)
     clean_data = pred.ekphrasis_preprocessing()
     if(preprocess_typ == "stopwords"):
@@ -133,7 +134,7 @@ if(run_textblob or run_single_predictions):
 # Multinomial Naive Bayes
 ############################################################################
 if(run_mnb or run_single_predictions):
-    results_file_name = "{}/{}/evaluation_{}_data_{}_mnb".format(
+    results_file_name = "{}/{}/evaluation_{}_data_{}_mnb_no_bow_parameter".format(  # _no_bow_parameter
         preprocess_typ, corpus_name, testing_corpus_name, preprocess_typ)
 
     print("run multinomial naive bayes")
