@@ -3,8 +3,8 @@ import os
 sys.path.insert(
     0, "{}/datastories_semeval2017_task4".format(os.getcwd()))
 from evaluate.evaluate import performance_analysis
-from utilities.data_loader import Task4Loader
-from utilities.data_loader import get_embeddings
+from utilities_nn.data_loader import Task4Loader
+from utilities_nn.data_loader import get_embeddings
 from keras.models import load_model
 from kutilities.layers import Attention
 import pickle
@@ -16,10 +16,10 @@ evaluate_corpus_name = "htw"
 pickle_path = "data/labeled_sentiment_data/pickle_files/{}/".format(
     evaluate_corpus_name)
 preprocess_typ = "ekphrasis"
-model_file_number = 1
+model_file_number = 3
 file_information = ""
 attention_mechanism = True
-corpusname = "sb10k_and_one_million_posts_corpus"
+corpusname = "mixed_corpus_1"
 
 print("load model_{}_{}".format(preprocess_typ, model_file_number))
 if(attention_mechanism):
